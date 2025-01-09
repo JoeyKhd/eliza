@@ -33,7 +33,9 @@
         [
             {
                 "user": "{{user1}}",
-                "content": { "text": "Show my balances of my wallet on {{mantrachaintestnet2}}" }
+                "content": {
+                    "text": "Show my balances of my wallet on {{mantrachaintestnet2}}"
+                }
             },
             {
                 "user": "CosmosHelper",
@@ -81,7 +83,9 @@
         [
             {
                 "user": "{{user1}}",
-                "content": { "text": "Make transfer 0.0001 OM to mantra13248w8dtnn07sxc3gq4l3ts4rvfyat6fks0ecj on mantrachaintestnet2" }
+                "content": {
+                    "text": "Make transfer 0.0001 OM to mantra13248w8dtnn07sxc3gq4l3ts4rvfyat6fks0ecj on mantrachaintestnet2"
+                }
             },
             {
                 "user": "CosmosHelper",

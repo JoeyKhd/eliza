@@ -15,9 +15,7 @@
             }
         }
     },
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "dependencies": {
         "@elizaos/core": "workspace:*",
         "@phala/dstack-sdk": "0.1.7",

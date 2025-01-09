@@ -15,11 +15,7 @@
             }
         }
     },
-    "files": [
-        "dist",
-        "schema.sql",
-        "seed.sql"
-    ],
+    "files": ["dist", "schema.sql", "seed.sql"],
     "dependencies": {
         "@elizaos/core": "workspace:*",
         "@types/pg": "8.11.10",

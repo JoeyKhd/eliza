@@ -28,7 +28,7 @@ export const Accordion: React.FC<AccordionProps> = ({
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [hoverLoadMore, setHoverLoadMore] = useState<boolean>(false);
     const [maxHeight, setMaxHeight] = useState<string>(
-        isOpen ? "1000px" : "0px",
+        isOpen ? "1000px" : "0px"
     );
 
     const contentRef = useRef<HTMLDivElement>(null);
@@ -119,7 +119,7 @@ export const Accordion: React.FC<AccordionProps> = ({
                                     window.open(
                                         entry.html_url,
                                         "_blank",
-                                        "noopener,noreferrer",
+                                        "noopener,noreferrer"
                                     )
                                 }
                             >

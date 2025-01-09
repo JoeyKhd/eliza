@@ -46,13 +46,13 @@ const Contributions = ({
 }) => {
     const githubAccessToken = useGithubAccessToken();
     const [commitsData, setCommitsData] = useState<AccordionItem>(
-        initializeAccordionItem(),
+        initializeAccordionItem()
     );
     const [prsData, setPrsData] = useState<AccordionItem>(
-        initializeAccordionItem(),
+        initializeAccordionItem()
     );
     const [issuesData, setIssuesData] = useState<AccordionItem>(
-        initializeAccordionItem(),
+        initializeAccordionItem()
     );
     const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
@@ -88,7 +88,7 @@ const Contributions = ({
                         Authorization: `token ${githubAccessToken}`,
                         Accept: "application/vnd.github.v3+json",
                     },
-                },
+                }
             );
             const commitData = await commitResponse.json();
             const commitItems = commitData.map((commit: any) => ({
@@ -116,7 +116,7 @@ const Contributions = ({
                         Authorization: `token ${githubAccessToken}`,
                         Accept: "application/vnd.github.v3+json",
                     },
-                },
+                }
             );
             const prData = await prResponse.json();
             const prItems = prData.items.map((pr: any) => ({
@@ -151,7 +151,7 @@ const Contributions = ({
                         Authorization: `token ${githubAccessToken}`,
                         Accept: "application/vnd.github.v3+json",
                     },
-                },
+                }
             );
             const issueData = await issueResponse.json();
             const issueItems = issueData.items.map((issue: any) => ({

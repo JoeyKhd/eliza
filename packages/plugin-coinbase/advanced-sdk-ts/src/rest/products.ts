@@ -1,5 +1,5 @@
-import { API_PREFIX } from '../constants';
-import { RESTBase } from './rest-base';
+import { API_PREFIX } from "../constants";
+import { RESTBase } from "./rest-base";
 import {
     GetBestBidAskRequest,
     GetBestBidAskResponse,
@@ -13,8 +13,8 @@ import {
     GetProductResponse,
     ListProductsRequest,
     ListProductsResponse,
-} from './types/products-types';
-import { method } from './types/request-types';
+} from "./types/products-types";
+import { method } from "./types/request-types";
 
 // [GET] Get Best Bid Ask
 // Official Documentation: https://docs.cdp.coinbase.com/advanced-trade/reference/retailbrokerageapi_getbestbidask

@@ -8,7 +8,7 @@ import {
     Product,
     Products,
     ProductType,
-} from './common-types';
+} from "./common-types";
 
 // Get Best Bid Ask
 export type GetBestBidAskRequest = {

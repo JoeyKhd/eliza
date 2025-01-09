@@ -62,7 +62,8 @@ export async function getWalletBalance(
 // Add helper function to get connection
 async function getConnection(runtime: IAgentRuntime): Promise<Connection> {
     return new Connection(
-        runtime.getSetting("SOLANA_RPC_URL") || "https://api.mainnet-beta.solana.com"
+        runtime.getSetting("SOLANA_RPC_URL") ||
+            "https://api.mainnet-beta.solana.com"
     );
 }
 

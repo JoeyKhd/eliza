@@ -51,21 +51,5 @@ export default [
             ],
         },
     },
-    // Vitest configuration
-    {
-        files: [
-            "src/**/*.test.js",
-            "src/**/*.test.ts",
-            "src/**/*.spec.js",
-            "src/**/*.spec.ts",
-        ],
-        plugins: {
-            vitest, // Register Vitest plugin
-        },
-        rules: {
-            ...vitest.configs.recommended.rules,
-        },
-    },
-    // Add prettier as the last config to override other formatting rules
     prettier,
 ];

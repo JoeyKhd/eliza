@@ -75,11 +75,11 @@ const Contributors: React.FC = () => {
                         Authorization: `token ${githubAccessToken}`,
                         Accept: "application/vnd.github.v3+json",
                     },
-                },
+                }
             );
             if (!response.ok) {
                 throw new Error(
-                    `Error fetching contributors: ${response.statusText}`,
+                    `Error fetching contributors: ${response.statusText}`
                 );
             }
             const data: Contributor[] = await response.json();
@@ -101,11 +101,11 @@ const Contributors: React.FC = () => {
         const fetchActivitySummaries = async () => {
             try {
                 const response = await fetch(
-                    "https://elizaos.github.io/data/contributors.json",
+                    "https://elizaos.github.io/data/contributors.json"
                 );
                 if (!response.ok) {
                     throw new Error(
-                        `Error fetching activity summaries: ${response.statusText}`,
+                        `Error fetching activity summaries: ${response.statusText}`
                     );
                 }
                 const specs = await response.json();
@@ -124,7 +124,7 @@ const Contributors: React.FC = () => {
                             score: spec.score,
                             activitySummary: spec.summary,
                         });
-                    },
+                    }
                 );
                 setActivitySummaries(currentActivitySummaries);
             } catch (err) {
@@ -149,7 +149,7 @@ const Contributors: React.FC = () => {
                     fetchContributors(pageRef.current);
                 }
             },
-            { threshold: 1.0 },
+            { threshold: 1.0 }
         );
 
         if (observerRef.current) {

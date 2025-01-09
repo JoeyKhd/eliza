@@ -19,9 +19,7 @@ import {
 } from "@elizaos/core";
 import { ClientBase } from "./base";
 import { buildConversationThread, sendTweet, wait } from "./utils.ts";
-import {
-    generateText
-} from "@elizaos/core";
+import { generateText } from "@elizaos/core";
 import { PizzaAPI } from "./pizza.ts";
 
 export const twitterMessageHandlerTemplate =

@@ -15,9 +15,7 @@
             }
         }
     },
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "dependencies": {
         "@electric-sql/pglite": "^0.2.15",
         "@elizaos/core": "workspace:*"

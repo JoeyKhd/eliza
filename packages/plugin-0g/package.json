@@ -15,9 +15,7 @@
             }
         }
     },
-    "files": [
-        "dist"
-    ],
+    "files": ["dist"],
     "dependencies": {
         "@0glabs/0g-ts-sdk": "0.2.1",
         "@elizaos/core": "workspace:*",

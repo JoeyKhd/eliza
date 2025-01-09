@@ -1,15 +1,15 @@
-import { RESTBase } from './rest-base';
-import * as Accounts from './accounts';
-import * as Converts from './converts';
-import * as DataAPI from './dataAPI';
-import * as Fees from './fees';
-import * as Futures from './futures';
-import * as Orders from './orders';
-import * as Payments from './payments';
-import * as Perpetuals from './perpetuals';
-import * as Portfolios from './portfolios';
-import * as Products from './products';
-import * as Public from './public';
+import { RESTBase } from "./rest-base";
+import * as Accounts from "./accounts";
+import * as Converts from "./converts";
+import * as DataAPI from "./dataAPI";
+import * as Fees from "./fees";
+import * as Futures from "./futures";
+import * as Orders from "./orders";
+import * as Payments from "./payments";
+import * as Perpetuals from "./perpetuals";
+import * as Portfolios from "./portfolios";
+import * as Products from "./products";
+import * as Public from "./public";
 
 export class RESTClient extends RESTBase {
     constructor(key?: string | undefined, secret?: string | undefined) {

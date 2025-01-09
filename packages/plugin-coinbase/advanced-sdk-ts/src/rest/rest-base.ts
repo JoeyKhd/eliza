@@ -1,8 +1,8 @@
-import { generateToken } from '../jwt-generator';
-import fetch, { Headers, RequestInit, Response } from 'node-fetch';
-import { BASE_URL, USER_AGENT } from '../constants';
-import { RequestOptions } from './types/request-types';
-import { handleException } from './errors';
+import { generateToken } from "../jwt-generator";
+import fetch, { Headers, RequestInit, Response } from "node-fetch";
+import { BASE_URL, USER_AGENT } from "../constants";
+import { RequestOptions } from "./types/request-types";
+import { handleException } from "./errors";
 
 export class RESTBase {
     private apiKey: string | undefined;
@@ -11,7 +11,7 @@ export class RESTBase {
     constructor(key?: string, secret?: string) {
         if (!key || !secret) {
             console.log(
-                'Could not authenticate. Only public endpoints accessible.'
+                "Could not authenticate. Only public endpoints accessible."
             );
         }
         this.apiKey = key;
@@ -71,11 +71,11 @@ export class RESTBase {
 
     setHeaders(httpMethod: string, urlPath: string, isPublic?: boolean) {
         const headers: Headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        headers.append('User-Agent', USER_AGENT);
+        headers.append("Content-Type", "application/json");
+        headers.append("User-Agent", USER_AGENT);
         if (this.apiKey !== undefined && this.apiSecret !== undefined)
             headers.append(
-                'Authorization',
+                "Authorization",
                 `Bearer ${generateToken(
                     httpMethod,
                     urlPath,
@@ -85,7 +85,7 @@ export class RESTBase {
             );
         else if (isPublic == undefined || isPublic == false)
             throw new Error(
-                'Attempting to access authenticated endpoint with invalid API_KEY or API_SECRET.'
+                "Attempting to access authenticated endpoint with invalid API_KEY or API_SECRET."
             );
 
         return headers;
@@ -105,7 +105,7 @@ export class RESTBase {
 
     buildQueryString(queryParams?: Record<string, any>): string {
         if (!queryParams || Object.keys(queryParams).length === 0) {
-            return '';
+            return "";
         }
 
         const queryString = Object.entries(queryParams)
@@ -119,7 +119,7 @@ export class RESTBase {
                     return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
                 }
             })
-            .join('&');
+            .join("&");
 
         return `?${queryString}`;
     }
