@@ -1,4 +1,4 @@
-name: codecov
+name: ci-release
 on:
     push:
         branches: [main]
@@ -21,6 +21,14 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install -r --no-frozen-lockfile
+
+            - name: Create test env file
+              run: |
+                      echo "TEST_DATABASE_CLIENT=sqlite" > packages/core/.env.test
+                      echo "NODE_ENV=test" >> packages/core/.env.test
+
+            - name: Run tests
+              run: cd packages/core && pnpm test:coverage
 
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v5
