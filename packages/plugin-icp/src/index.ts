@@ -1,6 +1,6 @@
 import { Plugin } from "@elizaos/core";
-import { icpWalletProvider } from "./providers/wallet";
 import { executeCreateToken } from "./actions/createToken";
+import { icpWalletProvider } from "./providers/wallet";
 
 export const icpPlugin: Plugin = {
     name: "icp",

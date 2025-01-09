@@ -1,13 +1,13 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { defaultCharacter } from "../src/defaultCharacter";
 import { AgentRuntime } from "../src/runtime";
 import {
-    IDatabaseAdapter,
-    ModelProviderName,
     Action,
+    IDatabaseAdapter,
     Memory,
+    ModelProviderName,
     UUID,
 } from "../src/types";
-import { defaultCharacter } from "../src/defaultCharacter";
 
 // Mock dependencies with minimal implementations
 const mockDatabaseAdapter: IDatabaseAdapter = {

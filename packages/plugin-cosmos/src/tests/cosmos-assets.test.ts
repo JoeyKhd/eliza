@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
 import type { Asset, AssetList } from "@chain-registry/types";
+import { describe, expect, it } from "vitest";
 import { getAvailableAssets } from "../shared/helpers/cosmos-assets.ts";
 
 describe("getAvailableAssets", () => {

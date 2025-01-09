@@ -3,15 +3,15 @@ import {
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { fileSchema, isValidFile } from "../types";
 import { getObsidian } from "../helper";
 import { fileTemplate } from "../templates/file";
+import { fileSchema, isValidFile } from "../types";
 
 export const openFileAction: Action = {
     name: "OPEN_FILE",
@@ -34,7 +34,7 @@ export const openFileAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting open file handler");

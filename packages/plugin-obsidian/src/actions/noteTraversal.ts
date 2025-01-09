@@ -3,25 +3,25 @@ import {
     HandlerCallback,
     AgentRuntime as IAgentRuntime,
     Memory,
-    State,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
+import {
+    extractLinks,
+    getObsidian,
+    retrieveHierarchyFromMemory,
+    storeHierarchyInMemory,
+} from "../helper";
+import { traversalTemplate } from "../templates/traversal";
 import {
     NoteContent,
     NoteHierarchy,
     isValidNoteHierarchy,
     noteHierarchySchema,
 } from "../types";
-import {
-    getObsidian,
-    extractLinks,
-    storeHierarchyInMemory,
-    retrieveHierarchyFromMemory,
-} from "../helper";
-import { traversalTemplate } from "../templates/traversal";
 
 export const noteTraversalAction: Action = {
     name: "TRAVERSE_NOTE",
@@ -54,7 +54,7 @@ export const noteTraversalAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting note traversal handler");

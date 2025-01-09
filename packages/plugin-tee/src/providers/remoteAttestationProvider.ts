@@ -6,9 +6,9 @@ import {
     elizaLogger,
 } from "@elizaos/core";
 import {
-    TdxQuoteResponse,
     TappdClient,
     TdxQuoteHashAlgorithms,
+    TdxQuoteResponse,
 } from "@phala/dstack-sdk";
 import { RemoteAttestationQuote, TEEMode } from "../types/tee";
 

@@ -1,9 +1,10 @@
+import { Coinbase } from "@coinbase/coinbase-sdk";
 import {
+    ModelClass,
+    Provider,
     composeContext,
     elizaLogger,
     generateObject,
-    ModelClass,
-    Provider,
 } from "@elizaos/core";
 import {
     Action,
@@ -13,10 +14,9 @@ import {
     Plugin,
     State,
 } from "@elizaos/core";
-import { ChargeContent, ChargeSchema, isChargeContent } from "../types";
 import { chargeTemplate, getChargeTemplate } from "../templates";
+import { ChargeContent, ChargeSchema, isChargeContent } from "../types";
 import { getWalletDetails } from "../utils";
-import { Coinbase } from "@coinbase/coinbase-sdk";
 
 const url = "https://api.commerce.coinbase.com/charges";
 interface ChargeRequest {

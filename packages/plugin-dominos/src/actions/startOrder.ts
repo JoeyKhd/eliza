@@ -1,13 +1,13 @@
 import {
     Action,
     ActionExample,
-    composeContext,
-    generateObject,
     Handler,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    generateObject,
 } from "@elizaos/core";
 import { Customer, Item, Order } from "dominos";
 import { PizzaCrust, PizzaSize } from "../types";
@@ -109,7 +109,7 @@ const handler: Handler = async (
             "\n" + orderManager.getNextRequiredActionDialogue(order, customer);
 
         return response;
-    } catch (error) {
+    } catch (_error) {
         // Fallback to basic order if extraction fails
         const customer = new Customer({});
         await orderManager.saveCustomer(userId, customer);

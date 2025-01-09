@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { elizaLogger } from "@elizaos/core";
+import { z } from "zod";
 import { MAX_TWEETS_PER_HOUR } from "../constants";
 import { MarketData } from "../types";
 

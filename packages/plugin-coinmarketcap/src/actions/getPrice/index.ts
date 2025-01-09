@@ -1,13 +1,13 @@
 import {
-    composeContext,
-    elizaLogger,
-    generateObjectDeprecated,
+    type Action,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import { validateCoinMarketCapConfig } from "../../environment";
 import { priceExamples } from "./examples";
@@ -26,7 +26,7 @@ export default {
         "GET_TOKEN_PRICE",
         "CHECK_TOKEN_PRICE",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         await validateCoinMarketCapConfig(runtime);
         return true;
     },

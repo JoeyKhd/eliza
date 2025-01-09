@@ -1,16 +1,16 @@
 import {
     Action,
-    IAgentRuntime,
-    Memory,
-    State,
-    HandlerCallback,
-    composeContext,
-    generateObject,
     ActionExample,
-    ModelClass,
-    elizaLogger,
-    ServiceType,
+    HandlerCallback,
+    IAgentRuntime,
     IImageDescriptionService,
+    Memory,
+    ModelClass,
+    ServiceType,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
 import { getFileLocationTemplate } from "../templates";
 import { FileLocationResultSchema, isFileLocationResult } from "../types";

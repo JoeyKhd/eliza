@@ -1,19 +1,19 @@
+import { AlloraAPIClient, ChainSlug } from "@alloralabs/allora-sdk";
 import {
+    type Action,
     ActionExample,
-    composeContext,
-    elizaLogger,
-    generateObject,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
 import { z } from "zod";
 import { topicsProvider } from "../providers/topics";
 import { getInferenceTemplate } from "../templates";
-import { AlloraAPIClient, ChainSlug } from "@alloralabs/allora-sdk";
 
 interface InferenceFields {
     topicId: number | null;
@@ -36,7 +36,7 @@ export const getInferenceAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: { [key: string]: unknown },
+        _options: { [key: string]: unknown },
         callback: HandlerCallback
     ): Promise<boolean> => {
         // Initialize or update state

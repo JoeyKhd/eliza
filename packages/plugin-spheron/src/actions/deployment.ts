@@ -1,24 +1,24 @@
 import {
     Action,
     ActionExample,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
     generateObjectDeprecated,
 } from "@elizaos/core";
 import { validateSpheronConfig } from "../environment.ts";
-import {
-    getDeployment,
-    updateDeployment,
-    closeDeployment,
-    startDeployment,
-} from "../utils/index.ts";
 import { DeploymentContent } from "../types/index.ts";
 import { AVAILABLE_GPU_MODELS } from "../utils/constants.ts";
+import {
+    closeDeployment,
+    getDeployment,
+    startDeployment,
+    updateDeployment,
+} from "../utils/index.ts";
 import { DEPLOYMENT_TEMPLATES } from "../utils/template.ts";
 
 function isDeploymentContent(content: any): content is DeploymentContent {

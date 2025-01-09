@@ -1,31 +1,31 @@
+import * as path from "path";
 import {
+    type IAgentRuntime,
+    type ICacheManager,
+    type Memory,
+    type Provider,
+    type State,
+    elizaLogger,
+} from "@elizaos/core";
+import { DeriveKeyProvider, TEEMode } from "@elizaos/plugin-tee";
+import NodeCache from "node-cache";
+import {
+    http,
     createPublicClient,
     createWalletClient,
     formatUnits,
-    http,
 } from "viem";
-import { privateKeyToAccount } from "viem/accounts";
-import {
-    type IAgentRuntime,
-    type Provider,
-    type Memory,
-    type State,
-    type ICacheManager,
-    elizaLogger,
-} from "@elizaos/core";
 import type {
+    Account,
     Address,
-    WalletClient,
-    PublicClient,
     Chain,
     HttpTransport,
-    Account,
     PrivateKeyAccount,
+    PublicClient,
+    WalletClient,
 } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
 import * as viemChains from "viem/chains";
-import { DeriveKeyProvider, TEEMode } from "@elizaos/plugin-tee";
-import NodeCache from "node-cache";
-import * as path from "path";
 
 import type { SupportedChain } from "../types";
 

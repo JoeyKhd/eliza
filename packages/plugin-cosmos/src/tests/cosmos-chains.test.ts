@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
 import type { Chain } from "@chain-registry/types";
+import { describe, expect, it } from "vitest";
 import { getAvailableChains } from "../shared/helpers/cosmos-chains.ts";
 
 describe("getAvailableChains", () => {

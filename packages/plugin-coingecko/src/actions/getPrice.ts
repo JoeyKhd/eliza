@@ -1,15 +1,15 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
     Content,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import axios from "axios";
 import { validateCoingeckoConfig } from "../environment";
@@ -29,7 +29,7 @@ export default {
         "GET_CRYPTO_PRICE",
         "CHECK_CRYPTO_PRICE",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         await validateCoingeckoConfig(runtime);
         return true;
     },

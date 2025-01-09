@@ -1,6 +1,6 @@
-import NodeCache from "node-cache";
 import fs from "fs";
 import path from "path";
+import NodeCache from "node-cache";
 
 export class Cache {
     private cache: NodeCache;

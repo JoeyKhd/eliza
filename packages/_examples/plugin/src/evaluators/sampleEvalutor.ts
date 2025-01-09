@@ -26,7 +26,7 @@ export const sampleEvaluator: Evaluator = {
             outcome: "Memory should be evaluated as important",
         },
     ],
-    handler: async (runtime: IAgentRuntime, memory: Memory, state: State) => {
+    handler: async (_runtime: IAgentRuntime, memory: Memory, _state: State) => {
         // Evaluation logic for the evaluator
         elizaLogger.log("Evaluating data in sampleEvaluator...");
 
@@ -46,7 +46,11 @@ export const sampleEvaluator: Evaluator = {
         }
     },
     name: "sampleEvaluator",
-    validate: async (runtime: IAgentRuntime, memory: Memory, state: State) => {
+    validate: async (
+        _runtime: IAgentRuntime,
+        _memory: Memory,
+        _state: State
+    ) => {
         // Validation logic for the evaluator
         return true;
     },

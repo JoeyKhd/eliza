@@ -1,27 +1,27 @@
 import {
     composeContext,
     generateImage,
-    generateText,
     generateObjectDeprecated,
+    generateText,
 } from "@elizaos/core";
 import {
+    type Action,
     ActionExample,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
 } from "@elizaos/core";
+import { uploadFileToWeb3Storage } from "../apis/uploadFile";
 import { idlFactory } from "../canisters/pick-pump/index.did";
 import { _SERVICE } from "../canisters/pick-pump/index.did.d";
+import { CANISTER_IDS } from "../constants/canisters";
+import { icpWalletProvider } from "../providers/wallet";
 import { ActorCreator, CreateMemeTokenArg } from "../types";
 import { unwrapOption, wrapOption } from "../utils/common/types/options";
 import { unwrapRustResultMap } from "../utils/common/types/results";
-import { icpWalletProvider } from "../providers/wallet";
-import { uploadFileToWeb3Storage } from "../apis/uploadFile";
 import { createTokenTemplate, logoPromptTemplate } from "./prompts/token";
-import { CANISTER_IDS } from "../constants/canisters";
 
 async function createTokenTransaction(
     creator: ActorCreator,
@@ -96,7 +96,7 @@ export const executeCreateToken: Action = {
     ],
     description:
         "Create a new meme token on PickPump platform (Internet Computer). This action helps users create and launch tokens specifically on the PickPump platform.",
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         const keywords = [
             "pickpump",
             "pp",

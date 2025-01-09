@@ -1,8 +1,15 @@
+import fs from "fs";
+import path from "path";
+import type { TSESTree } from "@typescript-eslint/types";
+import { AIService } from "./AIService/AIService.js";
+import { Configuration } from "./Configuration.js";
 import { DirectoryTraversal } from "./DirectoryTraversal.js";
-import { TypeScriptParser } from "./TypeScriptParser.js";
+import { GitManager } from "./GitManager.js";
+import { JSDocValidator } from "./JSDocValidator.js";
 import { JsDocAnalyzer } from "./JsDocAnalyzer.js";
 import { JsDocGenerator } from "./JsDocGenerator.js";
-import type { TSESTree } from "@typescript-eslint/types";
+import { PluginDocumentationGenerator } from "./PluginDocumentationGenerator.js";
+import { TypeScriptParser } from "./TypeScriptParser.js";
 import {
     ASTQueueItem,
     EnvUsage,
@@ -10,13 +17,6 @@ import {
     PrModeFileChange,
     TodoItem,
 } from "./types/index.js";
-import { GitManager } from "./GitManager.js";
-import fs from "fs";
-import { Configuration } from "./Configuration.js";
-import path from "path";
-import { AIService } from "./AIService/AIService.js";
-import { PluginDocumentationGenerator } from "./PluginDocumentationGenerator.js";
-import { JSDocValidator } from "./JSDocValidator.js";
 
 /**
  * Class representing a Documentation Generator.
@@ -343,7 +343,7 @@ export class DocumentationGenerator {
             const response = await fetch(contentsUrl);
             const data = await response.json();
             return Buffer.from(data.content, "base64").toString("utf-8");
-        } catch (error) {
+        } catch (_error) {
             console.error(
                 "Error fetching file content from GitHub API, ensure the PR has been merged"
             );

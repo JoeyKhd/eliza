@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -6,14 +7,13 @@ import {
     Memory,
     ModelClass,
     State,
-    elizaLogger,
-    type Action,
     composeContext,
+    elizaLogger,
     generateObject,
 } from "@elizaos/core";
 import { connect, keyStores, utils } from "near-api-js";
-import { KeyPairString } from "near-api-js/lib/utils";
 import { utils as nearUtils } from "near-api-js";
+import { KeyPairString } from "near-api-js/lib/utils";
 // import BigNumber from "bignumber.js";
 
 export interface TransferContent extends Content {
@@ -23,7 +23,7 @@ export interface TransferContent extends Content {
 }
 
 function isTransferContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is TransferContent {
     return (

@@ -1,29 +1,29 @@
+import * as path from "path";
 import {
     IAgentRuntime,
+    ICacheManager,
     Memory,
     Provider,
     State,
     elizaLogger,
-    ICacheManager,
     settings,
 } from "@elizaos/core";
+import { Connection } from "@solana/web3.js";
+import NodeCache from "node-cache";
+import { toBN } from "../bignumber.ts";
+import { getWalletKey } from "../keypairUtils.ts";
 import {
+    CalculatedBuyAmounts,
     DexScreenerData,
     DexScreenerPair,
     HolderData,
+    Prices,
     ProcessedTokenData,
+    TokenCodex,
     TokenSecurityData,
     TokenTradeData,
-    CalculatedBuyAmounts,
-    Prices,
-    TokenCodex,
 } from "../types/token.ts";
-import NodeCache from "node-cache";
-import * as path from "path";
-import { toBN } from "../bignumber.ts";
-import { WalletProvider, Item } from "./wallet.ts";
-import { Connection } from "@solana/web3.js";
-import { getWalletKey } from "../keypairUtils.ts";
+import { Item, WalletProvider } from "./wallet.ts";
 
 const PROVIDER_CONFIG = {
     BIRDEYE_API: "https://public-api.birdeye.so",

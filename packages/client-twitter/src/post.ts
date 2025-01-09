@@ -1,31 +1,31 @@
-import { Tweet } from "agent-twitter-client";
 import {
+    IAgentRuntime,
+    ModelClass,
+    TemplateType,
+    UUID,
     composeContext,
     generateText,
     getEmbeddingZeroVector,
-    IAgentRuntime,
-    ModelClass,
     stringToUuid,
-    TemplateType,
-    UUID,
 } from "@elizaos/core";
 import { elizaLogger } from "@elizaos/core";
-import { ClientBase } from "./base.ts";
 import { postActionResponseFooter } from "@elizaos/core";
 import { generateTweetActions } from "@elizaos/core";
 import { IImageDescriptionService, ServiceType } from "@elizaos/core";
-import { buildConversationThread } from "./utils.ts";
-import { twitterMessageHandlerTemplate } from "./interactions.ts";
-import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
+import { State } from "@elizaos/core";
+import { ActionResponse } from "@elizaos/core";
+import { Tweet } from "agent-twitter-client";
 import {
     Client,
     Events,
     GatewayIntentBits,
-    TextChannel,
     Partials,
+    TextChannel,
 } from "discord.js";
-import { State } from "@elizaos/core";
-import { ActionResponse } from "@elizaos/core";
+import { ClientBase } from "./base.ts";
+import { DEFAULT_MAX_TWEET_LENGTH } from "./environment.ts";
+import { twitterMessageHandlerTemplate } from "./interactions.ts";
+import { buildConversationThread } from "./utils.ts";
 
 const MAX_TIMELINES_TO_FETCH = 15;
 
@@ -399,7 +399,7 @@ export class TwitterPostClient {
 
     async handleNoteTweet(
         client: ClientBase,
-        runtime: IAgentRuntime,
+        _runtime: IAgentRuntime,
         content: string,
         tweetId?: string
     ) {
@@ -1111,7 +1111,7 @@ export class TwitterPostClient {
      */
     private async handleTextOnlyReply(
         tweet: Tweet,
-        tweetState: any,
+        _tweetState: any,
         executedActions: string[]
     ) {
         try {

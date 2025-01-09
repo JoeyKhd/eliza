@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { AgentRuntime, elizaLogger } from "@elizaos/core";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ObsidianProvider } from "../providers/obsidianClient";
-import { elizaLogger, AgentRuntime } from "@elizaos/core";
 import { NoteContent, ResultNoteApi, ServerInfo } from "../types";
 
 // Mock fetch globally

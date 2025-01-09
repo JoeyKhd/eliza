@@ -1,3 +1,7 @@
+import { promises as fs } from "fs";
+import path from "path";
+import { Configuration } from "../../Configuration.js";
+import { TypeScriptParser } from "../../TypeScriptParser.js";
 import {
     ASTQueueItem,
     EnvUsage,
@@ -5,15 +9,11 @@ import {
     TodoItem,
     TodoSection,
 } from "../../types";
-import { Configuration } from "../../Configuration.js";
-import { TypeScriptParser } from "../../TypeScriptParser.js";
+import { PROMPT_TEMPLATES } from "../../utils/prompts";
+import { AIService } from "../AIService.js";
+import { FileDocsGroup, OrganizedDocs } from "../types";
 import { CodeFormatter } from "../utils/CodeFormatter.js";
 import { DocumentOrganizer } from "../utils/DocumentOrganizer.js";
-import path from "path";
-import { PROMPT_TEMPLATES } from "../../utils/prompts";
-import { FileDocsGroup, OrganizedDocs } from "../types";
-import { AIService } from "../AIService.js";
-import { promises as fs } from "fs";
 
 interface FAQ {
     question: string;
@@ -195,7 +195,7 @@ export class FullDocumentationGenerator {
             this.configuration.absolutePath,
             "src/index.ts"
         );
-        let mainExport = "plugin";
+        const _mainExport = "plugin";
         let exportName = packageJson.name.split("/").pop() + "Plugin";
 
         try {
@@ -304,7 +304,7 @@ export class FullDocumentationGenerator {
 
     private async generateUsage(
         docs: OrganizedDocs,
-        packageJson: any
+        _packageJson: any
     ): Promise<string> {
         const fileGroups = this.documentOrganizer.groupDocsByFile(docs);
         // write fileGroups to a json file

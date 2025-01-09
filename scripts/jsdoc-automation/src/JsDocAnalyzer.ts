@@ -624,7 +624,7 @@ export class JsDocAnalyzer {
                 node.property.name === "env"
             ) {
                 // Get the parent statement/expression for context
-                const contextNode = this.findParentStatement(node);
+                const _contextNode = this.findParentStatement(node);
                 // Get the containing function/block for full context
                 const containingBlock = this.findContainingBlock(node);
 

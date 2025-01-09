@@ -1,12 +1,12 @@
-import { elizaLogger, IAgentRuntime } from "@elizaos/core";
+import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import {
     ChatMessage,
     ChatRoom,
     EchoChamberConfig,
-    ModelInfo,
     ListRoomsResponse,
-    RoomHistoryResponse,
     MessageResponse,
+    ModelInfo,
+    RoomHistoryResponse,
 } from "./types";
 
 const MAX_RETRIES = 3;

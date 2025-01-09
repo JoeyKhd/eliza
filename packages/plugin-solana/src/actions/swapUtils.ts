@@ -1,3 +1,4 @@
+import { elizaLogger, settings } from "@elizaos/core";
 import { getAssociatedTokenAddress } from "@solana/spl-token";
 import {
     BlockhashWithExpiryBlockHeight,
@@ -9,7 +10,6 @@ import {
     TokenAmount,
     VersionedTransaction,
 } from "@solana/web3.js";
-import { settings, elizaLogger } from "@elizaos/core";
 
 const solAddress = settings.SOL_ADDRESS;
 const SLIPPAGE = settings.SLIPPAGE;

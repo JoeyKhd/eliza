@@ -1,17 +1,19 @@
 import {
-    composeContext,
-    generateMessageResponse,
-    generateShouldRespond,
+    Content,
+    HandlerCallback,
+    type IAgentRuntime,
     Memory,
     ModelClass,
-    stringToUuid,
+    composeContext,
     elizaLogger,
-    HandlerCallback,
-    Content,
-    type IAgentRuntime,
+    generateMessageResponse,
+    generateShouldRespond,
+    stringToUuid,
 } from "@elizaos/core";
-import type { LensClient } from "./client";
+import { AnyPublicationFragment } from "@lens-protocol/client";
 import { toHex } from "viem";
+import { sendPublication } from "./actions";
+import type { LensClient } from "./client";
 import { buildConversationThread, createPublicationMemory } from "./memory";
 import {
     formatPublication,
@@ -19,11 +21,9 @@ import {
     messageHandlerTemplate,
     shouldRespondTemplate,
 } from "./prompts";
-import { publicationUuid } from "./utils";
-import { sendPublication } from "./actions";
-import { AnyPublicationFragment } from "@lens-protocol/client";
-import { Profile } from "./types";
 import StorjProvider from "./providers/StorjProvider";
+import { Profile } from "./types";
+import { publicationUuid } from "./utils";
 
 export class LensInteractionManager {
     private timeout: NodeJS.Timeout | undefined;
@@ -238,7 +238,7 @@ export class LensInteractionManager {
 
         const callback: HandlerCallback = async (
             content: Content,
-            files: any[]
+            _files: any[]
         ) => {
             try {
                 if (memoryId && !content.inReplyTo) {

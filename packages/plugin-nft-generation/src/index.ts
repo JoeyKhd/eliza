@@ -1,11 +1,11 @@
 import {
     Action,
-    elizaLogger,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     Plugin,
     State,
+    elizaLogger,
 } from "@elizaos/core";
 
 import { createCollection } from "./handlers/createCollection.ts";
@@ -49,8 +49,8 @@ const nftCollectionGeneration: Action = {
     handler: async (
         runtime: IAgentRuntime,
         message: Memory,
-        state: State,
-        options: { [key: string]: unknown },
+        _state: State,
+        _options: { [key: string]: unknown },
         callback: HandlerCallback
     ) => {
         try {

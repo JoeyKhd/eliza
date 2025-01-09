@@ -1,7 +1,7 @@
-import { elizaLogger, IAgentRuntime } from "@elizaos/core";
+import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import { Connection, Keypair, VersionedTransaction } from "@solana/web3.js";
-import { decodeBase58 } from "./utils";
 import { SAFETY_LIMITS } from "./constants";
+import { decodeBase58 } from "./utils";
 
 /**
  * Gets wallet keypair from runtime settings
@@ -250,7 +250,7 @@ export async function executeTrade(
 
 export async function getChainWalletBalance(
     runtime: IAgentRuntime,
-    tokenAddress: string
+    _tokenAddress: string
 ): Promise<number> {
     // Get Solana balance
     return await getWalletBalance(runtime);

@@ -5,8 +5,8 @@ import {
     Memory,
     State,
 } from "@elizaos/core";
-import { ReadContractParams } from "../types";
 import { ClientProvider } from "../providers/client";
+import { ReadContractParams } from "../types";
 import { getParamsWithLLM } from "../utils/llm";
 
 const readContractTemplate = `
@@ -38,7 +38,7 @@ export const readContractAction: Action = {
     handler: async (
         runtime: IAgentRuntime,
         message: Memory,
-        state: State,
+        _state: State,
         _options: any,
         callback: HandlerCallback
     ) => {

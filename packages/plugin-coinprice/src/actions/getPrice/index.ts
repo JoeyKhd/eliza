@@ -1,13 +1,13 @@
 import {
-    composeContext,
-    elizaLogger,
-    generateObjectDeprecated,
+    type Action,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import { priceExamples } from "./examples";
 import { createPriceService } from "./service";

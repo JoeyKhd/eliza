@@ -3,8 +3,8 @@ import {
     ModelClass,
     elizaLogger,
     generateText,
-    trimTokens,
     parseJSONObjectFromText,
+    trimTokens,
 } from "@elizaos/core";
 import {
     ChannelType,
@@ -87,7 +87,7 @@ export async function generateSummary(
 export async function sendMessageInChunks(
     channel: TextChannel,
     content: string,
-    inReplyTo: string,
+    _inReplyTo: string,
     files: any[]
 ): Promise<DiscordMessage[]> {
     const sentMessages: DiscordMessage[] = [];

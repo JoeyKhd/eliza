@@ -1,27 +1,27 @@
 import {
+    type Action,
     ActionExample,
     HandlerCallback,
-    elizaLogger,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
     composeContext,
+    elizaLogger,
     generateObject,
 } from "@elizaos/core";
-import { connect, keyStores, utils } from "near-api-js";
 import {
-    init_env,
-    ftGetTokenMetadata,
-    estimateSwap,
-    instantSwap,
-    fetchAllPools,
     FT_MINIMUM_STORAGE_BALANCE_LARGE,
     ONE_YOCTO_NEAR,
+    estimateSwap,
+    fetchAllPools,
+    ftGetTokenMetadata,
+    init_env,
+    instantSwap,
 } from "@ref-finance/ref-sdk";
-import { walletProvider } from "../providers/wallet";
+import { connect, keyStores, utils } from "near-api-js";
 import { KeyPairString } from "near-api-js/lib/utils";
+import { walletProvider } from "../providers/wallet";
 
 async function checkStorageBalance(
     account: any,

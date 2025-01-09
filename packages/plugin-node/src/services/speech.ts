@@ -1,12 +1,12 @@
-import { PassThrough } from "stream";
 import { Readable } from "node:stream";
 import { ReadableStream } from "node:stream/web";
+import { PassThrough } from "stream";
 import { IAgentRuntime, ISpeechService, ServiceType } from "@elizaos/core";
-import { getWavHeader } from "./audioUtils.ts";
 import { Service } from "@elizaos/core";
-import { validateNodeConfig } from "../environment.ts";
-import * as Echogarden from "echogarden";
 import { elizaLogger } from "@elizaos/core";
+import * as Echogarden from "echogarden";
+import { validateNodeConfig } from "../environment.ts";
+import { getWavHeader } from "./audioUtils.ts";
 
 function prependWavHeader(
     readable: Readable,

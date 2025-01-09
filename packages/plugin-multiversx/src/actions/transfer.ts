@@ -1,5 +1,5 @@
 import {
-    elizaLogger,
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -8,11 +8,11 @@ import {
     ModelClass,
     State,
     composeContext,
+    elizaLogger,
     generateObject,
-    type Action,
 } from "@elizaos/core";
-import { WalletProvider } from "../providers/wallet";
 import { validateMultiversxConfig } from "../enviroment";
+import { WalletProvider } from "../providers/wallet";
 
 export interface TransferContent extends Content {
     tokenAddress: string;

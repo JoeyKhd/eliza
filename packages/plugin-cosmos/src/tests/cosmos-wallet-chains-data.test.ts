@@ -1,10 +1,10 @@
-import { vi, expect, it, describe, beforeEach, Mock } from "vitest";
 import { Chain } from "@chain-registry/types";
 import { getChainByChainName } from "@chain-registry/utils";
+import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
+import { Mock, beforeEach, describe, expect, it, vi } from "vitest";
+import { CosmosWalletChains } from "../shared/entities/cosmos-wallet-chains-data.ts";
 import { CosmosWallet } from "../shared/entities/cosmos-wallet.ts";
 import { getAvailableChains } from "../shared/helpers/cosmos-chains.ts";
-import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
-import { CosmosWalletChains } from "../shared/entities/cosmos-wallet-chains-data.ts";
 
 vi.mock("@chain-registry/utils", () => ({
     getChainByChainName: vi.fn(),

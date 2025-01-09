@@ -1,6 +1,6 @@
+import fs from "fs";
 import { Scraper } from "agent-twitter-client";
 import dotenv from "dotenv";
-import fs from "fs";
 
 dotenv.config();
 

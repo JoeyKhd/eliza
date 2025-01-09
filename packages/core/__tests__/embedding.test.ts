@@ -1,12 +1,12 @@
-import { describe, test, expect, vi, beforeEach } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vitest";
 import {
     embed,
     getEmbeddingConfig,
     getEmbeddingType,
     getEmbeddingZeroVector,
 } from "../src/embedding.ts";
-import { IAgentRuntime, ModelProviderName } from "../types.ts";
 import settings from "../src/settings.ts";
+import { IAgentRuntime, ModelProviderName } from "../types.ts";
 
 // Mock environment-related settings
 vi.mock("../settings", () => ({

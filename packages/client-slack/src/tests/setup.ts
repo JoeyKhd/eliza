@@ -1,7 +1,5 @@
-import { jest } from "@jest/globals";
-import type { Mocked } from "jest-mock";
-import { config } from "dotenv";
 import { resolve } from "path";
+import { jest } from "@jest/globals";
 import { WebClient } from "@slack/web-api";
 import type {
     AuthTestResponse,
@@ -9,6 +7,8 @@ import type {
     ConversationsInfoResponse,
     FilesUploadResponse,
 } from "@slack/web-api";
+import { config } from "dotenv";
+import type { Mocked } from "jest-mock";
 
 // Load test environment variables
 const envPath = resolve(__dirname, "../../../../.env");

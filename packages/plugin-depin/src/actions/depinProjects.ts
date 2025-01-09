@@ -1,12 +1,12 @@
 import {
     Action,
-    composeContext,
-    generateText,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    generateText,
 } from "@elizaos/core";
 
 import { projectsTemplate } from "../template";

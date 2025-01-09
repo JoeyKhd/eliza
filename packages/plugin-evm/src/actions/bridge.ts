@@ -1,20 +1,20 @@
 import type { IAgentRuntime, Memory, State } from "@elizaos/core";
 import {
+    ModelClass,
     composeContext,
     generateObjectDeprecated,
-    ModelClass,
 } from "@elizaos/core";
 import {
+    ExtendedChain,
     createConfig,
     executeRoute,
-    ExtendedChain,
     getRoutes,
 } from "@lifi/sdk";
 
-import { initWalletProvider, WalletProvider } from "../providers/wallet";
+import { parseEther } from "viem";
+import { WalletProvider, initWalletProvider } from "../providers/wallet";
 import { bridgeTemplate } from "../templates";
 import type { BridgeParams, Transaction } from "../types";
-import { parseEther } from "viem";
 
 export { bridgeTemplate };
 

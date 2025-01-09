@@ -1,12 +1,12 @@
-import { IAgentRuntime } from "@elizaos/core";
 import {
     convertBaseUnitToDisplayUnit,
     getSymbolByDenom,
 } from "@chain-registry/utils";
+import { IAgentRuntime } from "@elizaos/core";
 import { assets } from "chain-registry";
-import { initWalletChainsData } from "./utils";
-import { ICosmosPluginOptions } from "../../shared/interfaces";
 import { getAvailableAssets } from "../../shared/helpers/cosmos-assets";
+import { ICosmosPluginOptions } from "../../shared/interfaces";
+import { initWalletChainsData } from "./utils";
 
 export const createCosmosWalletProvider = (
     pluginOptions: ICosmosPluginOptions

@@ -1,8 +1,8 @@
 import type { Plugin } from "@elizaos/core";
 
-import { depinDataProvider } from "./providers/depinData";
 import { depinProjects } from "./actions/depinProjects";
 import { sentientAI } from "./actions/sentientai";
+import { depinDataProvider } from "./providers/depinData";
 
 export const depinPlugin: Plugin = {
     name: "depin",

@@ -1,22 +1,5 @@
-import {
-    Content,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    ModelClass,
-    ServiceType,
-    State,
-    UUID,
-    composeContext,
-    composeRandomUser,
-    elizaLogger,
-    getEmbeddingZeroVector,
-    generateMessageResponse,
-    stringToUuid,
-    generateShouldRespond,
-    ITranscriptionService,
-    ISpeechService,
-} from "@elizaos/core";
+import EventEmitter from "events";
+import { Readable, pipeline } from "stream";
 import {
     AudioPlayer,
     AudioReceiveStream,
@@ -26,10 +9,29 @@ import {
     VoiceConnectionStatus,
     createAudioPlayer,
     createAudioResource,
+    entersState,
     getVoiceConnections,
     joinVoiceChannel,
-    entersState,
 } from "@discordjs/voice";
+import {
+    Content,
+    HandlerCallback,
+    IAgentRuntime,
+    ISpeechService,
+    ITranscriptionService,
+    Memory,
+    ModelClass,
+    ServiceType,
+    State,
+    UUID,
+    composeContext,
+    composeRandomUser,
+    elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
+    getEmbeddingZeroVector,
+    stringToUuid,
+} from "@elizaos/core";
 import {
     BaseGuildVoiceChannel,
     ChannelType,
@@ -39,9 +41,7 @@ import {
     VoiceChannel,
     VoiceState,
 } from "discord.js";
-import EventEmitter from "events";
 import prism from "prism-media";
-import { Readable, pipeline } from "stream";
 import { DiscordClient } from "./index.ts";
 import {
     discordShouldRespondTemplate,
@@ -867,7 +867,7 @@ export class VoiceManager extends EventEmitter {
 
     private async _generateResponse(
         message: Memory,
-        state: State,
+        _state: State,
         context: string
     ): Promise<Content> {
         const { userId, roomId } = message;

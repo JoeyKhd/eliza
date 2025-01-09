@@ -1,13 +1,13 @@
 import {
+    type Action,
     ActionExample,
     IAgentRuntime,
     Memory,
-    type Action,
     elizaLogger,
 } from "@elizaos/core";
 import { Connection, Keypair, PublicKey, Transaction } from "@solana/web3.js";
-import { getQuote } from "./swapUtils.ts";
 import { getWalletKey } from "../keypairUtils.ts";
+import { getQuote } from "./swapUtils.ts";
 
 async function invokeSwapDao(
     connection: Connection,
@@ -53,7 +53,7 @@ async function promptConfirmation(): Promise<boolean> {
 export const executeSwapForDAO: Action = {
     name: "EXECUTE_SWAP_DAO",
     similes: ["SWAP_TOKENS_DAO", "TOKEN_SWAP_DAO"],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         elizaLogger.log("Message:", message);
         return true;
     },

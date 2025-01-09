@@ -4,7 +4,7 @@ import {
     Service,
     ServiceType,
 } from "@elizaos/core";
-import { getDocument, PDFDocumentProxy } from "pdfjs-dist";
+import { PDFDocumentProxy, getDocument } from "pdfjs-dist";
 import { TextItem, TextMarkedContent } from "pdfjs-dist/types/src/display/api";
 
 export class PdfService extends Service implements IPdfService {

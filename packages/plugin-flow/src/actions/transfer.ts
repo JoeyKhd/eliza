@@ -1,17 +1,18 @@
 import {
-    composeContext,
-    Content,
-    elizaLogger,
-    generateObjectArray,
-    ModelClass,
     type Action,
     type ActionExample,
+    Content,
     type HandlerCallback,
     type IAgentRuntime,
     type Memory,
+    ModelClass,
     type State,
+    composeContext,
+    elizaLogger,
+    generateObjectArray,
 } from "@elizaos/core";
-import Exception from "../types/exception";
+import { transactions } from "../assets/transaction.defs";
+import { validateFlowConfig } from "../environment";
 import { getFlowConnectorInstance } from "../providers/connector.provider";
 import {
     FlowWalletProvider,
@@ -19,11 +20,10 @@ import {
     isEVMAddress,
     isFlowAddress,
 } from "../providers/wallet.provider";
-import { transferTemplate } from "../templates";
-import { validateFlowConfig } from "../environment";
-import { TransactionResponse } from "../types";
-import { transactions } from "../assets/transaction.defs";
 import * as queries from "../queries";
+import { transferTemplate } from "../templates";
+import { TransactionResponse } from "../types";
+import Exception from "../types/exception";
 
 /**
  * The generated content for the transfer action
@@ -39,7 +39,7 @@ export interface TransferContent extends Content {
  * Check if the content is a transfer content
  */
 function isTransferContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is TransferContent {
     elizaLogger.log("Content for transfer", content);

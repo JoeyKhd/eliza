@@ -1,9 +1,9 @@
 import {
-    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
     State,
+    elizaLogger,
 } from "@elizaos/core";
 
 import FlowConnector, { NetworkType } from "./utils/flow.connector";

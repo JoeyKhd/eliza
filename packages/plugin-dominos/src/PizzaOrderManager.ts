@@ -1,6 +1,9 @@
 import { IAgentRuntime } from "@elizaos/core";
 import {
     Customer,
+    DominosAddress,
+    DominosPayment,
+    DominosProduct,
     ErrorType,
     Order,
     OrderError,
@@ -15,9 +18,6 @@ import {
     PizzaSize,
     PizzaTopping,
     ToppingPortion,
-    DominosPayment,
-    DominosAddress,
-    DominosProduct,
 } from "./types";
 
 export class PizzaOrderManager implements OrderManager {
@@ -765,7 +765,7 @@ export class PizzaOrderManager implements OrderManager {
         }
     }
 
-    getOrderSummary(order: Order, customer: Customer): string {
+    getOrderSummary(order: Order, _customer: Customer): string {
         // Format order details into readable summary
         return `Order Summary:\n${order.items
             .map(
@@ -784,7 +784,7 @@ export class PizzaOrderManager implements OrderManager {
             .join("\n")}`;
     }
 
-    getNextRequiredActionDialogue(order: Order, customer: Customer): string {
+    getNextRequiredActionDialogue(order: Order, _customer: Customer): string {
         // Return appropriate next step prompt
         if (!order.items[0].size) return "What size pizza would you like?";
         if (!order.items[0].crust)

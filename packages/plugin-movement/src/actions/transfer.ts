@@ -1,16 +1,3 @@
-import { elizaLogger } from "@elizaos/core";
-import {
-    ActionExample,
-    Content,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    ModelClass,
-    State,
-    type Action,
-} from "@elizaos/core";
-import { composeContext } from "@elizaos/core";
-import { generateObjectDeprecated } from "@elizaos/core";
 import {
     Account,
     Aptos,
@@ -20,12 +7,25 @@ import {
     PrivateKey,
     PrivateKeyVariants,
 } from "@aptos-labs/ts-sdk";
-import { walletProvider } from "../providers/wallet";
+import { elizaLogger } from "@elizaos/core";
 import {
+    type Action,
+    ActionExample,
+    Content,
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
+} from "@elizaos/core";
+import { composeContext } from "@elizaos/core";
+import { generateObjectDeprecated } from "@elizaos/core";
+import {
+    MOVEMENT_EXPLORER_URL,
     MOVEMENT_NETWORK_CONFIG,
     MOVE_DECIMALS,
-    MOVEMENT_EXPLORER_URL,
 } from "../constants";
+import { walletProvider } from "../providers/wallet";
 
 export interface TransferContent extends Content {
     recipient: string;
@@ -94,7 +94,7 @@ export default {
             text.includes("0x")
         );
     },
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         elizaLogger.debug(
             "Starting transfer validation for user:",
             message.userId

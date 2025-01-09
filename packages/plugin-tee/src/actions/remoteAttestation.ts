@@ -1,11 +1,11 @@
 import type {
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    HandlerCallback,
 } from "@elizaos/core";
+import { type BodyInit, fetch } from "undici";
 import { RemoteAttestationProvider } from "../providers/remoteAttestationProvider";
-import { fetch, type BodyInit } from "undici";
 
 function hexToUint8Array(hex: string) {
     hex = hex.trim();

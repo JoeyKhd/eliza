@@ -1,30 +1,30 @@
-import { RESTClient } from "../../advanced-sdk-ts/src/rest";
-import {
-    Action,
-    Plugin,
-    elizaLogger,
-    IAgentRuntime,
-    Memory,
-    HandlerCallback,
-    State,
-    composeContext,
-    generateObject,
-    ModelClass,
-    Provider,
-} from "@elizaos/core";
-import { advancedTradeTemplate } from "../templates";
-import { isAdvancedTradeContent, AdvancedTradeSchema } from "../types";
-import { readFile } from "fs/promises";
-import { parse } from "csv-parse/sync";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import fs from "fs";
-import { createArrayCsvWriter } from "csv-writer";
 import {
-    OrderSide,
+    Action,
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    Plugin,
+    Provider,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
+} from "@elizaos/core";
+import { parse } from "csv-parse/sync";
+import { createArrayCsvWriter } from "csv-writer";
+import { readFile } from "fs/promises";
+import { RESTClient } from "../../advanced-sdk-ts/src/rest";
+import {
     OrderConfiguration,
+    OrderSide,
 } from "../../advanced-sdk-ts/src/rest/types/common-types";
 import { CreateOrderResponse } from "../../advanced-sdk-ts/src/rest/types/orders-types";
+import { advancedTradeTemplate } from "../templates";
+import { AdvancedTradeSchema, isAdvancedTradeContent } from "../types";
 
 // File path setup remains the same
 const __filename = fileURLToPath(import.meta.url);

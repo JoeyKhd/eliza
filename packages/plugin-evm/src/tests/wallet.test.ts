@@ -1,14 +1,14 @@
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+import { Chain, arbitrum, iotex, mainnet } from "viem/chains";
 import {
-    describe,
-    it,
-    expect,
+    afterEach,
     beforeAll,
     beforeEach,
+    describe,
+    expect,
+    it,
     vi,
-    afterEach,
 } from "vitest";
-import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
-import { mainnet, iotex, arbitrum, Chain } from "viem/chains";
 
 import { WalletProvider } from "../providers/wallet";
 

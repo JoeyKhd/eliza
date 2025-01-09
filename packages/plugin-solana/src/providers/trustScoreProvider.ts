@@ -1,10 +1,10 @@
 import {
-    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
-    settings,
     State,
+    elizaLogger,
+    settings,
 } from "@elizaos/core";
 import {
     RecommenderMetrics,

@@ -1,16 +1,3 @@
-import { elizaLogger } from "@elizaos/core";
-import {
-    ActionExample,
-    Content,
-    HandlerCallback,
-    IAgentRuntime,
-    Memory,
-    ModelClass,
-    State,
-    type Action,
-} from "@elizaos/core";
-import { composeContext } from "@elizaos/core";
-import { generateObjectDeprecated } from "@elizaos/core";
 import {
     Account,
     Aptos,
@@ -20,6 +7,19 @@ import {
     PrivateKey,
     PrivateKeyVariants,
 } from "@aptos-labs/ts-sdk";
+import { elizaLogger } from "@elizaos/core";
+import {
+    type Action,
+    ActionExample,
+    Content,
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
+} from "@elizaos/core";
+import { composeContext } from "@elizaos/core";
+import { generateObjectDeprecated } from "@elizaos/core";
 import { walletProvider } from "../providers/wallet";
 
 export interface TransferContent extends Content {
@@ -63,7 +63,7 @@ export default {
         "SEND_APT",
         "PAY",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         elizaLogger.log("Validating apt transfer from user:", message.userId);
         //add custom validate logic here
         /*

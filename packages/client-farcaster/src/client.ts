@@ -1,6 +1,6 @@
 import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import { NeynarAPIClient, isApiErrorResponse } from "@neynar/nodejs-sdk";
-import { NeynarCastResponse, Cast, Profile, FidRequest, CastId } from "./types";
+import { Cast, CastId, FidRequest, NeynarCastResponse, Profile } from "./types";
 
 export class FarcasterClient {
     runtime: IAgentRuntime;
@@ -46,7 +46,7 @@ export class FarcasterClient {
     async publishCast(
         cast: string,
         parentCastId: CastId | undefined,
-        retryTimes?: number
+        _retryTimes?: number
     ): Promise<NeynarCastResponse | undefined> {
         try {
             const result = await this.neynar.publishCast({
@@ -185,7 +185,7 @@ export class FarcasterClient {
             username: "",
         };
 
-        const userDataBodyType = {
+        const _userDataBodyType = {
             1: "pfp",
             2: "name",
             3: "bio",

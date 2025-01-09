@@ -5,8 +5,8 @@ import {
     HistoricalMarketTrade,
     PriceBook,
     Product,
-    Products,
     ProductType,
+    Products,
 } from "./common-types";
 
 // Get Server Time

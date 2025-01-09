@@ -1,5 +1,5 @@
 import {
-    elizaLogger,
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -7,12 +7,12 @@ import {
     Memory,
     ModelClass,
     State,
-    generateObject,
     composeContext,
-    type Action,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { WalletProvider } from "../providers/wallet";
 import { validateMultiversxConfig } from "../enviroment";
+import { WalletProvider } from "../providers/wallet";
 
 export interface CreateTokenContent extends Content {
     tokenName: string;
@@ -22,7 +22,7 @@ export interface CreateTokenContent extends Content {
 }
 
 function isCreateTokenContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is CreateTokenContent {
     console.log("Content for create token", content);

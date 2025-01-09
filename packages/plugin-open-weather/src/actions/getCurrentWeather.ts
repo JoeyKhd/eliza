@@ -10,9 +10,9 @@ import {
     State,
 } from "@elizaos/core";
 import { validateOpenWeatherConfig } from "../environment";
-import { getCurrentWeatherTemplate } from "../templates";
 import { getCurrentWeatherExamples } from "../examples";
 import { createWeatherService } from "../services";
+import { getCurrentWeatherTemplate } from "../templates";
 
 export const getCurrentWeatherAction: Action = {
     name: "GET_CURRENT_WEATHER",

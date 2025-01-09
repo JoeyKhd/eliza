@@ -1,15 +1,15 @@
+import * as fs from "fs";
 import {
     Action,
     ActionExample,
-    composeContext,
     Content,
-    generateText,
     IAgentRuntime,
     Memory,
     ModelClass,
+    composeContext,
+    generateText,
     settings,
 } from "@elizaos/core";
-import * as fs from "fs";
 import { validateStarknetConfig } from "../environment";
 
 interface Order {

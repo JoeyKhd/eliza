@@ -1,21 +1,21 @@
 import {
-    elizaLogger,
     IAgentRuntime,
-    composeContext,
-    generateText,
+    ITranscriptionService,
     ModelClass,
     ServiceType,
-    ITranscriptionService,
+    composeContext,
+    elizaLogger,
+    generateText,
 } from "@elizaos/core";
-import { ClientBase } from "./base";
 import {
+    IdleMonitorPlugin,
+    RecordToDiskPlugin,
     Scraper,
     Space,
     SpaceConfig,
-    RecordToDiskPlugin,
-    IdleMonitorPlugin,
     SpeakerRequest,
 } from "agent-twitter-client";
+import { ClientBase } from "./base";
 import { SttTtsPlugin } from "./plugins/SttTtsSpacesPlugin.ts";
 
 interface SpaceDecisionOptions {

@@ -1,5 +1,3 @@
-import { ButtplugClient, ButtplugNodeWebsocketClientConnector } from "buttplug";
-import { validateIntifaceConfig, type IntifaceConfig } from "./environment";
 import type {
     Action,
     HandlerCallback,
@@ -9,10 +7,12 @@ import type {
     State,
 } from "@elizaos/core";
 import { Service, ServiceType } from "@elizaos/core";
+import { ButtplugClient, ButtplugNodeWebsocketClientConnector } from "buttplug";
+import { type IntifaceConfig, validateIntifaceConfig } from "./environment";
 import {
     isPortAvailable,
-    startIntifaceEngine,
     shutdownIntifaceEngine,
+    startIntifaceEngine,
 } from "./utils";
 
 export interface IIntifaceService extends Service {
@@ -333,8 +333,8 @@ const vibrateAction: Action = {
     },
     handler: async (
         runtime: IAgentRuntime,
-        message: Memory,
-        state: State,
+        _message: Memory,
+        _state: State,
         options: any,
         callback: HandlerCallback
     ) => {
@@ -443,8 +443,8 @@ const rotateAction: Action = {
     },
     handler: async (
         runtime: IAgentRuntime,
-        message: Memory,
-        state: State,
+        _message: Memory,
+        _state: State,
         options: any,
         callback: HandlerCallback
     ) => {
@@ -501,9 +501,9 @@ const batteryAction: Action = {
     },
     handler: async (
         runtime: IAgentRuntime,
-        message: Memory,
-        state: State,
-        options: any,
+        _message: Memory,
+        _state: State,
+        _options: any,
         callback: HandlerCallback
     ) => {
         const service = runtime.getService<IIntifaceService>(
@@ -518,7 +518,7 @@ const batteryAction: Action = {
             callback({
                 text: `Device battery level is at ${Math.round(batteryLevel * 100)}%`,
             });
-        } catch (err) {
+        } catch (_err) {
             callback({
                 text: "Unable to get battery level. Device might not support this feature.",
             });

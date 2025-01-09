@@ -1,14 +1,14 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import { validateBinanceConfig } from "../environment";
 import { BinanceService } from "../services";
@@ -47,7 +47,7 @@ export const spotBalance: Action = {
         try {
             await validateBinanceConfig(runtime);
             return true;
-        } catch (error) {
+        } catch (_error) {
             return false;
         }
     },

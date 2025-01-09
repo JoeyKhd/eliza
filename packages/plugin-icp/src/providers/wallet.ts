@@ -1,7 +1,7 @@
 // src/providers/wallet.ts
 import { Actor, ActorSubclass, HttpAgent } from "@dfinity/agent";
-import { Ed25519KeyIdentity } from "@dfinity/identity";
 import { IDL } from "@dfinity/candid";
+import { Ed25519KeyIdentity } from "@dfinity/identity";
 import { Principal } from "@dfinity/principal";
 import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 
@@ -26,7 +26,7 @@ export class WalletProvider {
                 throw new Error("Invalid private key length");
             }
             return Ed25519KeyIdentity.fromSecretKey(privateKeyBytes);
-        } catch (error) {
+        } catch (_error) {
             throw new Error("Failed to create ICP identity");
         }
     };
@@ -66,8 +66,8 @@ export class WalletProvider {
 export const icpWalletProvider: Provider = {
     async get(
         runtime: IAgentRuntime,
-        message: Memory,
-        state?: State
+        _message: Memory,
+        _state?: State
     ): Promise<any> {
         try {
             const privateKey = runtime.getSetting(

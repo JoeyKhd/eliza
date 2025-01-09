@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { parse, ParserOptions } from "@typescript-eslint/parser";
+import { ParserOptions, parse } from "@typescript-eslint/parser";
 import { ActionBounds, ActionMetadata } from "./types";
 
 /**

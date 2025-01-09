@@ -1,16 +1,16 @@
 import {
-    composeContext,
-    generateText,
     IAgentRuntime,
     ModelClass,
-    stringToUuid,
+    composeContext,
     elizaLogger,
+    generateText,
+    stringToUuid,
 } from "@elizaos/core";
-import { FarcasterClient } from "./client";
-import { formatTimeline, postTemplate } from "./prompts";
-import { castUuid, MAX_CAST_LENGTH } from "./utils";
-import { createCastMemory } from "./memory";
 import { sendCast } from "./actions";
+import { FarcasterClient } from "./client";
+import { createCastMemory } from "./memory";
+import { formatTimeline, postTemplate } from "./prompts";
+import { MAX_CAST_LENGTH, castUuid } from "./utils";
 
 export class FarcasterPostManager {
     private timeout: NodeJS.Timeout | undefined;

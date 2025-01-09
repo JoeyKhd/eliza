@@ -1,18 +1,18 @@
 import {
-    composeContext,
-    generateMessageResponse,
-    generateShouldRespond,
-    messageCompletionFooter,
-    shouldRespondFooter,
     Content,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    stringToUuid,
+    composeContext,
     elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
     getEmbeddingZeroVector,
+    messageCompletionFooter,
+    shouldRespondFooter,
+    stringToUuid,
 } from "@elizaos/core";
 import { EchoChamberClient } from "./echoChamberClient";
 import { ChatMessage } from "./types";

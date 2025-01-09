@@ -1,10 +1,10 @@
 import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import {
-    createPublicClient,
-    createWalletClient,
-    Hash,
     http,
     Address,
+    Hash,
+    createPublicClient,
+    createWalletClient,
     parseUnits,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";

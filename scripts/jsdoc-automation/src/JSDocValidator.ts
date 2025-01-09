@@ -1,4 +1,4 @@
-import { parse, ParserOptions } from "@typescript-eslint/parser";
+import { ParserOptions, parse } from "@typescript-eslint/parser";
 import { AIService } from "./AIService/AIService.js";
 
 export class JSDocValidator {
@@ -83,7 +83,7 @@ export class JSDocValidator {
         try {
             parse(code, this.parserOptions);
             return true;
-        } catch (error) {
+        } catch (_error) {
             return false;
         }
     }

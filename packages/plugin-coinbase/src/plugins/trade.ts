@@ -1,26 +1,26 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { Coinbase } from "@coinbase/coinbase-sdk";
 import {
     Action,
-    Plugin,
-    elizaLogger,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
+    ModelClass,
+    Plugin,
+    Provider,
     State,
     composeContext,
+    elizaLogger,
     generateObject,
-    ModelClass,
-    Provider,
 } from "@elizaos/core";
-import { executeTradeAndCharityTransfer, getWalletDetails } from "../utils";
-import { tradeTemplate } from "../templates";
-import { isTradeContent, TradeContent, TradeSchema } from "../types";
-import { readFile } from "fs/promises";
 import { parse } from "csv-parse/sync";
-import path from "path";
-import { fileURLToPath } from "url";
-import fs from "fs";
 import { createArrayCsvWriter } from "csv-writer";
+import { readFile } from "fs/promises";
+import { tradeTemplate } from "../templates";
+import { TradeContent, TradeSchema, isTradeContent } from "../types";
+import { executeTradeAndCharityTransfer, getWalletDetails } from "../utils";
 
 // Dynamically resolve the file path to the src/plugins directory
 const __filename = fileURLToPath(import.meta.url);

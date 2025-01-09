@@ -1,15 +1,16 @@
-import {
-    elizaLogger,
-    IAgentRuntime,
-    ServiceType,
-    ModelProviderName,
-} from "@elizaos/core";
-import { Service } from "@elizaos/core";
 import fs from "fs";
 import https from "https";
+import path from "path";
+import { fileURLToPath } from "url";
+import {
+    IAgentRuntime,
+    ModelProviderName,
+    ServiceType,
+    elizaLogger,
+} from "@elizaos/core";
+import { Service } from "@elizaos/core";
 import {
     GbnfJsonSchema,
-    getLlama,
     Llama,
     LlamaContext,
     LlamaContextSequence,
@@ -17,10 +18,9 @@ import {
     LlamaJsonSchemaGrammar,
     LlamaModel,
     Token,
+    getLlama,
 } from "node-llama-cpp";
-import path from "path";
 import si from "systeminformation";
-import { fileURLToPath } from "url";
 
 const wordsToPunish = [
     " please",

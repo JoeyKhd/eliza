@@ -1,35 +1,35 @@
-import { Coinbase, readContract, SmartContract } from "@coinbase/coinbase-sdk";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { Coinbase, SmartContract, readContract } from "@coinbase/coinbase-sdk";
 import {
     Action,
-    Plugin,
-    elizaLogger,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
+    ModelClass,
+    Plugin,
     State,
     composeContext,
+    elizaLogger,
     generateObject,
-    ModelClass,
 } from "@elizaos/core";
-import { initializeWallet } from "../utils";
+import { createArrayCsvWriter } from "csv-writer";
+import { ABI } from "../constants";
 import {
     contractInvocationTemplate,
-    tokenContractTemplate,
     readContractTemplate,
+    tokenContractTemplate,
 } from "../templates";
 import {
     ContractInvocationSchema,
+    ReadContractSchema,
     TokenContractSchema,
     isContractInvocationContent,
-    isTokenContractContent,
-    ReadContractSchema,
     isReadContractContent,
+    isTokenContractContent,
 } from "../types";
-import path from "path";
-import { fileURLToPath } from "url";
-import { createArrayCsvWriter } from "csv-writer";
-import fs from "fs";
-import { ABI } from "../constants";
+import { initializeWallet } from "../utils";
 
 // Dynamically resolve the file path to the src/plugins directory
 const __filename = fileURLToPath(import.meta.url);

@@ -1,11 +1,4 @@
-import NodeCache from "node-cache";
-import {
-    Cluster,
-    clusterApiUrl,
-    Connection,
-    LAMPORTS_PER_SOL,
-    PublicKey,
-} from "@solana/web3.js";
+import { elizaLogger } from "@elizaos/core";
 import {
     createNft,
     findMetadataPda,
@@ -13,20 +6,27 @@ import {
     updateV1,
     verifyCollectionV1,
 } from "@metaplex-foundation/mpl-token-metadata";
-import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import {
+    // sol,
+    TransactionBuilder,
+    Umi,
     generateSigner,
     keypairIdentity,
     percentAmount,
     publicKey,
-    // sol,
-    TransactionBuilder,
-    Umi,
 } from "@metaplex-foundation/umi";
+import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { getExplorerLink } from "@solana-developers/helpers";
+import {
+    Cluster,
+    Connection,
+    LAMPORTS_PER_SOL,
+    PublicKey,
+    clusterApiUrl,
+} from "@solana/web3.js";
 // import { transferSol } from "@metaplex-foundation/mpl-toolbox";
 import bs58 from "bs58";
-import { elizaLogger } from "@elizaos/core";
+import NodeCache from "node-cache";
 
 export class WalletSolana {
     private cache: NodeCache;

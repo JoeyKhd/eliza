@@ -1,3 +1,4 @@
+import fs from "fs";
 import { elizaLogger } from "@elizaos/core";
 import {
     Action,
@@ -7,7 +8,6 @@ import {
     Plugin,
     State,
 } from "@elizaos/core";
-import fs from "fs";
 import { LUMA_CONSTANTS } from "./constants";
 
 const generateVideo = async (prompt: string, runtime: IAgentRuntime) => {

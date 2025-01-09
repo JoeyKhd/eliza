@@ -1,5 +1,5 @@
-import Redis from "ioredis";
 import { IDatabaseCacheAdapter, UUID, elizaLogger } from "@elizaos/core";
+import Redis from "ioredis";
 
 export class RedisClient implements IDatabaseCacheAdapter {
     private client: Redis;

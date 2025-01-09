@@ -4,6 +4,7 @@ import {
 } from "@chain-registry/utils";
 import type { Coin } from "@cosmjs/stargate";
 import { assets } from "chain-registry";
+import { getAvailableAssets } from "../../../shared/helpers/cosmos-assets.ts";
 import { getPaidFeeFromReceipt } from "../../../shared/helpers/cosmos-transaction-receipt.ts";
 import type {
     ICosmosActionService,
@@ -13,7 +14,6 @@ import type {
 } from "../../../shared/interfaces.ts";
 import { CosmosTransactionFeeEstimator } from "../../../shared/services/cosmos-transaction-fee-estimator.ts";
 import type { CosmosTransferParams } from "../types.ts";
-import { getAvailableAssets } from "../../../shared/helpers/cosmos-assets.ts";
 
 export class CosmosTransferActionService implements ICosmosActionService {
     constructor(private cosmosWalletChains: ICosmosWalletChains) {

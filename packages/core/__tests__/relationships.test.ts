@@ -1,11 +1,11 @@
+import { describe, expect, vi } from "vitest";
 import {
     createRelationship,
+    formatRelationships,
     getRelationship,
     getRelationships,
-    formatRelationships,
 } from "../src/relationships";
 import { IAgentRuntime, type Relationship, type UUID } from "../src/types";
-import { describe, expect, vi } from "vitest";
 
 // Mock runtime and databaseAdapter
 const mockDatabaseAdapter = {

@@ -1,7 +1,7 @@
-import type { FarcasterClient } from "./client";
 import type { Content, IAgentRuntime, Memory, UUID } from "@elizaos/core";
-import type { Cast, CastId, Profile } from "./types";
+import type { FarcasterClient } from "./client";
 import { createCastMemory } from "./memory";
+import type { Cast, CastId, Profile } from "./types";
 import { splitPostContent } from "./utils";
 
 export async function sendCast({

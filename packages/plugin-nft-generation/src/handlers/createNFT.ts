@@ -1,20 +1,20 @@
-import { AwsS3Service } from "@elizaos/plugin-node";
 import {
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    ServiceType,
     composeContext,
     elizaLogger,
     generateImage,
     generateText,
     getEmbeddingZeroVector,
-    IAgentRuntime,
-    Memory,
-    ModelClass,
-    ServiceType,
     stringToUuid,
 } from "@elizaos/core";
 import {
     saveBase64Image,
     saveHeuristImage,
 } from "@elizaos/plugin-image-generation";
+import { AwsS3Service } from "@elizaos/plugin-node";
 import { PublicKey } from "@solana/web3.js";
 import WalletSolana from "../provider/wallet/walletSolana.ts";
 

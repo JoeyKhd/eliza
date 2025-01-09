@@ -1,18 +1,18 @@
 import {
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
     composeContext,
     elizaLogger,
     generateObjectDeprecated,
-    HandlerCallback,
-    ModelClass,
-    IAgentRuntime,
-    Memory,
-    State,
 } from "@elizaos/core";
+import { MintLicenseTokensResponse } from "@story-protocol/core-sdk";
 import { WalletProvider } from "../providers/wallet";
+import { hasIpAttachedLicenseTerms } from "../queries";
 import { licenseIPTemplate } from "../templates";
 import { LicenseIPParams } from "../types";
-import { MintLicenseTokensResponse } from "@story-protocol/core-sdk";
-import { hasIpAttachedLicenseTerms } from "../queries";
 
 export { licenseIPTemplate };
 
@@ -52,7 +52,7 @@ export const licenseIPAction = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ): Promise<boolean> => {
         elizaLogger.log("Starting LICENSE_IP handler...");

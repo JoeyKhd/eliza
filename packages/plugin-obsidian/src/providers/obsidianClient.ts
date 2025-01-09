@@ -1,16 +1,16 @@
+import { createHash } from "crypto";
+import {
+    AgentRuntime,
+    elizaLogger,
+    knowledge,
+    stringToUuid,
+} from "@elizaos/core";
 import {
     NoteContent,
     ResultNoteApi,
     ResultNoteSearchApi,
     ServerInfo,
 } from "../types";
-import { createHash } from "crypto";
-import {
-    elizaLogger,
-    AgentRuntime,
-    knowledge,
-    stringToUuid,
-} from "@elizaos/core";
 
 export class ObsidianProvider {
     private connected: boolean = false;

@@ -1,15 +1,15 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { postAction } from "../src/actions/post";
 import {
-    ModelClass,
     IAgentRuntime,
     Memory,
+    ModelClass,
     State,
     generateObject,
 } from "@elizaos/core";
-import { TweetContent, TweetSchema } from "../src/types";
-import { tweetTemplate } from "../src/templates";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { UUID } from "../../core/src/types";
+import { postAction } from "../src/actions/post";
+import { tweetTemplate } from "../src/templates";
+import { TweetContent, TweetSchema } from "../src/types";
 
 // Mock @elizaos/core
 vi.mock("@elizaos/core", async () => {

@@ -1,3 +1,4 @@
+import fs from "fs";
 import { generateText, trimTokens } from "@elizaos/core";
 import { parseJSONObjectFromText } from "@elizaos/core";
 import {
@@ -12,7 +13,6 @@ import {
 } from "@elizaos/core";
 import { Attachment, Collection } from "discord.js";
 import ffmpeg from "fluent-ffmpeg";
-import fs from "fs";
 
 async function generateSummary(
     runtime: IAgentRuntime,

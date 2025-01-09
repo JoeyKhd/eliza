@@ -1,20 +1,20 @@
 import {
-    composeContext,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import { initWalletChainsData } from "../../providers/wallet/utils";
-import { cosmosTransferTemplate } from "../../templates";
-import { CosmosTransferActionService } from "./services/cosmos-transfer-action-service";
-import type { CosmosTransferParams } from "./types";
 import type {
     ICosmosPluginOptions,
     ICosmosWalletChains,
 } from "../../shared/interfaces";
+import { cosmosTransferTemplate } from "../../templates";
+import { CosmosTransferActionService } from "./services/cosmos-transfer-action-service";
+import type { CosmosTransferParams } from "./types";
 
 export const createTransferAction = (pluginOptions: ICosmosPluginOptions) => ({
     name: "COSMOS_TRANSFER",

@@ -1,18 +1,18 @@
+import { promises as fs } from "fs";
+import { Indexer, ZgFile, getFlowContract } from "@0glabs/0g-ts-sdk";
 import {
     Action,
+    ActionExample,
+    Content,
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
     ModelClass,
-    Content,
-    ActionExample,
+    State,
     generateObject,
 } from "@elizaos/core";
-import { Indexer, ZgFile, getFlowContract } from "@0glabs/0g-ts-sdk";
-import { ethers } from "ethers";
 import { composeContext } from "@elizaos/core";
-import { promises as fs } from "fs";
+import { ethers } from "ethers";
 
 import { uploadTemplate } from "../templates/upload";
 
@@ -40,7 +40,7 @@ export const zgUpload: Action = {
         "PUBLISH_FILE_TO_ZG",
     ],
     description: "Store data using 0G protocol",
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         const zgIndexerRpc = !!runtime.getSetting("ZEROG_INDEXER_RPC");
         const zgEvmRpc = !!runtime.getSetting("ZEROG_EVM_RPC");
         const zgPrivateKey = !!runtime.getSetting("ZEROG_PRIVATE_KEY");

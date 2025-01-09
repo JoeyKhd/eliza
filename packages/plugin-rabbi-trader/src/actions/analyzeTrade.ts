@@ -1,9 +1,9 @@
 import {
     Action,
+    ModelClass,
     composeContext,
     elizaLogger,
     generateText,
-    ModelClass,
     parseJSONObjectFromText,
 } from "@elizaos/core";
 

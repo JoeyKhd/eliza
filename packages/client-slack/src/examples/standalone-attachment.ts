@@ -1,9 +1,9 @@
-import { config } from "dotenv";
-import { SlackClientProvider } from "../providers/slack-client.provider";
-import { AttachmentManager } from "../attachments";
-import { SlackConfig } from "../types/slack-types";
 import path from "path";
 import { elizaLogger } from "@elizaos/core";
+import { config } from "dotenv";
+import { AttachmentManager } from "../attachments";
+import { SlackClientProvider } from "../providers/slack-client.provider";
+import { SlackConfig } from "../types/slack-types";
 
 // Load environment variables
 config({ path: path.resolve(__dirname, "../../../.env") });

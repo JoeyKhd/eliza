@@ -4,31 +4,31 @@ import { v4 } from "uuid";
 import pg from "pg";
 type Pool = pg.Pool;
 
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import {
+    Account,
+    Actor,
+    DatabaseAdapter,
+    EmbeddingProvider,
+    type Goal,
+    GoalStatus,
+    type IDatabaseCacheAdapter,
+    type Memory,
+    Participant,
+    RAGKnowledgeItem,
+    type Relationship,
+    type UUID,
+    elizaLogger,
+    getEmbeddingConfig,
+} from "@elizaos/core";
 import {
     QueryConfig,
     QueryConfigValues,
     QueryResult,
     QueryResultRow,
 } from "pg";
-import {
-    Account,
-    Actor,
-    GoalStatus,
-    type Goal,
-    type Memory,
-    type Relationship,
-    type UUID,
-    type IDatabaseCacheAdapter,
-    Participant,
-    elizaLogger,
-    getEmbeddingConfig,
-    DatabaseAdapter,
-    EmbeddingProvider,
-    RAGKnowledgeItem,
-} from "@elizaos/core";
-import fs from "fs";
-import { fileURLToPath } from "url";
-import path from "path";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory

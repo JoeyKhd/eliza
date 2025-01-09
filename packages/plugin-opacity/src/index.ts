@@ -1,11 +1,11 @@
 import {
     IVerifiableInferenceAdapter,
-    VerifiableInferenceOptions,
-    VerifiableInferenceResult,
-    VerifiableInferenceProvider,
     ModelProviderName,
-    models,
+    VerifiableInferenceOptions,
+    VerifiableInferenceProvider,
+    VerifiableInferenceResult,
     elizaLogger,
+    models,
 } from "@elizaos/core";
 import { verifyProof } from "./utils/api";
 interface OpacityOptions {
@@ -43,7 +43,7 @@ export class OpacityAdapter implements IVerifiableInferenceAdapter {
         // Get provider-specific endpoint
         let endpoint;
         let authHeader;
-        let responseRegex;
+        let _responseRegex;
 
         switch (provider) {
             case ModelProviderName.OPENAI:
@@ -97,7 +97,7 @@ export class OpacityAdapter implements IVerifiableInferenceAdapter {
             // Validate JSON before sending
             try {
                 JSON.parse(requestBody); // Verify the JSON is valid
-            } catch (e) {
+            } catch (_e) {
                 elizaLogger.error("Invalid JSON body:", body);
                 throw new Error("Failed to create valid JSON request body");
             }

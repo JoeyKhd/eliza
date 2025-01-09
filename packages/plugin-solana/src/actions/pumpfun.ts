@@ -4,9 +4,8 @@ import { generateImage } from "@elizaos/core";
 import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 import { CreateTokenMetadata, PriorityFee, PumpFunSDK } from "pumpdotfun-sdk";
 
-import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 import {
-    settings,
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -14,11 +13,12 @@ import {
     Memory,
     ModelClass,
     State,
-    generateObjectDeprecated,
     composeContext,
-    type Action,
     elizaLogger,
+    generateObjectDeprecated,
+    settings,
 } from "@elizaos/core";
+import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 
 import { walletProvider } from "../providers/wallet.ts";
 
@@ -33,7 +33,7 @@ export interface CreateAndBuyContent extends Content {
 }
 
 export function isCreateAndBuyContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is CreateAndBuyContent {
     elizaLogger.log("Content for create & buy", content);

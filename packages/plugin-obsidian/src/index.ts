@@ -1,18 +1,18 @@
-import { searchAction } from "./actions/search";
-import { listNotesAction } from "./actions/listNotes";
-import { listAllFilesAction } from "./actions/vault";
-import { listDirectoryAction } from "./actions/vaultDirectory";
-import { createKnowledgeAction } from "./actions/createKnowledge";
-import { noteTraversalAction } from "./actions/noteTraversal";
 import {
     getActiveNoteAction,
     summarizeActiveNoteAction,
 } from "./actions/activeNote";
-import { getNoteAction } from "./actions/note";
+import { createKnowledgeAction } from "./actions/createKnowledge";
 import { readFileAction } from "./actions/file";
-import { saveFileAction } from "./actions/saveFile";
+import { listNotesAction } from "./actions/listNotes";
+import { getNoteAction } from "./actions/note";
+import { noteTraversalAction } from "./actions/noteTraversal";
 import { openFileAction } from "./actions/openFile";
+import { saveFileAction } from "./actions/saveFile";
+import { searchAction } from "./actions/search";
 import { updateFileAction } from "./actions/updateFile";
+import { listAllFilesAction } from "./actions/vault";
+import { listDirectoryAction } from "./actions/vaultDirectory";
 
 export const obsidianPlugin = {
     name: "obsidian",

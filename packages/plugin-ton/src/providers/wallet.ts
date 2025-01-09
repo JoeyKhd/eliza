@@ -6,12 +6,12 @@ import {
     State,
 } from "@elizaos/core";
 
-import { TonClient, WalletContractV4 } from "@ton/ton";
 import { KeyPair, mnemonicToPrivateKey } from "@ton/crypto";
+import { TonClient, WalletContractV4 } from "@ton/ton";
 
-import NodeCache from "node-cache";
 import * as path from "path";
 import BigNumber from "bignumber.js";
+import NodeCache from "node-cache";
 
 const PROVIDER_CONFIG = {
     MAINNET_RPC: "https://toncenter.com/api/v2/jsonRPC",
@@ -290,8 +290,8 @@ export const initWalletProvider = async (runtime: IAgentRuntime) => {
 export const nativeWalletProvider: Provider = {
     async get(
         runtime: IAgentRuntime,
-        message: Memory,
-        state?: State
+        _message: Memory,
+        _state?: State
     ): Promise<string | null> {
         try {
             const walletProvider = await initWalletProvider(runtime);

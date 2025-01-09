@@ -1,13 +1,13 @@
 import {
     Action,
     ActionExample,
-    composeContext,
-    generateObject,
     Handler,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    generateObject,
 } from "@elizaos/core";
 import { Customer, Payment } from "dominos";
 import { z } from "zod";
@@ -130,7 +130,7 @@ Provide updated customer information as a JSON object, including only fields tha
             "\n" + orderManager.getNextRequiredActionDialogue(order, customer);
 
         return response;
-    } catch (error) {
+    } catch (_error) {
         return "I couldn't understand the customer information provided. Please try again with clearer details.";
     }
 };

@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -6,16 +7,15 @@ import {
     Memory,
     ModelClass,
     State,
-    type Action,
-    elizaLogger,
     composeContext,
+    elizaLogger,
     generateObject,
 } from "@elizaos/core";
 import { validateAbstractConfig } from "../environment";
 
-import { Address, createWalletClient, erc20Abi, http, parseEther } from "viem";
-import { abstractTestnet } from "viem/chains";
+import { http, Address, createWalletClient, erc20Abi, parseEther } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
+import { abstractTestnet } from "viem/chains";
 import { eip712WalletActions } from "viem/zksync";
 import { z } from "zod";
 
@@ -97,7 +97,7 @@ export default {
         "MOVE_TOKENS_ON_ABSTRACT",
         "MOVE_ETH_ON_ABSTRACT",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         await validateAbstractConfig(runtime);
         return true;
     },

@@ -1,16 +1,16 @@
 import {
     ActionExample,
-    booleanFooter,
-    composeContext,
     Content,
-    elizaLogger,
     Evaluator,
-    generateObjectArray,
-    generateTrueOrFalse,
     IAgentRuntime,
     Memory,
     MemoryManager,
     ModelClass,
+    booleanFooter,
+    composeContext,
+    elizaLogger,
+    generateObjectArray,
+    generateTrueOrFalse,
 } from "@elizaos/core";
 import { TrustScoreDatabase } from "@elizaos/plugin-trustdb";
 import { Connection } from "@solana/web3.js";
@@ -294,7 +294,7 @@ export const trustEvaluator: Evaluator = {
     ],
     alwaysRun: true,
     validate: async (
-        runtime: IAgentRuntime,
+        _runtime: IAgentRuntime,
         message: Memory
     ): Promise<boolean> => {
         if (message.content.text.length < 5) {

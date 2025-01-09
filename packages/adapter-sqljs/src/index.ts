@@ -5,14 +5,14 @@ import {
     Account,
     Actor,
     DatabaseAdapter,
+    type Goal,
     GoalStatus,
     IDatabaseCacheAdapter,
-    Participant,
-    type Goal,
     type Memory,
+    Participant,
+    RAGKnowledgeItem,
     type Relationship,
     type UUID,
-    RAGKnowledgeItem,
     elizaLogger,
 } from "@elizaos/core";
 import { v4 } from "uuid";
@@ -861,7 +861,7 @@ export class SqlJsDatabaseAdapter
             return JSON.parse(cachedResult);
         }
 
-        let sql = `
+        const sql = `
             WITH vector_scores AS (
                 SELECT id,
                         1 / (1 + vec_distance_L2(embedding, ?)) as vector_score

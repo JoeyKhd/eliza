@@ -1,6 +1,6 @@
 import { elizaLogger } from "@elizaos/core";
-import { TokenProvider } from "./token";
 import { ProcessedTokenData } from "../types/token";
+import { TokenProvider } from "./token";
 
 export class TrustScoreProvider {
     private tokenProviders: Map<string, TokenProvider> = new Map();

@@ -1,8 +1,8 @@
 import type {
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    HandlerCallback,
 } from "@elizaos/core";
 
 export const remoteAttestationAction = {
@@ -16,7 +16,7 @@ export const remoteAttestationAction = {
         "Generate a remote attestation to prove that the agent is running in a TEE",
     handler: async (
         runtime: IAgentRuntime,
-        message: Memory,
+        _message: Memory,
         _state: State,
         _options: any,
         callback: HandlerCallback
@@ -36,7 +36,7 @@ export const remoteAttestationAction = {
             return false;
         }
     },
-    validate: async (runtime: IAgentRuntime) => {
+    validate: async (_runtime: IAgentRuntime) => {
         return true;
     },
     examples: [

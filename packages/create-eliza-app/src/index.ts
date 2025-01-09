@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { downloadTemplate } from "giget";
 import { runMain } from "citty";
+import { downloadTemplate } from "giget";
 
 const DEFAULT_TEMPLATE = "eliza";
 const DEFAULT_REGISTRY =

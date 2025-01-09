@@ -1,10 +1,10 @@
 import {
-    elizaLogger,
+    type Action,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    type Action,
+    elizaLogger,
 } from "@elizaos/core";
 
 const BASE_URL = "https://nebula-api.thirdweb.com";

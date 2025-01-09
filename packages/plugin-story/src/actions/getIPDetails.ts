@@ -1,17 +1,17 @@
 import {
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
     composeContext,
     elizaLogger,
     generateObjectDeprecated,
-    HandlerCallback,
-    ModelClass,
-    IAgentRuntime,
-    Memory,
-    State,
 } from "@elizaos/core";
-import { getIPDetailsTemplate } from "../templates";
 import { Address } from "viem";
-import { Asset, RESOURCE_TYPE } from "../types/api";
 import { API_URL, getResource } from "../lib/api";
+import { getIPDetailsTemplate } from "../templates";
+import { Asset, RESOURCE_TYPE } from "../types/api";
 
 export { getIPDetailsTemplate };
 
@@ -70,7 +70,7 @@ export const getIPDetailsAction = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ): Promise<boolean> => {
         elizaLogger.log("Starting GET_IP_DETAILS handler...");

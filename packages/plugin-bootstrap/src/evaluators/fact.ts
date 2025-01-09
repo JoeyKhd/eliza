@@ -3,10 +3,10 @@ import { generateObjectArray } from "@elizaos/core";
 import { MemoryManager } from "@elizaos/core";
 import {
     ActionExample,
+    Evaluator,
     IAgentRuntime,
     Memory,
     ModelClass,
-    Evaluator,
 } from "@elizaos/core";
 
 export const formatFacts = (facts: Memory[]) => {

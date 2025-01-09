@@ -1,10 +1,10 @@
 import {
-    elizaLogger,
-    generateText,
     HandlerCallback,
     IAgentRuntime,
     ModelClass,
     State,
+    elizaLogger,
+    generateText,
 } from "@elizaos/core";
 import { Memory } from "@elizaos/core";
 

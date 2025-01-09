@@ -1,6 +1,6 @@
 export async function verifyProof(
     baseUrl: string,
-    textID: string,
+    _textID: string,
     proof: string
 ) {
     const response = await fetch(`${baseUrl}/api/verify`, {

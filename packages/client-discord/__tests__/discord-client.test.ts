@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { DiscordClient } from "../src";
 import { Client, Events } from "discord.js";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { DiscordClient } from "../src";
 
 // Mock @elizaos/core
 vi.mock("@elizaos/core", () => ({

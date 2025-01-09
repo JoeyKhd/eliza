@@ -1,17 +1,17 @@
 import {
     Action,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    HandlerCallback,
 } from "@elizaos/core";
 import {
-    generateObject,
-    composeContext,
-    ModelClass,
     Content,
+    ModelClass,
+    composeContext,
+    generateObject,
 } from "@elizaos/core";
-import { createPublicClient, createWalletClient, http, parseCFX } from "cive";
+import { http, createPublicClient, createWalletClient, parseCFX } from "cive";
 import { privateKeyToAccount } from "cive/accounts";
 import { testnet } from "cive/chains";
 import { confluxTransferTemplate } from "../templates/transfer";
@@ -72,7 +72,7 @@ export const transfer: Action = {
             },
         ],
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, _message: Memory) => {
         // no extra validation needed
         return true;
     },
@@ -80,7 +80,7 @@ export const transfer: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state?: State,
-        options?: { [key: string]: unknown },
+        _options?: { [key: string]: unknown },
         callback?: HandlerCallback
     ) => {
         if (!state) {

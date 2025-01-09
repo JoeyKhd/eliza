@@ -1,21 +1,21 @@
 import {
-    IAgentRuntime,
     AgentRuntime,
-    ModelClass,
+    IAgentRuntime,
     Memory,
     MemoryManager,
+    ModelClass,
 } from "@elizaos/core";
 import {
-    elizaLogger,
     composeContext,
+    elizaLogger,
     generateObject,
     stringToUuid,
 } from "@elizaos/core";
 //import fileTypeChecker from "file-type-checker";
 import { lookup } from "mrmime";
-import { ObsidianProvider } from "./providers/obsidianClient";
 import { validateObsidianConfig } from "./enviroment";
-import { searchQuerySchema, NoteHierarchy, NoteContent } from "./types";
+import { ObsidianProvider } from "./providers/obsidianClient";
+import { NoteContent, NoteHierarchy, searchQuerySchema } from "./types";
 
 let obsidianInstance: ObsidianProvider | undefined;
 

@@ -1,6 +1,6 @@
-import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import express from "express";
 
 import {
     AgentRuntime,
@@ -9,9 +9,9 @@ import {
     validateCharacterConfig,
 } from "@elizaos/core";
 
+import { stringToUuid } from "@elizaos/core";
 import { REST, Routes } from "discord.js";
 import { DirectClient } from ".";
-import { stringToUuid } from "@elizaos/core";
 
 export function createApiRouter(
     agents: Map<string, AgentRuntime>,
@@ -28,15 +28,15 @@ export function createApiRouter(
         })
     );
 
-    router.get("/", (req, res) => {
+    router.get("/", (_req, res) => {
         res.send("Welcome, this is the REST API!");
     });
 
-    router.get("/hello", (req, res) => {
+    router.get("/hello", (_req, res) => {
         res.json({ message: "Hello World!" });
     });
 
-    router.get("/agents", (req, res) => {
+    router.get("/agents", (_req, res) => {
         const agentsList = Array.from(agents.values()).map((agent) => ({
             id: agent.agentId,
             name: agent.character.name,
@@ -54,7 +54,7 @@ export function createApiRouter(
             return;
         }
 
-        let character = agent?.character;
+        const character = agent?.character;
         if (character?.settings?.secrets) {
             delete character.settings.secrets;
         }

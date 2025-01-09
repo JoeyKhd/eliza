@@ -1,19 +1,19 @@
 import { Coinbase, Webhook } from "@coinbase/coinbase-sdk";
 import {
     Action,
-    Plugin,
-    elizaLogger,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
+    ModelClass,
+    Plugin,
+    Provider,
     State,
     composeContext,
+    elizaLogger,
     generateObject,
-    ModelClass,
-    Provider,
 } from "@elizaos/core";
-import { WebhookSchema, isWebhookContent, WebhookContent } from "../types";
 import { webhookTemplate } from "../templates";
+import { WebhookContent, WebhookSchema, isWebhookContent } from "../types";
 import { appendWebhooksToCsv } from "../utils";
 
 export const webhookProvider: Provider = {

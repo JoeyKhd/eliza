@@ -1,18 +1,18 @@
+// import { settings } from "@elizaos/core";
+import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import {
-    TrustScoreDatabase,
     TokenPerformance,
     // TradePerformance,
     TokenRecommendation,
+    TrustScoreDatabase,
 } from "@elizaos/plugin-trustdb";
 import { Connection, PublicKey } from "@solana/web3.js";
+import * as amqp from "amqplib";
+import { getWalletKey } from "../keypairUtils.ts";
+import { ProcessedTokenData } from "../types/token.ts";
 // Assuming TokenProvider and IAgentRuntime are available
 import { TokenProvider } from "./token.ts";
-// import { settings } from "@elizaos/core";
-import { IAgentRuntime, elizaLogger } from "@elizaos/core";
 import { WalletProvider } from "./wallet.ts";
-import * as amqp from "amqplib";
-import { ProcessedTokenData } from "../types/token.ts";
-import { getWalletKey } from "../keypairUtils.ts";
 
 interface SellDetails {
     sell_amount: number;
@@ -211,7 +211,7 @@ export class SimulationSellingService {
         // start the process in the sonar backend
         tokenPerformances.forEach(async (tokenPerformance) => {
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const tokenProvider = new TokenProvider(
+            const _tokenProvider = new TokenProvider(
                 tokenPerformance.tokenAddress,
                 this.walletProvider,
                 this.runtime.cacheManager
@@ -258,7 +258,7 @@ export class SimulationSellingService {
                 this.trustScoreDb.getTokenPerformance(tokenAddress);
 
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            const tokenProvider = new TokenProvider(
+            const _tokenProvider = new TokenProvider(
                 tokenPerformance.tokenAddress,
                 this.walletProvider,
                 this.runtime.cacheManager

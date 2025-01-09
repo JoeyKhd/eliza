@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
 import { Account, Chain } from "viem";
+import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import { TransferAction } from "../actions/transfer";
 import { WalletProvider } from "../providers/wallet";

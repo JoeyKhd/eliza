@@ -1,34 +1,34 @@
 import {
     Action,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    HandlerCallback,
     elizaLogger,
 } from "@elizaos/core";
-import { generateObject, composeContext, ModelClass } from "@elizaos/core";
+import { ModelClass, composeContext, generateObject } from "@elizaos/core";
 import {
+    http,
+    Account,
+    WalletClient,
     createPublicClient,
     createWalletClient,
-    http,
-    parseEther,
     encodeFunctionData,
-    WalletClient,
-    Account,
+    parseEther,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { confluxESpaceTestnet } from "viem/chains";
-import { parseUnits, getAddress } from "viem/utils";
+import { getAddress, parseUnits } from "viem/utils";
+import ERC20ABI from "../abi/erc20";
+import MEMEABI from "../abi/meme";
 import { confluxTransferTemplate } from "../templates/transfer";
 import {
     PumpSchema,
-    isPumpContent,
     isPumpBuyContent,
+    isPumpContent,
     isPumpCreateContent,
     isPumpSellContent,
 } from "../types";
-import MEMEABI from "../abi/meme";
-import ERC20ABI from "../abi/erc20";
 
 // Helper function to check and approve token allowance if needed
 async function ensureAllowance(
@@ -159,7 +159,7 @@ export const confiPump: Action = {
         ],
     ],
 
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, _message: Memory) => {
         return true; // No extra validation needed
     },
 
@@ -167,7 +167,7 @@ export const confiPump: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state?: State,
-        options?: { [key: string]: unknown },
+        _options?: { [key: string]: unknown },
         callback?: HandlerCallback
     ) => {
         let success = false;
@@ -267,7 +267,7 @@ export const confiPump: Action = {
                     });
                     break;
 
-                case "SELL_TOKEN":
+                case "SELL_TOKEN": {
                     if (!isPumpSellContent(contentObject)) {
                         elizaLogger.error(
                             "Invalid PumpSellContent: ",
@@ -307,6 +307,7 @@ export const confiPump: Action = {
                     });
                     value = 0n;
                     break;
+                }
             }
 
             // Simulate and execute transaction

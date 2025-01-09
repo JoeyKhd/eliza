@@ -1,15 +1,15 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
     Content,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 
 import { SolanaAgentKit } from "solana-agent-kit";
@@ -60,7 +60,7 @@ Respond with a JSON markdown block containing only the extracted values.`;
 export default {
     name: "CREATE_TOKEN",
     similes: ["DEPLOY_TOKEN"],
-    validate: async (runtime: IAgentRuntime, message: Memory) => true,
+    validate: async (_runtime: IAgentRuntime, _message: Memory) => true,
     description: "Create tokens",
     handler: async (
         runtime: IAgentRuntime,

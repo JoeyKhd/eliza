@@ -1,15 +1,15 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
     Content,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import axios from "axios";
 import { validateStargazeConfig } from "../environment";
@@ -69,7 +69,7 @@ Extract the collection address from the above messages and respond with the appr
 export default {
     name: "GET_COLLECTION_STATS",
     similes: ["CHECK_COLLECTION_STATS", "COLLECTION_INFO"],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         elizaLogger.log("🔄 Validating Stargaze configuration...");
         try {
             const config = await validateStargazeConfig(runtime);

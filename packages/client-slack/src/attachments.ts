@@ -1,7 +1,8 @@
+import fs from "fs";
 import {
     generateText,
-    trimTokens,
     parseJSONObjectFromText,
+    trimTokens,
 } from "@elizaos/core";
 import {
     IAgentRuntime,
@@ -15,7 +16,6 @@ import {
 } from "@elizaos/core";
 import { WebClient } from "@slack/web-api";
 import ffmpeg from "fluent-ffmpeg";
-import fs from "fs";
 
 async function generateSummary(
     runtime: IAgentRuntime,

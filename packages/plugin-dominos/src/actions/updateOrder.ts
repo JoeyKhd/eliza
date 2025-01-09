@@ -1,13 +1,13 @@
 import {
     Action,
     ActionExample,
-    composeContext,
-    generateObject,
     Handler,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    generateObject,
 } from "@elizaos/core";
 import { Item } from "dominos";
 import { PizzaCrust, PizzaSize, ToppingPortion } from "../types";
@@ -231,7 +231,7 @@ export const handler: Handler = async (
             "\n" + orderManager.getNextRequiredActionDialogue(order, customer);
 
         return response;
-    } catch (error) {
+    } catch (_error) {
         return "I couldn't understand the requested changes. Please try again with clearer modifications.";
     }
 };

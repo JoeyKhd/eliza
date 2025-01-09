@@ -1,3 +1,5 @@
+import { join } from "path";
+import { readFile } from "fs/promises";
 import { names, uniqueNamesGenerator } from "unique-names-generator";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -17,42 +19,40 @@ import { generateText } from "./generation.ts";
 import { formatGoalsAsString, getGoals } from "./goals.ts";
 import { elizaLogger } from "./index.ts";
 import knowledge from "./knowledge.ts";
-import { RAGKnowledgeManager } from "./ragknowledge.ts";
 import { MemoryManager } from "./memory.ts";
 import { formatActors, formatMessages, getActorDetails } from "./messages.ts";
 import { parseJsonArrayFromText } from "./parsing.ts";
 import { formatPosts } from "./posts.ts";
 import { getProviders } from "./providers.ts";
+import { RAGKnowledgeManager } from "./ragknowledge.ts";
 import settings from "./settings.ts";
 import {
+    type Action,
+    type Actor,
     Character,
+    type Evaluator,
     Goal,
     HandlerCallback,
     IAgentRuntime,
     ICacheManager,
     IDatabaseAdapter,
-    IRAGKnowledgeManager,
     IMemoryManager,
+    IRAGKnowledgeManager,
+    IVerifiableInferenceAdapter,
     KnowledgeItem,
-    RAGKnowledgeItem,
     Media,
+    type Memory,
     ModelClass,
     ModelProviderName,
     Plugin,
     Provider,
+    RAGKnowledgeItem,
     Service,
     ServiceType,
     State,
     UUID,
-    type Action,
-    type Actor,
-    type Evaluator,
-    type Memory,
-    IVerifiableInferenceAdapter,
 } from "./types.ts";
 import { stringToUuid } from "./uuid.ts";
-import { readFile } from "fs/promises";
-import { join } from "path";
 
 /**
  * Represents the runtime environment for an agent, handling message processing,

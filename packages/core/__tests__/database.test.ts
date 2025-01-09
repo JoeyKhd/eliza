@@ -1,11 +1,11 @@
 /* eslint-disable no-dupe-class-members */
 import { DatabaseAdapter } from "../src/database.ts";
 import {
-    Memory,
-    Actor,
     Account,
+    Actor,
     Goal,
     GoalStatus,
+    Memory,
     Participant,
     Relationship,
     UUID,

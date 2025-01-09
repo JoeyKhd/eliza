@@ -9,9 +9,9 @@ export * from "./providers/connector.provider";
 export * from "./providers/wallet.provider";
 
 import type { Plugin } from "@elizaos/core";
-import { flowWalletProvider } from "./providers/wallet.provider";
-import { flowConnectorProvider } from "./providers/connector.provider";
 import { transferAction } from "./actions/transfer";
+import { flowConnectorProvider } from "./providers/connector.provider";
+import { flowWalletProvider } from "./providers/wallet.provider";
 
 export const flowPlugin: Plugin = {
     name: "flow",

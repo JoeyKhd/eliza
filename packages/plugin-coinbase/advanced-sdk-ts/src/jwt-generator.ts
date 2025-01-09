@@ -1,6 +1,6 @@
-import jwt from "jsonwebtoken";
-import { BASE_URL, ALGORITHM, JWT_ISSUER } from "./constants";
 import crypto from "crypto";
+import jwt from "jsonwebtoken";
+import { ALGORITHM, BASE_URL, JWT_ISSUER } from "./constants";
 
 export function generateToken(
     requestMethod: string,

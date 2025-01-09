@@ -1,12 +1,12 @@
 import { embed } from "./embedding.ts";
+import { splitChunks } from "./generation.ts";
 import elizaLogger from "./logger.ts";
 import {
+    IAgentRuntime,
     IRAGKnowledgeManager,
     RAGKnowledgeItem,
     UUID,
-    IAgentRuntime,
 } from "./types.ts";
-import { splitChunks } from "./generation.ts";
 import { stringToUuid } from "./uuid.ts";
 
 /**
@@ -367,7 +367,7 @@ export class RAGKnowledgeManager implements IRAGKnowledgeManager {
         };
 
         const startTime = Date.now();
-        let content = file.content;
+        const content = file.content;
 
         try {
             const fileSizeKB = new TextEncoder().encode(content).length / 1024;
@@ -376,7 +376,7 @@ export class RAGKnowledgeManager implements IRAGKnowledgeManager {
             );
 
             // Step 1: Preprocessing
-            const preprocessStart = Date.now();
+            const _preprocessStart = Date.now();
             const processedContent = this.preprocess(content);
             timeMarker("Preprocessing");
 

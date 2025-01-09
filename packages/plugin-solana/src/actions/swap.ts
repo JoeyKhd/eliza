@@ -1,20 +1,20 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
-    settings,
     State,
-    type Action,
+    composeContext,
     elizaLogger,
+    generateObjectDeprecated,
+    settings,
 } from "@elizaos/core";
 import { Connection, PublicKey, VersionedTransaction } from "@solana/web3.js";
 import BigNumber from "bignumber.js";
 import { getWalletKey } from "../keypairUtils.ts";
-import { walletProvider, WalletProvider } from "../providers/wallet.ts";
+import { WalletProvider, walletProvider } from "../providers/wallet.ts";
 import { getTokenDecimals } from "./swapUtils.ts";
 
 async function swapToken(
@@ -173,7 +173,7 @@ async function getTokenFromWallet(runtime: IAgentRuntime, tokenSymbol: string) {
 export const executeSwap: Action = {
     name: "EXECUTE_SWAP",
     similes: ["SWAP_TOKENS", "TOKEN_SWAP", "TRADE_TOKENS", "EXCHANGE_TOKENS"],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         // Check if the necessary parameters are provided in the message
         elizaLogger.log("Message:", message);
         return true;

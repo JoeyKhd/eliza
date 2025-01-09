@@ -1,5 +1,5 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { validateEnv, validateCharacterConfig } from "../src/environment";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { validateCharacterConfig, validateEnv } from "../src/environment";
 import { Clients, ModelProviderName } from "../src/types";
 
 describe("Environment Configuration", () => {

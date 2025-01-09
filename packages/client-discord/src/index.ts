@@ -1,10 +1,11 @@
+import { EventEmitter } from "events";
 import {
-    getEmbeddingZeroVector,
-    stringToUuid,
-    elizaLogger,
     Character,
     Client as ElizaClient,
     IAgentRuntime,
+    elizaLogger,
+    getEmbeddingZeroVector,
+    stringToUuid,
 } from "@elizaos/core";
 import {
     Client,
@@ -15,7 +16,7 @@ import {
     Partials,
     User,
 } from "discord.js";
-import { EventEmitter } from "events";
+import { PermissionsBitField } from "discord.js";
 import chat_with_attachments from "./actions/chat_with_attachments.ts";
 import download_media from "./actions/download_media.ts";
 import joinvoice from "./actions/joinvoice.ts";
@@ -26,7 +27,6 @@ import { MessageManager } from "./messages.ts";
 import channelStateProvider from "./providers/channelState.ts";
 import voiceStateProvider from "./providers/voiceState.ts";
 import { VoiceManager } from "./voice.ts";
-import { PermissionsBitField } from "discord.js";
 
 export class DiscordClient extends EventEmitter {
     apiToken: string;

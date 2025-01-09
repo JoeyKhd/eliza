@@ -1,8 +1,8 @@
-import { describe, it, expect } from "vitest";
 import type {
     DeliverTxResponse,
     ExecuteResult,
 } from "@cosmjs/cosmwasm-stargate";
+import { describe, expect, it } from "vitest";
 import { getPaidFeeFromReceipt } from "../shared/helpers/cosmos-transaction-receipt";
 
 describe("PaidFee", () => {

@@ -1,19 +1,19 @@
 import {
     Action,
     ActionExample,
+    Content,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { getTxReceipt, sendNativeAsset, sendToken } from "../utils";
 import { Address } from "viem";
 import { validateAvalancheConfig } from "../environment";
+import { getTxReceipt, sendNativeAsset, sendToken } from "../utils";
 import { TOKEN_ADDRESSES } from "../utils/constants";
 
 export interface TransferContent extends Content {
@@ -23,7 +23,7 @@ export interface TransferContent extends Content {
 }
 
 function isTransferContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is TransferContent {
     elizaLogger.debug("Content for transfer", content);

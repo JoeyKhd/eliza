@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
 import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
+import { Mock, beforeEach, describe, expect, it, vi } from "vitest";
 import { CosmosTransactionFeeEstimator } from "../shared/services/cosmos-transaction-fee-estimator";
 
 vi.mock("@cosmjs/cosmwasm-stargate", () => ({

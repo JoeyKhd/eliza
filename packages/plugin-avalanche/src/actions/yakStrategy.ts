@@ -1,19 +1,19 @@
 import {
     Action,
     ActionExample,
+    Content,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { approve, deposit, getTxReceipt } from "../utils";
 import { Address } from "viem";
 import { validateAvalancheConfig } from "../environment";
+import { approve, deposit, getTxReceipt } from "../utils";
 import { STRATEGY_ADDRESSES, TOKEN_ADDRESSES } from "../utils/constants";
 
 export interface StrategyContent extends Content {
@@ -23,7 +23,7 @@ export interface StrategyContent extends Content {
 }
 
 function isStrategyContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is StrategyContent {
     elizaLogger.debug("Content for strategy", content);

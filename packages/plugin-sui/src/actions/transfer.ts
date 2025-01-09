@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -9,7 +10,6 @@ import {
     composeContext,
     elizaLogger,
     generateObject,
-    type Action,
 } from "@elizaos/core";
 import { z } from "zod";
 
@@ -63,7 +63,7 @@ export default {
         "SEND_SUI",
         "PAY",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         console.log("Validating sui transfer from user:", message.userId);
         //add custom validate logic here
         /*

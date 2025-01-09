@@ -3,25 +3,25 @@
 
 import { settings } from "@elizaos/core";
 import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
+import { num } from "starknet";
+import { PROVIDER_CONFIG } from "../index.ts";
+import { TokenInfo } from "../types/token.ts";
 import {
+    CalculatedBuyAmounts,
     DexScreenerData,
     DexScreenerPair,
     HolderData,
+    Prices,
     ProcessedTokenData,
     TokenSecurityData,
-    CalculatedBuyAmounts,
-    Prices,
 } from "../types/trustDB.ts";
-import { WalletProvider, Item } from "./walletProvider.ts";
-import { num } from "starknet";
+import { Cache } from "../utils/cache.ts";
 import {
+    TokenMetrics,
     analyzeHighSupplyHolders,
     evaluateTokenTrading,
-    TokenMetrics,
 } from "./utils.ts";
-import { PROVIDER_CONFIG } from "../index.ts";
-import { Cache } from "../utils/cache.ts";
-import { TokenInfo } from "../types/token.ts";
+import { Item, WalletProvider } from "./walletProvider.ts";
 
 export const PORTFOLIO_TOKENS = {
     // Coingecko IDs src:

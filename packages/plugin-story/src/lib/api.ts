@@ -1,3 +1,4 @@
+import { elizaLogger } from "@elizaos/core";
 import {
     IPLicenseTerms,
     PILTerms,
@@ -8,7 +9,6 @@ import {
     ResourceType,
     Trait,
 } from "../types/api";
-import { elizaLogger } from "@elizaos/core";
 
 import { camelize } from "./utils";
 const API_BASE_URL = process.env.STORY_API_BASE_URL;
@@ -19,7 +19,7 @@ export const API_KEY = process.env.STORY_API_KEY || "";
 export async function getResource(
     resourceName: ResourceType,
     resourceId: string,
-    options?: QueryOptions
+    _options?: QueryOptions
 ) {
     try {
         elizaLogger.log(

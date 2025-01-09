@@ -3,13 +3,13 @@ import { generateText } from "@elizaos/core";
 import { getGoals } from "@elizaos/core";
 import { parseJsonArrayFromText } from "@elizaos/core";
 import {
+    Evaluator,
+    type Goal,
     IAgentRuntime,
     Memory,
     ModelClass,
     Objective,
-    type Goal,
     type State,
-    Evaluator,
 } from "@elizaos/core";
 
 const goalsTemplate = `TASK: Update Goal

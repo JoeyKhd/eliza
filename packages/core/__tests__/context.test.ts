@@ -1,6 +1,6 @@
+import handlebars from "handlebars";
 import { describe, expect, it } from "vitest";
 import { composeContext } from "../src/context.ts";
-import handlebars from "handlebars";
 import { State } from "../src/types.ts";
 
 describe("composeContext", () => {

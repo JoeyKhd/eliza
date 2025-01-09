@@ -1,11 +1,11 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { WalletProvider } from "../providers/wallet.ts";
 
 import { defaultCharacter } from "@elizaos/core";
-import BigNumber from "bignumber.js";
-import { SUI_DECIMALS } from "@mysten/sui/utils";
 import { SuiClient, getFullnodeUrl } from "@mysten/sui/client";
 import { Ed25519Keypair } from "@mysten/sui/keypairs/ed25519";
+import { SUI_DECIMALS } from "@mysten/sui/utils";
+import BigNumber from "bignumber.js";
 // Mock NodeCache
 vi.mock("node-cache", () => {
     return {

@@ -1,14 +1,14 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import { BinanceService } from "../services";
 

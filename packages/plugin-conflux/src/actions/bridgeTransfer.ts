@@ -1,29 +1,29 @@
 import {
     Action,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    HandlerCallback,
 } from "@elizaos/core";
 import {
-    generateObject,
-    composeContext,
-    ModelClass,
     Content,
+    ModelClass,
+    composeContext,
+    generateObject,
 } from "@elizaos/core";
 import {
+    http,
     createPublicClient,
     createWalletClient,
-    http,
-    parseCFX,
     encodeFunctionData,
+    parseCFX,
 } from "cive";
-import { hexAddressToBase32 } from "cive/utils";
 import { privateKeyToAccount } from "cive/accounts";
 import { testnet } from "cive/chains";
+import { hexAddressToBase32 } from "cive/utils";
+import CrossSpaceCallAbi from "../abi/crossSpaceCall";
 import { confluxBridgeTransferTemplate } from "../templates/bridgeTransfer";
 import { TransferSchema, isTransferContent } from "../types";
-import CrossSpaceCallAbi from "../abi/crossSpaceCall";
 
 const bridgeSendCFX = async (
     secretKey: `0x${string}`,
@@ -95,7 +95,7 @@ export const bridgeTransfer: Action = {
             },
         ],
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, _message: Memory) => {
         // no extra validation needed
         return true;
     },
@@ -103,7 +103,7 @@ export const bridgeTransfer: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state?: State,
-        options?: { [key: string]: unknown },
+        _options?: { [key: string]: unknown },
         callback?: HandlerCallback
     ) => {
         if (!state) {

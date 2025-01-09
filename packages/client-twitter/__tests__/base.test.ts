@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
-import { ClientBase } from "../src/base";
 import { IAgentRuntime } from "@elizaos/core";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { ClientBase } from "../src/base";
 import { TwitterConfig } from "../src/environment";
 
 describe("Twitter Client Base", () => {

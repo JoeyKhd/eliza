@@ -2,8 +2,8 @@
 
 import { spawn } from "child_process";
 import { ITranscriptionService, elizaLogger } from "@elizaos/core";
-import { Space, JanusClient, AudioDataWithUser } from "agent-twitter-client";
 import { Plugin } from "@elizaos/core";
+import { AudioDataWithUser, JanusClient, Space } from "agent-twitter-client";
 
 interface PluginConfig {
     openAiApiKey?: string; // for STT & ChatGPT
@@ -64,7 +64,7 @@ export class SttTtsPlugin implements Plugin {
     private ttsQueue: string[] = [];
     private isSpeaking = false;
 
-    onAttach(space: Space) {
+    onAttach(_space: Space) {
         elizaLogger.log("[SttTtsPlugin] onAttach => space was attached");
     }
 

@@ -1,3 +1,4 @@
+import * as fs from "fs";
 import { composeContext, getModelSettings } from "@elizaos/core";
 import { generateText, trimTokens } from "@elizaos/core";
 import { parseJSONObjectFromText } from "@elizaos/core";
@@ -11,7 +12,6 @@ import {
     ModelClass,
     State,
 } from "@elizaos/core";
-import * as fs from "fs";
 
 export const summarizationTemplate = `# Summarized so far (we are adding to this)
 {{currentSummary}}
@@ -134,7 +134,7 @@ const summarizeAction = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback: HandlerCallback
     ) => {
         state = (await runtime.composeState(message)) as State;

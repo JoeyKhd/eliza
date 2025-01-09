@@ -1,18 +1,18 @@
-import { ByteArray, formatEther, parseEther, type Hex } from "viem";
 import {
     Action,
-    composeContext,
-    generateObjectDeprecated,
     HandlerCallback,
-    ModelClass,
     type IAgentRuntime,
     type Memory,
+    ModelClass,
     type State,
+    composeContext,
+    generateObjectDeprecated,
 } from "@elizaos/core";
+import { ByteArray, type Hex, formatEther, parseEther } from "viem";
 
-import { initWalletProvider, WalletProvider } from "../providers/wallet";
-import type { Transaction, TransferParams } from "../types";
+import { WalletProvider, initWalletProvider } from "../providers/wallet";
 import { transferTemplate } from "../templates";
+import type { Transaction, TransferParams } from "../types";
 
 // Exported for tests
 export class TransferAction {

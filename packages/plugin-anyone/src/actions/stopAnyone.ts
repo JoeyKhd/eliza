@@ -1,10 +1,10 @@
 import {
+    type Action,
     ActionExample,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     State,
-    type Action,
 } from "@elizaos/core";
 import { AnyoneClientService } from "../services/AnyoneClientService";
 import { AnyoneProxyService } from "../services/AnyoneProxyService";

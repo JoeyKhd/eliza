@@ -1,17 +1,17 @@
 import {
     composeContext,
     generateText,
-    trimTokens,
-    parseJSONObjectFromText,
     getModelSettings,
+    parseJSONObjectFromText,
+    trimTokens,
 } from "@elizaos/core";
 import { models } from "@elizaos/core";
 import {
     Action,
     ActionExample,
     Content,
-    HandlerCallback,
     Handler,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
@@ -46,7 +46,7 @@ Your response must be formatted as a JSON block with this structure:
 
 const getAttachmentIds = async (
     runtime: IAgentRuntime,
-    message: Memory,
+    _message: Memory,
     state: State
 ): Promise<{ objective: string; attachmentIds: string[] } | null> => {
     const context = composeContext({
@@ -95,7 +95,7 @@ const summarizeAction: Action = {
     description:
         "Answer a user request informed by specific attachments based on their IDs. If a user asks to chat with a PDF, or wants more specific information about a link or video or anything else they've attached, this is the action to use.",
     validate: async (
-        runtime: IAgentRuntime,
+        _runtime: IAgentRuntime,
         message: Memory,
         _state: State | undefined
     ): Promise<boolean> => {
@@ -137,7 +137,7 @@ const summarizeAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State | undefined,
-        options: any,
+        _options: any,
         callback: HandlerCallback
     ): Promise<Content> => {
         const currentState =

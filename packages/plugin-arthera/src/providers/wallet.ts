@@ -1,20 +1,20 @@
+import type { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import {
+    http,
     createPublicClient,
     createWalletClient,
     formatUnits,
-    http,
 } from "viem";
-import { privateKeyToAccount } from "viem/accounts";
-import type { IAgentRuntime, Provider, Memory, State } from "@elizaos/core";
 import type {
+    Account,
     Address,
-    WalletClient,
-    PublicClient,
     Chain,
     HttpTransport,
-    Account,
     PrivateKeyAccount,
+    PublicClient,
+    WalletClient,
 } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
 import * as viemChains from "viem/chains";
 
 import type { SupportedChain } from "../types";

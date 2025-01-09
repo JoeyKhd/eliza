@@ -1,40 +1,40 @@
-import type { Plugin, IAgentRuntime, Memory, State } from "@elizaos/core";
-import { elizaLogger, settings } from "@elizaos/core";
-import { z } from "zod";
-import { TwitterClientInterface } from "@elizaos/client-twitter";
-import {
-    solanaPlugin,
-    trustScoreProvider,
-    trustEvaluator,
-    getTokenBalance,
-} from "@elizaos/plugin-solana";
-import { TokenProvider } from "./providers/token";
-import { Connection, PublicKey } from "@solana/web3.js";
-import type { Chain, WalletClient, Signature, Balance } from "@goat-sdk/core";
 import * as fs from "fs";
 import * as path from "path";
+import { TwitterClientInterface } from "@elizaos/client-twitter";
+import type { IAgentRuntime, Memory, Plugin, State } from "@elizaos/core";
+import { elizaLogger, settings } from "@elizaos/core";
+import {
+    getTokenBalance,
+    solanaPlugin,
+    trustEvaluator,
+    trustScoreProvider,
+} from "@elizaos/plugin-solana";
+import { TrustScoreDatabase } from "@elizaos/plugin-trustdb";
+import type { Balance, Chain, Signature, WalletClient } from "@goat-sdk/core";
+import { Connection, PublicKey } from "@solana/web3.js";
+import NodeCache from "node-cache";
+import { v4 as uuidv4 } from "uuid";
+import { z } from "zod";
+import { actions } from "./actions";
+import { analyzeTradeAction } from "./actions/analyzeTrade";
+import { SAFETY_LIMITS } from "./constants";
+import { TokenProvider } from "./providers/token";
 import { TrustScoreProvider } from "./providers/trustScoreProvider";
 import { SimulationService } from "./services/simulationService";
-import { SAFETY_LIMITS } from "./constants";
-import NodeCache from "node-cache";
-import { TrustScoreDatabase } from "@elizaos/plugin-trustdb";
-import { v4 as uuidv4 } from "uuid";
-import { actions } from "./actions";
 import {
     TradeAlert,
     TradeBuyAlert,
-    tweetTrade,
     TwitterConfigSchema,
     TwitterService,
+    tweetTrade,
 } from "./services/twitter";
+import { ProcessedTokenData } from "./types";
 import {
     executeTrade,
     getChainWalletBalance,
     getWalletBalance,
     getWalletKeypair,
 } from "./wallet";
-import { ProcessedTokenData } from "./types";
-import { analyzeTradeAction } from "./actions/analyzeTrade";
 
 // Update Balance interface to include formatted
 interface ExtendedBalance extends Balance {
@@ -147,7 +147,7 @@ interface SkipWaitCache {
 }
 
 // Add near other cache instances
-const skipWaitCache = new NodeCache({
+const _skipWaitCache = new NodeCache({
     stdTTL: 7200, // 2 hours in seconds
     checkperiod: 600, // Check for expired entries every 10 minutes
 });
@@ -267,7 +267,7 @@ async function updateSellDetails(
     tokenAddress: string,
     recommenderId: string,
     tradeAmount: number,
-    latestTrade: any,
+    _latestTrade: any,
     tokenData: any
 ) {
     const trustScoreDb = new TrustScoreDatabase(runtime.databaseAdapter.db);
@@ -483,11 +483,11 @@ async function createRabbiTraderPlugin(
     }
 
     elizaLogger.log("Initializing Solana connection...");
-    let walletProvider: ExtendedWalletProvider = {
+    const walletProvider: ExtendedWalletProvider = {
         connection,
         getChain: () => ({ type: "solana" }),
         getAddress: () => keypair.publicKey.toBase58(),
-        signMessage: async (message: string): Promise<Signature> => {
+        signMessage: async (_message: string): Promise<Signature> => {
             throw new Error(
                 "Message signing not implemented for Solana wallet"
             );
@@ -524,7 +524,7 @@ async function createRabbiTraderPlugin(
                         name: "Solana",
                     };
                 }
-            } catch (error) {
+            } catch (_error) {
                 return {
                     value: BigInt(0),
                     decimals: tokenAddress.startsWith("0x") ? 18 : 9,
@@ -559,12 +559,8 @@ async function createRabbiTraderPlugin(
                 return 0;
             }
         },
-        executeTrade: async (params) => {
-            try {
-                return { success: true };
-            } catch (error) {
-                throw error;
-            }
+        executeTrade: async (_params) => {
+            return { success: true };
         },
         getFormattedPortfolio: async () => "",
     };
@@ -712,7 +708,7 @@ async function analyzeToken(
             new PublicKey(walletPublicKey)
         );
 
-        const walletSolBalance = {
+        const _walletSolBalance = {
             formatted: (balance / 1e9).toString(),
         };
 
@@ -844,7 +840,7 @@ async function analyzeToken(
                             result
                         );
                     }
-                } catch (parseError) {}
+                } catch (_parseError) {}
                 return [];
             }
         );
@@ -1119,7 +1115,7 @@ async function sell({
     const tradeAmount = Number(latestTrade?.buy_amount || 0);
 
     // Create and save trade memory object for sell
-    const tradeMemory: Memory = {
+    const _tradeMemory: Memory = {
         userId: state.userId,
         agentId: runtime.agentId,
         roomId: state.roomId,

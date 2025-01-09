@@ -1,13 +1,13 @@
 import {
     Action,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    HandlerCallback,
+    ModelClass,
     State,
     composeContext,
-    generateObject,
-    ModelClass,
     elizaLogger,
+    generateObject,
 } from "@elizaos/core";
 
 import { CreateResourceSchema, isCreateResourceContent } from "../types";

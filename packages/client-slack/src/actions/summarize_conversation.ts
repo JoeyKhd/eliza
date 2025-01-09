@@ -1,10 +1,10 @@
 import {
     composeContext,
     generateText,
+    getModelSettings,
+    parseJSONObjectFromText,
     splitChunks,
     trimTokens,
-    parseJSONObjectFromText,
-    getModelSettings,
 } from "@elizaos/core";
 import { models } from "@elizaos/core";
 import { getActorDetails } from "@elizaos/core";
@@ -200,7 +200,7 @@ const summarizeAction: Action = {
     handler: async (
         runtime: IAgentRuntime,
         message: Memory,
-        state: State,
+        _state: State,
         _options: any,
         callback: HandlerCallback
     ): Promise<Content> => {

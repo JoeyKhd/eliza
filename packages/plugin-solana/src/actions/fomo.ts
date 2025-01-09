@@ -1,15 +1,6 @@
-import { generateImage, elizaLogger } from "@elizaos/core";
+import { elizaLogger, generateImage } from "@elizaos/core";
 import {
-    Connection,
-    Keypair,
-    PublicKey,
-    VersionedTransaction,
-} from "@solana/web3.js";
-import { Fomo, PurchaseCurrency } from "fomo-sdk-solana";
-import { getAssociatedTokenAddressSync } from "@solana/spl-token";
-import bs58 from "bs58";
-import {
-    settings,
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -17,10 +8,19 @@ import {
     Memory,
     ModelClass,
     State,
-    generateObject,
     composeContext,
-    type Action,
+    generateObject,
+    settings,
 } from "@elizaos/core";
+import { getAssociatedTokenAddressSync } from "@solana/spl-token";
+import {
+    Connection,
+    Keypair,
+    PublicKey,
+    VersionedTransaction,
+} from "@solana/web3.js";
+import bs58 from "bs58";
+import { Fomo, PurchaseCurrency } from "fomo-sdk-solana";
 
 import { walletProvider } from "../providers/wallet.ts";
 

@@ -1,34 +1,34 @@
+import * as fs from "fs";
+import * as path from "path";
+import {
+    AgentRuntime,
+    Client,
+    Content,
+    IAgentRuntime,
+    Media,
+    Memory,
+    ModelClass,
+    composeContext,
+    elizaLogger,
+    generateCaption,
+    generateImage,
+    generateMessageResponse,
+    generateObject,
+    getEmbeddingZeroVector,
+    messageCompletionFooter,
+    settings,
+    stringToUuid,
+} from "@elizaos/core";
 import bodyParser from "body-parser";
 import cors from "cors";
 import express, { Request as ExpressRequest } from "express";
 import multer from "multer";
-import { z } from "zod";
-import {
-    AgentRuntime,
-    elizaLogger,
-    messageCompletionFooter,
-    generateCaption,
-    generateImage,
-    Media,
-    getEmbeddingZeroVector,
-    composeContext,
-    generateMessageResponse,
-    generateObject,
-    Content,
-    Memory,
-    ModelClass,
-    Client,
-    stringToUuid,
-    settings,
-    IAgentRuntime,
-} from "@elizaos/core";
-import { createApiRouter } from "./api.ts";
-import * as fs from "fs";
-import * as path from "path";
 import OpenAI from "openai";
+import { z } from "zod";
+import { createApiRouter } from "./api.ts";
 
 const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
+    destination: (_req, _file, cb) => {
         const uploadDir = path.join(process.cwd(), "data", "uploads");
         // Create the directory if it doesn't exist
         if (!fs.existsSync(uploadDir)) {
@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
         }
         cb(null, uploadDir);
     },
-    filename: (req, file, cb) => {
+    filename: (_req, file, cb) => {
         const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
         cb(null, `${uniqueSuffix}-${file.originalname}`);
     },
@@ -373,14 +373,14 @@ export class DirectClient {
 
                 // hyperfi specific parameters
                 let nearby = [];
-                let messages = [];
+                let _messages = [];
                 let availableEmotes = [];
 
                 if (body.nearby) {
                     nearby = body.nearby;
                 }
                 if (body.messages) {
-                    messages = body.messages;
+                    _messages = body.messages;
                     // loop on the messages and record the memories
                     // might want to do this in parallel
                     for (const msg of body.messages) {
@@ -505,7 +505,7 @@ export class DirectClient {
                 let hfOut;
                 try {
                     hfOut = hyperfiOutSchema.parse(response.object);
-                } catch (e) {
+                } catch (_e) {
                     elizaLogger.error(
                         "cant serialize response",
                         response.object
@@ -515,7 +515,7 @@ export class DirectClient {
                 }
 
                 // do this in the background
-                const rememberThis = new Promise(async (resolve) => {
+                const _rememberThis = new Promise(async (resolve) => {
                     const contentObj: Content = {
                         text: hfOut.say,
                     };
@@ -554,7 +554,7 @@ export class DirectClient {
                         return;
                     }
 
-                    let message = null as Content | null;
+                    let _message = null as Content | null;
 
                     const messageId = stringToUuid(Date.now().toString());
                     const memory: Memory = {
@@ -578,7 +578,7 @@ export class DirectClient {
                             [responseMessage],
                             state,
                             async (newMessages) => {
-                                message = newMessages;
+                                _message = newMessages;
                                 return [memory];
                             }
                         ); // 0.674s

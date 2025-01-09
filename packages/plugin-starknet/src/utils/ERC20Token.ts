@@ -1,10 +1,10 @@
 import {
     AccountInterface,
-    cairo,
     CallData,
     Calldata,
     Contract,
     ProviderInterface,
+    cairo,
 } from "starknet";
 import erc20Abi from "./erc20.json";
 

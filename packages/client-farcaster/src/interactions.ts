@@ -1,27 +1,27 @@
 import {
-    composeContext,
-    generateMessageResponse,
-    generateShouldRespond,
+    Content,
+    HandlerCallback,
+    type IAgentRuntime,
     Memory,
     ModelClass,
-    stringToUuid,
+    composeContext,
     elizaLogger,
-    HandlerCallback,
-    Content,
-    type IAgentRuntime,
+    generateMessageResponse,
+    generateShouldRespond,
+    stringToUuid,
 } from "@elizaos/core";
-import type { FarcasterClient } from "./client";
 import { toHex } from "viem";
+import { sendCast } from "./actions";
+import type { FarcasterClient } from "./client";
 import { buildConversationThread, createCastMemory } from "./memory";
-import { Cast, Profile } from "./types";
 import {
     formatCast,
     formatTimeline,
     messageHandlerTemplate,
     shouldRespondTemplate,
 } from "./prompts";
+import { Cast, Profile } from "./types";
 import { castUuid } from "./utils";
-import { sendCast } from "./actions";
 
 export class FarcasterInteractionManager {
     private timeout: NodeJS.Timeout | undefined;
@@ -240,7 +240,7 @@ export class FarcasterInteractionManager {
 
         const callback: HandlerCallback = async (
             content: Content,
-            files: any[]
+            _files: any[]
         ) => {
             try {
                 if (memoryId && !content.inReplyTo) {

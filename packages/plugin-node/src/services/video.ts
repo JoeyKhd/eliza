@@ -1,3 +1,6 @@
+import fs from "fs";
+import { tmpdir } from "os";
+import path from "path";
 import {
     IAgentRuntime,
     ITranscriptionService,
@@ -5,13 +8,10 @@ import {
     Media,
     Service,
     ServiceType,
-    stringToUuid,
     elizaLogger,
+    stringToUuid,
 } from "@elizaos/core";
 import ffmpeg from "fluent-ffmpeg";
-import fs from "fs";
-import { tmpdir } from "os";
-import path from "path";
 import youtubeDl from "youtube-dl-exec";
 
 export class VideoService extends Service implements IVideoService {

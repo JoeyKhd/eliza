@@ -1,18 +1,18 @@
 // src/actions/leaveVoice
 import { getVoiceConnection } from "@discordjs/voice";
 import {
-    Channel,
-    ChannelType,
-    Client,
-    Message as DiscordMessage,
-} from "discord.js";
-import {
     Action,
     ActionExample,
     IAgentRuntime,
     Memory,
     State,
 } from "@elizaos/core";
+import {
+    Channel,
+    ChannelType,
+    Client,
+    Message as DiscordMessage,
+} from "discord.js";
 
 export default {
     name: "LEAVE_VOICE",
@@ -24,7 +24,11 @@ export default {
         "LEAVE_MEETING",
         "LEAVE_CALL",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory, state: State) => {
+    validate: async (
+        _runtime: IAgentRuntime,
+        message: Memory,
+        state: State
+    ) => {
         if (message.content.source !== "discord") {
             // not a discord message
             return false;
@@ -70,8 +74,8 @@ export default {
     },
     description: "Leave the current voice channel.",
     handler: async (
-        runtime: IAgentRuntime,
-        message: Memory,
+        _runtime: IAgentRuntime,
+        _message: Memory,
         state: State
     ): Promise<boolean> => {
         if (!state.discordClient) {

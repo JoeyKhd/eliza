@@ -1,18 +1,18 @@
 import {
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
     composeContext,
     elizaLogger,
     generateObjectDeprecated,
-    HandlerCallback,
-    ModelClass,
-    IAgentRuntime,
-    Memory,
-    State,
 } from "@elizaos/core";
-import { getAvailableLicensesTemplate, licenseIPTemplate } from "../templates";
 import { Address } from "viem";
-import { IPLicenseDetails, RESOURCE_TYPE } from "../types/api";
-import { API_KEY, API_URL } from "../lib/api";
 import { storyOdyssey } from "viem/chains";
+import { API_KEY, API_URL } from "../lib/api";
+import { getAvailableLicensesTemplate, licenseIPTemplate } from "../templates";
+import { IPLicenseDetails, RESOURCE_TYPE } from "../types/api";
 
 export { licenseIPTemplate };
 
@@ -103,7 +103,7 @@ export const getAvailableLicensesAction = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ): Promise<boolean> => {
         elizaLogger.log("Starting GET_AVAILABLE_LICENSES handler...");

@@ -1,18 +1,18 @@
-import { Octokit } from "@octokit/rest";
-import { glob } from "glob";
-import simpleGit, { SimpleGit } from "simple-git";
-import path from "path";
-import fs from "fs/promises";
-import { existsSync } from "fs";
 import { createHash } from "crypto";
+import { existsSync } from "fs";
+import path from "path";
 import {
-    elizaLogger,
     AgentRuntime,
     Client,
     IAgentRuntime,
+    elizaLogger,
     knowledge,
     stringToUuid,
 } from "@elizaos/core";
+import { Octokit } from "@octokit/rest";
+import fs from "fs/promises";
+import { glob } from "glob";
+import simpleGit, { SimpleGit } from "simple-git";
 import { validateGithubConfig } from "./environment";
 
 export interface GitHubConfig {

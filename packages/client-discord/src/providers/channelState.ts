@@ -1,12 +1,12 @@
+import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 import {
     ChannelType,
     Message as DiscordMessage,
     TextChannel,
 } from "discord.js";
-import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
 
 const channelStateProvider: Provider = {
-    get: async (runtime: IAgentRuntime, message: Memory, state?: State) => {
+    get: async (_runtime: IAgentRuntime, _message: Memory, state?: State) => {
         const discordMessage =
             (state?.discordMessage as DiscordMessage) ||
             (state?.discordChannel as DiscordMessage);

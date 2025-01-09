@@ -1,5 +1,5 @@
-import fs, { glob } from "fs/promises";
 import path from "path";
+import fs, { glob } from "fs/promises";
 
 const characterName = "eliza";
 const newCacheDir = path.resolve(`./data/${characterName}/cache`);

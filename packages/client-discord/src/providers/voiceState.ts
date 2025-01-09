@@ -1,9 +1,9 @@
 import { getVoiceConnection } from "@discordjs/voice";
-import { ChannelType, Message as DiscordMessage } from "discord.js";
 import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
+import { ChannelType, Message as DiscordMessage } from "discord.js";
 
 const voiceStateProvider: Provider = {
-    get: async (runtime: IAgentRuntime, message: Memory, state?: State) => {
+    get: async (_runtime: IAgentRuntime, _message: Memory, state?: State) => {
         // Voice doesn't get a discord message, so we need to use the channel for guild data
         const discordMessage = (state?.discordMessage ||
             state.discordChannel) as DiscordMessage;

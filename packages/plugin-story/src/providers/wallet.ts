@@ -1,21 +1,21 @@
-import { IAgentRuntime, Provider, Memory, State } from "@elizaos/core";
+import { IAgentRuntime, Memory, Provider, State } from "@elizaos/core";
+import { StoryClient, StoryConfig } from "@story-protocol/core-sdk";
 import {
-    createPublicClient,
-    createWalletClient,
     http,
-    formatUnits,
-    type PublicClient,
-    type WalletClient,
+    Account,
+    type Address,
     type Chain,
     type HttpTransport,
-    type Address,
-    Account,
+    type PublicClient,
     Transport,
+    type WalletClient,
+    createPublicClient,
+    createWalletClient,
+    formatUnits,
 } from "viem";
-import { storyOdyssey } from "viem/chains";
-import type { SupportedChain, ChainMetadata } from "../types";
 import { privateKeyToAccount } from "viem/accounts";
-import { StoryClient, StoryConfig } from "@story-protocol/core-sdk";
+import { storyOdyssey } from "viem/chains";
+import type { ChainMetadata, SupportedChain } from "../types";
 
 export const DEFAULT_CHAIN_CONFIGS: Record<SupportedChain, ChainMetadata> = {
     odyssey: {
@@ -114,8 +114,8 @@ export class WalletProvider {
 export const storyWalletProvider: Provider = {
     async get(
         runtime: IAgentRuntime,
-        message: Memory,
-        state?: State
+        _message: Memory,
+        _state?: State
     ): Promise<string | null> {
         // Check if the user has a Story wallet
         if (!runtime.getSetting("STORY_PRIVATE_KEY")) {

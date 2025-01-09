@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { ContributorProps } from "./Contributors";
 import { THEME_COLORS } from "./Contributors";
-import { hexToRgb } from "./utils";
+import Hero from "./Hero";
 import ScoreIcon from "./ScoreIcon";
 import Summary from "./Summary";
-import Hero from "./Hero";
+import { hexToRgb } from "./utils";
 
 const ContributorCard: React.FC<ContributorProps> = ({
     contributor,

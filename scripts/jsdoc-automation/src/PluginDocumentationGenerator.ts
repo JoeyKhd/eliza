@@ -1,15 +1,15 @@
-import {
-    ASTQueueItem,
-    PluginDocumentation,
-    TodoItem,
-    EnvUsage,
-} from "./types/index.js";
-import { AIService } from "./AIService/AIService.js";
-import { GitManager } from "./GitManager.js";
-import { Configuration } from "./Configuration.js";
-import { FullDocumentationGenerator } from "./AIService/generators/FullDocumentationGenerator.js";
 import fs from "fs";
 import path from "path";
+import { AIService } from "./AIService/AIService.js";
+import { FullDocumentationGenerator } from "./AIService/generators/FullDocumentationGenerator.js";
+import { Configuration } from "./Configuration.js";
+import { GitManager } from "./GitManager.js";
+import {
+    ASTQueueItem,
+    EnvUsage,
+    PluginDocumentation,
+    TodoItem,
+} from "./types/index.js";
 
 /**
  * Generates comprehensive plugin documentation based on existing JSDoc comments

@@ -1,21 +1,21 @@
+import { beforeEach, describe, expect, vi } from "vitest";
+import { CacheManager, MemoryCacheAdapter } from "../src/cache.ts";
 import {
-    getGoals,
-    formatGoalsAsString,
-    updateGoal,
     createGoal,
+    formatGoalsAsString,
+    getGoals,
+    updateGoal,
 } from "../src/goals.ts";
 import {
     Goal,
     GoalStatus,
     IAgentRuntime,
     Memory,
-    State,
-    UUID,
     Service,
     ServiceType,
+    State,
+    UUID,
 } from "../src/types.ts";
-import { CacheManager, MemoryCacheAdapter } from "../src/cache.ts";
-import { describe, expect, vi, beforeEach } from "vitest";
 
 // Mock the database adapter
 export const mockDatabaseAdapter = {

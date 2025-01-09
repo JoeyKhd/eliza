@@ -1,30 +1,30 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import { Coinbase, Wallet } from "@coinbase/coinbase-sdk";
 import {
+    Action,
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    Plugin,
+    Provider,
+    State,
     composeContext,
     elizaLogger,
     generateObject,
-    ModelClass,
-    Action,
-    IAgentRuntime,
-    Memory,
-    Provider,
-    State,
-    HandlerCallback,
-    Plugin,
 } from "@elizaos/core";
+import { parse } from "csv-parse/sync";
+import { createArrayCsvWriter } from "csv-writer";
+import { readFile } from "fs/promises";
+import { transferTemplate } from "../templates";
 import {
+    Transaction,
+    TransferContent,
     TransferSchema,
     isTransferContent,
-    TransferContent,
-    Transaction,
 } from "../types";
-import { transferTemplate } from "../templates";
-import { readFile } from "fs/promises";
-import { parse } from "csv-parse/sync";
-import path from "path";
-import { fileURLToPath } from "url";
-import fs from "fs";
-import { createArrayCsvWriter } from "csv-writer";
 import {
     appendTransactionsToCsv,
     executeTransfer,

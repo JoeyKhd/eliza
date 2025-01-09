@@ -10,8 +10,8 @@ import {
 import { fal } from "@fal-ai/client";
 import { FAL_CONSTANTS } from "./constants";
 
-import * as fs from "fs";
 import { Buffer } from "buffer";
+import * as fs from "fs";
 import * as path from "path";
 import * as process from "process";
 

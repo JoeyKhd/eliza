@@ -1,10 +1,10 @@
+import { createReadStream } from "fs";
+import { resolve } from "path";
+import { config } from "dotenv";
+import express from "express";
+import { EventHandler } from "../events";
 import { SlackClientProvider } from "../providers/slack-client.provider";
 import { SlackConfig } from "../types/slack-types";
-import { EventHandler } from "../events";
-import { config } from "dotenv";
-import { resolve } from "path";
-import { createReadStream } from "fs";
-import express from "express";
 
 // Load environment variables
 const envPath = resolve(__dirname, "../../../../.env");

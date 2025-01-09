@@ -1,4 +1,3 @@
-import { RESTBase } from "./rest-base";
 import * as Accounts from "./accounts";
 import * as Converts from "./converts";
 import * as DataAPI from "./dataAPI";
@@ -10,6 +9,7 @@ import * as Perpetuals from "./perpetuals";
 import * as Portfolios from "./portfolios";
 import * as Products from "./products";
 import * as Public from "./public";
+import { RESTBase } from "./rest-base";
 
 export class RESTClient extends RESTBase {
     constructor(key?: string | undefined, secret?: string | undefined) {

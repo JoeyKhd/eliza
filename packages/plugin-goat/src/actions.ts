@@ -1,17 +1,17 @@
 import { getOnChainTools } from "@goat-sdk/adapter-vercel-ai";
+import { WalletClientBase } from "@goat-sdk/core";
 import { MODE, USDC, erc20 } from "@goat-sdk/plugin-erc20";
 import { kim } from "@goat-sdk/plugin-kim";
 import { sendETH } from "@goat-sdk/wallet-evm";
-import { WalletClientBase } from "@goat-sdk/core";
 
 import {
-    generateText,
     type HandlerCallback,
     type IAgentRuntime,
     type Memory,
     ModelClass,
     type State,
     composeContext,
+    generateText,
 } from "@elizaos/core";
 
 export async function getOnChainActions(wallet: WalletClientBase) {
@@ -48,7 +48,7 @@ function getActionHandler(
         runtime: IAgentRuntime,
         message: Memory,
         state: State | undefined,
-        options?: Record<string, unknown>,
+        _options?: Record<string, unknown>,
         callback?: HandlerCallback
     ): Promise<boolean> => {
         let currentState = state ?? (await runtime.composeState(message));

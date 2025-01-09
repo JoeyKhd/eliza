@@ -1,15 +1,15 @@
 import {
-    elizaLogger,
-    getEmbeddingZeroVector,
     IAgentRuntime,
-    stringToUuid,
     type Memory,
     type UUID,
+    elizaLogger,
+    getEmbeddingZeroVector,
+    stringToUuid,
 } from "@elizaos/core";
-import type { Cast } from "./types";
 import { toHex } from "viem";
-import { castUuid } from "./utils";
 import { FarcasterClient } from "./client";
+import type { Cast } from "./types";
+import { castUuid } from "./utils";
 
 export function createCastMemory({
     roomId,

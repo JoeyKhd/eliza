@@ -4,10 +4,10 @@
 import {
     Action,
     ActionExample,
-    composeContext,
     IAgentRuntime,
     Memory,
     State,
+    composeContext,
 } from "@elizaos/core";
 import {
     Channel,

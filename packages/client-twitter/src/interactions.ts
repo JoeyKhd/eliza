@@ -1,26 +1,26 @@
-import { SearchMode, Tweet } from "agent-twitter-client";
 import {
-    composeContext,
-    generateMessageResponse,
-    generateShouldRespond,
-    messageCompletionFooter,
-    shouldRespondFooter,
     Content,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    stringToUuid,
+    composeContext,
     elizaLogger,
+    generateMessageResponse,
+    generateShouldRespond,
     getEmbeddingZeroVector,
+    messageCompletionFooter,
     parsePizzaDecisionFromText,
     pizzaDecisionFooter,
+    shouldRespondFooter,
+    stringToUuid,
 } from "@elizaos/core";
-import { ClientBase } from "./base";
-import { buildConversationThread, sendTweet, wait } from "./utils.ts";
 import { generateText } from "@elizaos/core";
+import { SearchMode, Tweet } from "agent-twitter-client";
+import { ClientBase } from "./base";
 import { PizzaAPI } from "./pizza.ts";
+import { buildConversationThread, sendTweet, wait } from "./utils.ts";
 
 export const twitterMessageHandlerTemplate =
     `

@@ -1,4 +1,4 @@
-import { IAgentRuntime, Memory, Evaluator, elizaLogger } from "@elizaos/core";
+import { Evaluator, IAgentRuntime, Memory, elizaLogger } from "@elizaos/core";
 import { TrustScoreProvider } from "../providers/trustScoreProvider";
 
 export const trustEvaluator: Evaluator = {
@@ -7,7 +7,7 @@ export const trustEvaluator: Evaluator = {
     examples: [],
     description: "Evaluates token trust scores and trading signals",
     validate: async () => true,
-    handler: async (runtime: IAgentRuntime, message: Memory) => {
+    handler: async (_runtime: IAgentRuntime, message: Memory) => {
         const trustScoreProvider = new TrustScoreProvider();
         const tokenAddress = message.content?.tokenAddress;
 

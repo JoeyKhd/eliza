@@ -1,8 +1,8 @@
-import { getEmbeddingModelSettings, getEndpoint } from "./models.ts";
-import { IAgentRuntime, ModelProviderName } from "./types.ts";
-import settings from "./settings.ts";
-import elizaLogger from "./logger.ts";
 import LocalEmbeddingModelManager from "./localembeddingManager.ts";
+import elizaLogger from "./logger.ts";
+import { getEmbeddingModelSettings, getEndpoint } from "./models.ts";
+import settings from "./settings.ts";
+import { IAgentRuntime, ModelProviderName } from "./types.ts";
 
 interface EmbeddingOptions {
     model: string;

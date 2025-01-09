@@ -73,7 +73,7 @@ export default {
     description:
         "Downloads a video or audio file from a URL and attaches it to the response message.",
     validate: async (
-        runtime: IAgentRuntime,
+        _runtime: IAgentRuntime,
         message: Memory,
         _state: State
     ) => {
@@ -85,7 +85,7 @@ export default {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback: HandlerCallback
     ) => {
         const videoService = runtime

@@ -1,11 +1,11 @@
+import { beforeAll, describe, expect, test, vi } from "vitest";
 import {
     formatActors,
     formatMessages,
-    getActorDetails,
     formatTimestamp,
+    getActorDetails,
 } from "../src/messages.ts";
-import { IAgentRuntime, Actor, Content, Memory, UUID } from "../src/types.ts";
-import { describe, test, expect, vi, beforeAll } from "vitest";
+import { Actor, Content, IAgentRuntime, Memory, UUID } from "../src/types.ts";
 
 describe("Messages Library", () => {
     let runtime: IAgentRuntime;

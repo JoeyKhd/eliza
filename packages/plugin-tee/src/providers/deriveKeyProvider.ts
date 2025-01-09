@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import {
     IAgentRuntime,
     Memory,
@@ -5,13 +6,12 @@ import {
     State,
     elizaLogger,
 } from "@elizaos/core";
-import { Keypair } from "@solana/web3.js";
-import crypto from "crypto";
 import { DeriveKeyResponse, TappdClient } from "@phala/dstack-sdk";
-import { privateKeyToAccount } from "viem/accounts";
+import { Keypair } from "@solana/web3.js";
 import { PrivateKeyAccount, keccak256 } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { RemoteAttestationQuote, TEEMode } from "../types/tee";
 import { RemoteAttestationProvider } from "./remoteAttestationProvider";
-import { TEEMode, RemoteAttestationQuote } from "../types/tee";
 
 interface DeriveKeyAttestationData {
     agentId: string;

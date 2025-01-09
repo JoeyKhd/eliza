@@ -5,8 +5,8 @@ import {
     State,
     elizaLogger,
 } from "@elizaos/core";
-import { KeyPair, keyStores, connect, Account, utils } from "near-api-js";
 import BigNumber from "bignumber.js";
+import { Account, KeyPair, connect, keyStores, utils } from "near-api-js";
 import { KeyPairString } from "near-api-js/lib/utils";
 import NodeCache from "node-cache";
 

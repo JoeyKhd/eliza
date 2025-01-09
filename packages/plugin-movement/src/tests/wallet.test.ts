@@ -1,5 +1,3 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import { WalletProvider } from "../providers/wallet";
 import {
     Account,
     Aptos,
@@ -11,7 +9,9 @@ import {
 } from "@aptos-labs/ts-sdk";
 import { defaultCharacter } from "@elizaos/core";
 import BigNumber from "bignumber.js";
-import { MOVE_DECIMALS, MOVEMENT_NETWORK_CONFIG } from "../constants";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { MOVEMENT_NETWORK_CONFIG, MOVE_DECIMALS } from "../constants";
+import { WalletProvider } from "../providers/wallet";
 
 // Mock NodeCache
 vi.mock("node-cache", () => {

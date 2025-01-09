@@ -14,20 +14,15 @@ import {
     State,
     UUID,
 } from "@elizaos/core";
-import { stringToUuid, getEmbeddingZeroVector } from "@elizaos/core";
+import { getEmbeddingZeroVector, stringToUuid } from "@elizaos/core";
+import { elizaLogger } from "@elizaos/core";
 import {
     ChannelType,
     Client,
     Message as DiscordMessage,
     TextChannel,
 } from "discord.js";
-import { elizaLogger } from "@elizaos/core";
 import { AttachmentManager } from "./attachments.ts";
-import { VoiceManager } from "./voice.ts";
-import {
-    discordShouldRespondTemplate,
-    discordMessageHandlerTemplate,
-} from "./templates.ts";
 import {
     IGNORE_RESPONSE_WORDS,
     LOSE_INTEREST_WORDS,
@@ -38,10 +33,15 @@ import {
     TIMING_CONSTANTS,
 } from "./constants";
 import {
-    sendMessageInChunks,
+    discordMessageHandlerTemplate,
+    discordShouldRespondTemplate,
+} from "./templates.ts";
+import {
     canSendMessage,
     cosineSimilarity,
+    sendMessageInChunks,
 } from "./utils.ts";
+import { VoiceManager } from "./voice.ts";
 
 interface MessageContext {
     content: string;
@@ -680,7 +680,7 @@ export class MessageManager {
 
     private _isRelevantToTeamMember(
         content: string,
-        channelId: string,
+        _channelId: string,
         lastAgentMemory: Memory | null = null
     ): boolean {
         const teamConfig = this.runtime.character.clientConfig?.discord;
@@ -1270,7 +1270,7 @@ export class MessageManager {
 
     private async _generateResponse(
         message: Memory,
-        state: State,
+        _state: State,
         context: string
     ): Promise<Content> {
         const { userId, roomId } = message;

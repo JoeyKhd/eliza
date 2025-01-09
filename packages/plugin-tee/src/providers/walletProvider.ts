@@ -9,8 +9,8 @@ import {
 import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 import BigNumber from "bignumber.js";
 import NodeCache from "node-cache";
-import { DeriveKeyProvider } from "./deriveKeyProvider";
 import { RemoteAttestationQuote } from "../types/tee";
+import { DeriveKeyProvider } from "./deriveKeyProvider";
 // Provider configuration
 const PROVIDER_CONFIG = {
     BIRDEYE_API: "https://public-api.birdeye.so",

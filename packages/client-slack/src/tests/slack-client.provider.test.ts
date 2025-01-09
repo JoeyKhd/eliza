@@ -1,14 +1,14 @@
-import { describe, expect, test, jest, beforeEach } from "@jest/globals";
-import type { Mocked } from "jest-mock";
-import { SlackClientProvider } from "../providers/slack-client.provider";
-import { SlackConfig } from "../types/slack-types";
-import { getMockWebClient, createMockSlackResponse } from "./setup";
+import { beforeEach, describe, expect, jest, test } from "@jest/globals";
 import { WebClient } from "@slack/web-api";
 import type {
     AuthTestResponse,
     ChatPostMessageResponse,
     ConversationsInfoResponse,
 } from "@slack/web-api";
+import type { Mocked } from "jest-mock";
+import { SlackClientProvider } from "../providers/slack-client.provider";
+import { SlackConfig } from "../types/slack-types";
+import { createMockSlackResponse, getMockWebClient } from "./setup";
 
 jest.mock("@slack/web-api");
 

@@ -4,9 +4,9 @@ import type { Plugin } from "@elizaos/core";
 export * from "./actions/submitData";
 export * from "./actions/transfer";
 
+import submitData from "./actions/submitData";
 // import { bridgeAction } from "./actions/bridge";
 import transfer from "./actions/transfer";
-import submitData from "./actions/submitData";
 
 export const availPlugin: Plugin = {
     name: "avail",

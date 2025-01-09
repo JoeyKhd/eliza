@@ -1,19 +1,19 @@
 import {
     Action,
     ActionExample,
+    Content,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { approve, getTxReceipt, swap, getQuote } from "../utils";
 import { Address } from "viem";
 import { validateAvalancheConfig } from "../environment";
+import { approve, getQuote, getTxReceipt, swap } from "../utils";
 import { TOKEN_ADDRESSES, YAK_SWAP_CONFIG } from "../utils/constants";
 
 export interface SwapContent extends Content {
@@ -24,7 +24,7 @@ export interface SwapContent extends Content {
 }
 
 function isSwapContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is SwapContent {
     elizaLogger.debug("Content for swap", content);

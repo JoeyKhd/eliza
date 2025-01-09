@@ -6,12 +6,12 @@ import {
     State,
 } from "@elizaos/core";
 
-import { getFullnodeUrl, SuiClient } from "@mysten/sui/client";
+import { SuiClient, getFullnodeUrl } from "@mysten/sui/client";
 
+import * as path from "path";
 import { MIST_PER_SUI } from "@mysten/sui/utils";
 import BigNumber from "bignumber.js";
 import NodeCache from "node-cache";
-import * as path from "path";
 import { parseAccount } from "../utils";
 
 // Provider configuration

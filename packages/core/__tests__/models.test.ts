@@ -1,6 +1,6 @@
-import { getModel, getEndpoint, models } from "../src/models.ts";
-import { ModelProviderName, ModelClass } from "../src/types.ts";
-import { describe, test, expect, vi } from "vitest";
+import { describe, expect, test, vi } from "vitest";
+import { getEndpoint, getModel, models } from "../src/models.ts";
+import { ModelClass, ModelProviderName } from "../src/types.ts";
 
 // Mock settings
 vi.mock("../settings", () => {

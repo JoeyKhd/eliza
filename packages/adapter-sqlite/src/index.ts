@@ -3,24 +3,24 @@ export * from "./sqlite_vec.ts";
 
 import {
     DatabaseAdapter,
-    elizaLogger,
     IDatabaseCacheAdapter,
+    elizaLogger,
 } from "@elizaos/core";
 import {
     Account,
     Actor,
-    GoalStatus,
-    Participant,
     type Goal,
+    GoalStatus,
     type Memory,
+    Participant,
+    RAGKnowledgeItem,
     type Relationship,
     type UUID,
-    RAGKnowledgeItem,
 } from "@elizaos/core";
 import { Database } from "better-sqlite3";
 import { v4 } from "uuid";
-import { load } from "./sqlite_vec.ts";
 import { sqliteTables } from "./sqliteTables.ts";
+import { load } from "./sqlite_vec.ts";
 
 export class SqliteDatabaseAdapter
     extends DatabaseAdapter<Database>

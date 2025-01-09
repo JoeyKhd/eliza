@@ -1,8 +1,8 @@
 import { Client, IAgentRuntime, elizaLogger } from "@elizaos/core";
-import { FarcasterClient } from "./client";
-import { FarcasterPostManager } from "./post";
-import { FarcasterInteractionManager } from "./interactions";
 import { Configuration, NeynarAPIClient } from "@neynar/nodejs-sdk";
+import { FarcasterClient } from "./client";
+import { FarcasterInteractionManager } from "./interactions";
+import { FarcasterPostManager } from "./post";
 
 export class FarcasterAgentClient implements Client {
     client: FarcasterClient;

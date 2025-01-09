@@ -1,6 +1,6 @@
 import path from "node:path";
 import { fileURLToPath } from "url";
-import { FlagEmbedding, EmbeddingModel } from "fastembed";
+import { EmbeddingModel, FlagEmbedding } from "fastembed";
 import elizaLogger from "./logger";
 
 class LocalEmbeddingModelManager {

@@ -3,15 +3,15 @@ import {
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { NoteContent, noteSchema, isValidNote } from "../types";
 import { getObsidian } from "../helper";
 import { noteTemplate } from "../templates/note";
+import { NoteContent, isValidNote, noteSchema } from "../types";
 
 export const getNoteAction: Action = {
     name: "GET_NOTE",
@@ -45,7 +45,7 @@ export const getNoteAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting get note handler");

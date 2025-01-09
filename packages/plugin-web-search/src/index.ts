@@ -9,7 +9,7 @@ import {
 } from "@elizaos/core";
 import { generateWebSearch } from "@elizaos/core";
 import { SearchResult } from "@elizaos/core";
-import { encodingForModel, TiktokenModel } from "js-tiktoken";
+import { TiktokenModel, encodingForModel } from "js-tiktoken";
 
 const DEFAULT_MAX_WEB_SEARCH_TOKENS = 4000;
 const DEFAULT_MODEL_ENCODING = "gpt-3.5-turbo";
@@ -47,7 +47,7 @@ const webSearch: Action = {
     ],
     description:
         "Perform a web search to find information related to the message.",
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         const tavilyApiKeyOk = !!runtime.getSetting("TAVILY_API_KEY");
 
         return tavilyApiKeyOk;
@@ -55,12 +55,12 @@ const webSearch: Action = {
     handler: async (
         runtime: IAgentRuntime,
         message: Memory,
-        state: State,
-        options: any,
+        _state: State,
+        _options: any,
         callback: HandlerCallback
     ) => {
         elizaLogger.log("Composing state for message:", message);
-        state = (await runtime.composeState(message)) as State;
+        _state = (await runtime.composeState(message)) as State;
         const userId = runtime.agentId;
         elizaLogger.log("User ID:", userId);
 

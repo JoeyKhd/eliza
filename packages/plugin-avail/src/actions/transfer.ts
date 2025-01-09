@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -6,22 +7,21 @@ import {
     Memory,
     ModelClass,
     State,
-    type Action,
-    elizaLogger,
     composeContext,
+    elizaLogger,
     generateObject,
     generateObjectDeprecated,
 } from "@elizaos/core";
-import { validateAvailConfig } from "../environment";
+import { H256 } from "@polkadot/types/interfaces/runtime";
+import { ISubmittableResult } from "@polkadot/types/types/extrinsic";
 import {
-    getDecimals,
-    initialize,
     formatNumberToBalance,
+    getDecimals,
     getKeyringFromSeed,
+    initialize,
     isValidAddress,
 } from "avail-js-sdk";
-import { ISubmittableResult } from "@polkadot/types/types/extrinsic";
-import { H256 } from "@polkadot/types/interfaces/runtime";
+import { validateAvailConfig } from "../environment";
 
 export interface TransferContent extends Content {
     recipient: string;
@@ -77,7 +77,7 @@ export default {
         "SEND_AVAIL_TOKEN_ON_AVAIL_DA",
         "PAY_ON_AVAIL",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         await validateAvailConfig(runtime);
         return true;
     },
@@ -128,7 +128,7 @@ export default {
         if (content.amount != null && content.recipient != null) {
             try {
                 const SEED = runtime.getSetting("AVAIL_SEED")!;
-                const PUBLIC_KEY = runtime.getSetting("AVAIL_ADDRESS")!;
+                const _PUBLIC_KEY = runtime.getSetting("AVAIL_ADDRESS")!;
                 const ENDPOINT = runtime.getSetting("AVAIL_RPC_URL");
 
                 const api = await initialize(ENDPOINT);

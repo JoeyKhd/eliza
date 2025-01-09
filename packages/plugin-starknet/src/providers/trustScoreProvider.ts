@@ -1,14 +1,13 @@
-import { ProcessedTokenData, TokenSecurityData } from "../types/trustDB.ts";
 // import { Connection, PublicKey } from "@solana/web3.js";
 // import { getAssociatedTokenAddress } from "@solana/spl-token";
 // import { TokenProvider } from "./token.ts";
 import {
-    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
-    settings,
     State,
+    elizaLogger,
+    settings,
 } from "@elizaos/core";
 import {
     RecommenderMetrics,
@@ -17,6 +16,7 @@ import {
     TradePerformance,
     TrustScoreDatabase,
 } from "@elizaos/plugin-trustdb";
+import { ProcessedTokenData, TokenSecurityData } from "../types/trustDB.ts";
 import { getTokenBalance } from "../utils/index.ts";
 import { TokenProvider } from "./token.ts";
 import { WalletProvider } from "./walletProvider.ts";

@@ -1,14 +1,15 @@
+import { EventEmitter } from "events";
 import {
+    ActionTimelineType,
     Content,
     IAgentRuntime,
     IImageDescriptionService,
     Memory,
     State,
     UUID,
-    getEmbeddingZeroVector,
     elizaLogger,
+    getEmbeddingZeroVector,
     stringToUuid,
-    ActionTimelineType,
 } from "@elizaos/core";
 import {
     QueryTweetsResponse,
@@ -16,7 +17,6 @@ import {
     SearchMode,
     Tweet,
 } from "agent-twitter-client";
-import { EventEmitter } from "events";
 import { TwitterConfig } from "./environment.ts";
 
 export function extractAnswer(text: string): string {

@@ -1,10 +1,4 @@
-import {
-    IAgentRuntime,
-    ICacheManager,
-    Memory,
-    Provider,
-    State,
-} from "@elizaos/core";
+import * as path from "path";
 import {
     Account,
     Aptos,
@@ -14,10 +8,16 @@ import {
     PrivateKey,
     PrivateKeyVariants,
 } from "@aptos-labs/ts-sdk";
+import {
+    IAgentRuntime,
+    ICacheManager,
+    Memory,
+    Provider,
+    State,
+} from "@elizaos/core";
 import BigNumber from "bignumber.js";
 import NodeCache from "node-cache";
-import * as path from "path";
-import { MOVE_DECIMALS, MOVEMENT_NETWORK_CONFIG } from "../constants";
+import { MOVEMENT_NETWORK_CONFIG, MOVE_DECIMALS } from "../constants";
 
 // Provider configuration
 const PROVIDER_CONFIG = {

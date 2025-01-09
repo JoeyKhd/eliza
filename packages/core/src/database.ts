@@ -1,17 +1,17 @@
+import { CircuitBreaker } from "./database/CircuitBreaker";
+import { elizaLogger } from "./logger";
 import {
     Account,
     Actor,
-    GoalStatus,
     type Goal,
+    GoalStatus,
+    IDatabaseAdapter,
     type Memory,
+    Participant,
+    RAGKnowledgeItem,
     type Relationship,
     type UUID,
-    RAGKnowledgeItem,
-    Participant,
-    IDatabaseAdapter,
 } from "./types.ts";
-import { CircuitBreaker } from "./database/CircuitBreaker";
-import { elizaLogger } from "./logger";
 
 /**
  * An abstract class representing a database adapter for managing various entities

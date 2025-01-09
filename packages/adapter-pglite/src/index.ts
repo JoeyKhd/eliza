@@ -1,32 +1,32 @@
 import { v4 } from "uuid";
 
-import {
-    Account,
-    Actor,
-    GoalStatus,
-    type Goal,
-    type Memory,
-    type Relationship,
-    type UUID,
-    type IDatabaseCacheAdapter,
-    Participant,
-    elizaLogger,
-    getEmbeddingConfig,
-    DatabaseAdapter,
-    EmbeddingProvider,
-    RAGKnowledgeItem,
-} from "@elizaos/core";
 import fs from "fs";
-import { fileURLToPath } from "url";
 import path from "path";
+import { fileURLToPath } from "url";
 import {
     PGlite,
     PGliteOptions,
     Results,
     Transaction,
 } from "@electric-sql/pglite";
-import { vector } from "@electric-sql/pglite/vector";
 import { fuzzystrmatch } from "@electric-sql/pglite/contrib/fuzzystrmatch";
+import { vector } from "@electric-sql/pglite/vector";
+import {
+    Account,
+    Actor,
+    DatabaseAdapter,
+    EmbeddingProvider,
+    type Goal,
+    GoalStatus,
+    type IDatabaseCacheAdapter,
+    type Memory,
+    Participant,
+    RAGKnowledgeItem,
+    type Relationship,
+    type UUID,
+    elizaLogger,
+    getEmbeddingConfig,
+} from "@elizaos/core";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory

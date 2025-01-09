@@ -1,5 +1,5 @@
 import assert from "assert";
-import { send, log, logError, runIntegrationTest } from "./testLibrary.mjs";
+import { log, logError, runIntegrationTest, send } from "./testLibrary.mjs";
 
 async function helloTrump() {
     const reply = await send("Hi");

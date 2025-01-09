@@ -1,13 +1,13 @@
 import { getChainByChainName } from "@chain-registry/utils";
 import { SigningCosmWasmClient } from "@cosmjs/cosmwasm-stargate";
 import { chains } from "chain-registry";
-import { CosmosWallet } from "./cosmos-wallet";
+import { getAvailableChains } from "../helpers/cosmos-chains";
 import type {
     ICosmosPluginCustomChainData,
     ICosmosWalletChains,
     ICosmosWalletChainsData,
 } from "../interfaces";
-import { getAvailableChains } from "../helpers/cosmos-chains";
+import { CosmosWallet } from "./cosmos-wallet";
 
 export class CosmosWalletChains implements ICosmosWalletChains {
     public walletChainsData: ICosmosWalletChainsData = {};

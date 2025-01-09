@@ -1,26 +1,26 @@
+import fs from "fs";
+import os from "os";
+import path from "path";
 import { elizaLogger, getEndpoint, models } from "@elizaos/core";
 import { Service } from "@elizaos/core";
 import {
     IAgentRuntime,
+    IImageDescriptionService,
     ModelProviderName,
     ServiceType,
-    IImageDescriptionService,
 } from "@elizaos/core";
 import {
     AutoProcessor,
     AutoTokenizer,
-    env,
     Florence2ForConditionalGeneration,
     Florence2Processor,
     PreTrainedModel,
     PreTrainedTokenizer,
     RawImage,
     type Tensor,
+    env,
 } from "@huggingface/transformers";
-import fs from "fs";
 import gifFrames from "gif-frames";
-import os from "os";
-import path from "path";
 
 export class ImageDescriptionService
     extends Service

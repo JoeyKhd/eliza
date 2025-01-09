@@ -121,7 +121,7 @@ class ElizaLogger {
         // Convert objects to strings
         const processedStrings = strings.map((item) => {
             if (typeof item === "object") {
-                return JSON.stringify(item, (key, value) =>
+                return JSON.stringify(item, (_key, value) =>
                     typeof value === "bigint" ? value.toString() : value
                 );
             }

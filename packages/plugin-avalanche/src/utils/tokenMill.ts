@@ -1,8 +1,8 @@
-import { getAccount, getWalletClient, getPublicClient } from "./index";
-import { TOKEN_ADDRESSES, TOKEN_MILL_CONFIG } from "./constants";
 import { IAgentRuntime, elizaLogger } from "@elizaos/core";
-import { TokenMillMarketCreationParameters } from "../types";
 import { Address, encodeAbiParameters, parseUnits } from "viem";
+import { TokenMillMarketCreationParameters } from "../types";
+import { TOKEN_ADDRESSES, TOKEN_MILL_CONFIG } from "./constants";
+import { getAccount, getPublicClient, getWalletClient } from "./index";
 
 export const createMarketAndToken = async (
     runtime: IAgentRuntime,

@@ -9,7 +9,7 @@ interface SlackEvent {
 }
 
 export const channelStateProvider: Provider = {
-    get: async (runtime: IAgentRuntime, message: Memory, state?: State) => {
+    get: async (_runtime: IAgentRuntime, _message: Memory, state?: State) => {
         const slackEvent = state?.slackEvent as SlackEvent | undefined;
         if (!slackEvent) {
             return "";

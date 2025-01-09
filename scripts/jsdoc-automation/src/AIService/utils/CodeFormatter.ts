@@ -133,7 +133,7 @@ export class CodeFormatter {
         return relativePath;
     }
 
-    public formatJSDoc(jsDoc: string, code?: string): string {
+    public formatJSDoc(jsDoc: string, _code?: string): string {
         // Clean up the JSDoc
         let cleanDoc = jsDoc
             .replace(/^```\s*\n?/gm, "")

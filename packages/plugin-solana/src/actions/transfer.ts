@@ -1,8 +1,8 @@
-import {
-    getAssociatedTokenAddressSync,
-    createTransferInstruction,
-} from "@solana/spl-token";
 import { elizaLogger, settings } from "@elizaos/core";
+import {
+    createTransferInstruction,
+    getAssociatedTokenAddressSync,
+} from "@solana/spl-token";
 
 import {
     Connection,
@@ -12,6 +12,7 @@ import {
 } from "@solana/web3.js";
 
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -19,11 +20,10 @@ import {
     Memory,
     ModelClass,
     State,
-    type Action,
 } from "@elizaos/core";
 import { composeContext } from "@elizaos/core";
-import { getWalletKey } from "../keypairUtils";
 import { generateObjectDeprecated } from "@elizaos/core";
+import { getWalletKey } from "../keypairUtils";
 
 export interface TransferContent extends Content {
     tokenAddress: string;
@@ -32,7 +32,7 @@ export interface TransferContent extends Content {
 }
 
 function isTransferContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is TransferContent {
     elizaLogger.log("Content for transfer", content);
@@ -73,7 +73,7 @@ export default {
         "SEND_SOL",
         "PAY",
     ],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (_runtime: IAgentRuntime, message: Memory) => {
         elizaLogger.log("Validating transfer from user:", message.userId);
         //add custom validate logic here
         /*

@@ -1,9 +1,9 @@
-import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
-import {
-    getFlowConnectorInstance,
-    FlowConnectorProvider,
-} from "../providers/connector.provider";
 import { defaultCharacter } from "@elizaos/core";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import {
+    FlowConnectorProvider,
+    getFlowConnectorInstance,
+} from "../providers/connector.provider";
 
 describe("ConnectorProvider", () => {
     let connectorProvider: FlowConnectorProvider;

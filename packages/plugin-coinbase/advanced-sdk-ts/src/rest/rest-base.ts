@@ -1,8 +1,8 @@
-import { generateToken } from "../jwt-generator";
 import fetch, { Headers, RequestInit, Response } from "node-fetch";
 import { BASE_URL, USER_AGENT } from "../constants";
-import { RequestOptions } from "./types/request-types";
+import { generateToken } from "../jwt-generator";
 import { handleException } from "./errors";
+import { RequestOptions } from "./types/request-types";
 
 export class RESTBase {
     private apiKey: string | undefined;
@@ -58,7 +58,7 @@ export class RESTBase {
     }
 
     async sendRequest(
-        headers: Headers,
+        _headers: Headers,
         requestOptions: RequestInit,
         url: string
     ) {

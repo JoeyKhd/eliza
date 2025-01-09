@@ -1,21 +1,21 @@
-import {
-    elizaLogger,
-    IAgentRuntime,
-    ITranscriptionService,
-    settings,
-    TranscriptionProvider,
-} from "@elizaos/core";
-import { Service, ServiceType } from "@elizaos/core";
 import { exec } from "child_process";
-import { File } from "formdata-node";
 import fs from "fs";
-import { nodewhisper } from "nodejs-whisper";
-import OpenAI from "openai"; // todo, can probably move this to model provider or whateer
 import os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
 import { promisify } from "util";
-import { createClient, DeepgramClient } from "@deepgram/sdk";
+import { DeepgramClient, createClient } from "@deepgram/sdk";
+import {
+    IAgentRuntime,
+    ITranscriptionService,
+    TranscriptionProvider,
+    elizaLogger,
+    settings,
+} from "@elizaos/core";
+import { Service, ServiceType } from "@elizaos/core";
+import { File } from "formdata-node";
+import { nodewhisper } from "nodejs-whisper";
+import OpenAI from "openai"; // todo, can probably move this to model provider or whateer
 
 // const __dirname = path.dirname(new URL(import.meta.url).pathname); #compatibility issues with windows
 const __filename = fileURLToPath(import.meta.url);

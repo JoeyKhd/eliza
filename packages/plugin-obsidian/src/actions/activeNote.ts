@@ -3,17 +3,17 @@ import {
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    elizaLogger,
-    composeContext,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateText,
     splitChunks,
     trimTokens,
-    generateText,
 } from "@elizaos/core";
-import { NoteContent } from "../types";
-import { baseSummaryTemplate } from "../templates/summary";
 import { getObsidian } from "../helper";
+import { baseSummaryTemplate } from "../templates/summary";
+import { NoteContent } from "../types";
 
 export const getActiveNoteAction: Action = {
     name: "GET_ACTIVE_NOTE",
@@ -39,9 +39,9 @@ export const getActiveNoteAction: Action = {
     },
     handler: async (
         runtime: IAgentRuntime,
-        message: Memory,
-        state: State,
-        options: any,
+        _message: Memory,
+        _state: State,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting get active note handler");
@@ -134,7 +134,7 @@ export const summarizeActiveNoteAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting summarize active note handler");

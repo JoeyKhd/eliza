@@ -1,12 +1,12 @@
 import { Plugin } from "@elizaos/core";
-import escrow from "./actions/escrow.ts";
 import deployment from "./actions/deployment.ts";
-import { tokensProvider } from "./providers/tokens.ts";
+import escrow from "./actions/escrow.ts";
 import { deploymentProvider } from "./providers/deployment.ts";
+import { tokensProvider } from "./providers/tokens.ts";
 import {
-    SUPPORTED_TOKENS,
     DEPLOYMENT_CONFIGS,
     LEASE_STATES,
+    SUPPORTED_TOKENS,
 } from "./utils/constants.ts";
 
 export const CONFIG = {

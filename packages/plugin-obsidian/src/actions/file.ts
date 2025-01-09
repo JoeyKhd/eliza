@@ -3,15 +3,15 @@ import {
     HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
-import { fileSchema, isValidFile } from "../types";
 import { getObsidian } from "../helper";
 import { fileTemplate } from "../templates/file";
+import { fileSchema, isValidFile } from "../types";
 
 export const readFileAction: Action = {
     name: "READ_FILE",
@@ -45,7 +45,7 @@ export const readFileAction: Action = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ) => {
         elizaLogger.info("Starting read file handler");

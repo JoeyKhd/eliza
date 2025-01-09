@@ -1,15 +1,15 @@
 import {
     Action,
     ActionExample,
+    Content,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
-    Content,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
 } from "@elizaos/core";
 import { validateAvalancheConfig } from "../environment";
 import { createMarketAndToken } from "../utils/tokenMill";
@@ -20,7 +20,7 @@ export interface TokenMillCreateContent extends Content {
 }
 
 function isTokenMillCreateContent(
-    runtime: IAgentRuntime,
+    _runtime: IAgentRuntime,
     content: any
 ): content is TokenMillCreateContent {
     elizaLogger.debug("Content for create", content);

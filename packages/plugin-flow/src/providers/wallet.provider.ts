@@ -1,19 +1,19 @@
 import {
-    elizaLogger,
     IAgentRuntime,
     Memory,
     Provider,
     State,
+    elizaLogger,
 } from "@elizaos/core";
-import NodeCache from "node-cache";
 import * as fcl from "@onflow/fcl";
-import type { CompositeSignature, Account } from "@onflow/typedefs";
-import type { FlowConnector } from "./utils/flow.connector";
-import { IFlowScriptExecutor, IFlowSigner } from "../types";
-import { getFlowConnectorInstance } from "./connector.provider";
-import PureSigner from "./utils/pure.signer";
-import Exception from "../types/exception";
+import type { Account, CompositeSignature } from "@onflow/typedefs";
+import NodeCache from "node-cache";
 import * as queries from "../queries";
+import { IFlowScriptExecutor, IFlowSigner } from "../types";
+import Exception from "../types/exception";
+import { getFlowConnectorInstance } from "./connector.provider";
+import type { FlowConnector } from "./utils/flow.connector";
+import PureSigner from "./utils/pure.signer";
 
 /**
  * Flow wallet Provider

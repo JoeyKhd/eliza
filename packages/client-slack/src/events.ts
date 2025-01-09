@@ -1,8 +1,8 @@
+import { elizaLogger } from "@elizaos/core";
 import { createEventAdapter } from "@slack/events-api";
 import { WebClient } from "@slack/web-api";
-import { SlackConfig } from "./types/slack-types";
 import { MessageManager } from "./messages";
-import { elizaLogger } from "@elizaos/core";
+import { SlackConfig } from "./types/slack-types";
 
 export class EventHandler {
     private events: ReturnType<typeof createEventAdapter>;
@@ -10,7 +10,7 @@ export class EventHandler {
 
     constructor(
         config: SlackConfig,
-        client: WebClient,
+        _client: WebClient,
         messageManager: MessageManager
     ) {
         elizaLogger.log("🎮 Initializing Slack event handler...");

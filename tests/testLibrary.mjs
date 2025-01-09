@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
-import { stringToUuid } from "../packages/core/dist/index.js";
 import path from "path";
+import { stringToUuid } from "../packages/core/dist/index.js";
 
 export const DEFAULT_CHARACTER = "trump";
 export const DEFAULT_AGENT_ID = stringToUuid(DEFAULT_CHARACTER ?? uuidv4());

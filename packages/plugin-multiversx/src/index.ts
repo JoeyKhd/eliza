@@ -1,6 +1,6 @@
 import { Plugin } from "@elizaos/core";
-import transfer from "./actions/transfer";
 import createToken from "./actions/createToken";
+import transfer from "./actions/transfer";
 
 export const multiversxPlugin: Plugin = {
     name: "multiversx",

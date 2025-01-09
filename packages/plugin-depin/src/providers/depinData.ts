@@ -1,13 +1,13 @@
+import * as path from "path";
 import {
     type IAgentRuntime,
-    type Provider,
+    ICacheManager,
     type Memory,
+    type Provider,
     type State,
     elizaLogger,
-    ICacheManager,
 } from "@elizaos/core";
 import NodeCache from "node-cache";
-import * as path from "path";
 
 import type { DepinScanMetrics, DepinScanProject } from "../types/depin";
 

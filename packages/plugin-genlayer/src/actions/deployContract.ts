@@ -1,3 +1,4 @@
+import fs from "fs";
 import {
     Action,
     HandlerCallback,
@@ -6,9 +7,8 @@ import {
     State,
     elizaLogger,
 } from "@elizaos/core";
-import fs from "fs";
-import { DeployContractParams } from "../types";
 import { ClientProvider } from "../providers/client";
+import { DeployContractParams } from "../types";
 import { getParamsWithLLM } from "../utils/llm";
 
 const deployContractTemplate = `

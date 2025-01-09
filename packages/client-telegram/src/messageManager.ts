@@ -1,10 +1,8 @@
-import { Message } from "@telegraf/types";
-import { Context, Telegraf } from "telegraf";
 import {
-    composeContext,
-    elizaLogger,
     ServiceType,
+    composeContext,
     composeRandomUser,
+    elizaLogger,
 } from "@elizaos/core";
 import { getEmbeddingZeroVector } from "@elizaos/core";
 import {
@@ -12,24 +10,26 @@ import {
     HandlerCallback,
     IAgentRuntime,
     IImageDescriptionService,
+    Media,
     Memory,
     ModelClass,
     State,
     UUID,
-    Media,
 } from "@elizaos/core";
 import { stringToUuid } from "@elizaos/core";
+import { Message } from "@telegraf/types";
+import { Context, Telegraf } from "telegraf";
 
 import { generateMessageResponse, generateShouldRespond } from "@elizaos/core";
 import { messageCompletionFooter, shouldRespondFooter } from "@elizaos/core";
 
-import { cosineSimilarity, escapeMarkdown } from "./utils";
 import {
     MESSAGE_CONSTANTS,
-    TIMING_CONSTANTS,
     RESPONSE_CHANCES,
     TEAM_COORDINATION,
+    TIMING_CONSTANTS,
 } from "./constants";
+import { cosineSimilarity, escapeMarkdown } from "./utils";
 
 import fs from "fs";
 
@@ -230,7 +230,7 @@ export class MessageManager {
 
     private _isRelevantToTeamMember(
         content: string,
-        chatId: string,
+        _chatId: string,
         lastAgentMemory: Memory | null = null
     ): boolean {
         const teamConfig = this.runtime.character.clientConfig?.telegram;

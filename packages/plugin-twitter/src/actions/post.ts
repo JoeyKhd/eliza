@@ -2,16 +2,16 @@ import {
     Action,
     IAgentRuntime,
     Memory,
+    ModelClass,
     State,
     composeContext,
     elizaLogger,
-    ModelClass,
     formatMessages,
     generateObject,
 } from "@elizaos/core";
 import { Scraper } from "agent-twitter-client";
 import { tweetTemplate } from "../templates";
-import { isTweetContent, TweetSchema } from "../types";
+import { TweetSchema, isTweetContent } from "../types";
 
 async function composeTweet(
     runtime: IAgentRuntime,
@@ -124,9 +124,9 @@ export const postAction: Action = {
     similes: ["TWEET", "POST", "SEND_TWEET"],
     description: "Post a tweet to Twitter",
     validate: async (
-        runtime: IAgentRuntime,
-        message: Memory,
-        state?: State
+        _runtime: IAgentRuntime,
+        _message: Memory,
+        _state?: State
     ) => {
         const hasCredentials =
             !!process.env.TWITTER_USERNAME && !!process.env.TWITTER_PASSWORD;

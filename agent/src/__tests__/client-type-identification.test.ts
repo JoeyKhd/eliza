@@ -1,5 +1,5 @@
 import { Client, IAgentRuntime } from "@elizaos/core";
-import { describe, it, expect } from "@jest/globals";
+import { describe, expect, it } from "@jest/globals";
 
 // Helper function to identify client types
 function determineClientType(client: Client): string {

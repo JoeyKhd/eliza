@@ -1,8 +1,8 @@
-import { SlackClientProvider } from "../providers/slack-client.provider";
-import { SlackConfig } from "../types/slack-types";
-import { config } from "dotenv";
 import { resolve } from "path";
 import { elizaLogger } from "@elizaos/core";
+import { config } from "dotenv";
+import { SlackClientProvider } from "../providers/slack-client.provider";
+import { SlackConfig } from "../types/slack-types";
 
 // Load environment variables from root .env
 const envPath = resolve(__dirname, "../../../../.env");

@@ -6,8 +6,8 @@ import {
     State,
     elizaLogger,
 } from "@elizaos/core";
-import { WriteContractParams } from "../types";
 import { ClientProvider } from "../providers/client";
+import { WriteContractParams } from "../types";
 import { getParamsWithLLM } from "../utils/llm";
 
 const writeContractTemplate = `
@@ -41,7 +41,7 @@ export const writeContractAction: Action = {
     handler: async (
         runtime: IAgentRuntime,
         message: Memory,
-        state: State,
+        _state: State,
         _options: any,
         callback: HandlerCallback
     ) => {

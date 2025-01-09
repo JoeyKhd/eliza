@@ -1,16 +1,16 @@
+import { createHash } from "crypto";
 import {
+    HandlerCallback,
+    IAgentRuntime,
+    Memory,
+    ModelClass,
+    State,
     composeContext,
     elizaLogger,
     generateObjectDeprecated,
-    HandlerCallback,
-    ModelClass,
-    IAgentRuntime,
-    Memory,
-    State,
 } from "@elizaos/core";
 import pinataSDK from "@pinata/sdk";
 import { RegisterIpResponse } from "@story-protocol/core-sdk";
-import { createHash } from "crypto";
 import { uploadJSONToIPFS } from "../functions/uploadJSONToIPFS";
 import { WalletProvider } from "../providers/wallet";
 import { registerIPTemplate } from "../templates";
@@ -79,7 +79,7 @@ export const registerIPAction = {
         runtime: IAgentRuntime,
         message: Memory,
         state: State,
-        options: any,
+        _options: any,
         callback?: HandlerCallback
     ): Promise<boolean> => {
         elizaLogger.log("Starting REGISTER_IP handler...");

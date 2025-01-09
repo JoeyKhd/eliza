@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
     Coinbase,
     Trade,
@@ -6,11 +9,8 @@ import {
     WalletData,
     Webhook,
 } from "@coinbase/coinbase-sdk";
-import { elizaLogger, IAgentRuntime, settings } from "@elizaos/core";
-import fs from "fs";
-import path from "path";
 import { EthereumTransaction } from "@coinbase/coinbase-sdk/dist/client";
-import { fileURLToPath } from "url";
+import { IAgentRuntime, elizaLogger, settings } from "@elizaos/core";
 import { createArrayCsvWriter } from "csv-writer";
 import { Transaction } from "./types";
 

@@ -1,6 +1,6 @@
-import { MemoryManager } from "../src/memory";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { CacheManager, MemoryCacheAdapter } from "../src/cache";
-import { describe, expect, it, vi, beforeEach } from "vitest";
+import { MemoryManager } from "../src/memory";
 import { IAgentRuntime, Memory, UUID } from "../src/types";
 
 describe("MemoryManager", () => {

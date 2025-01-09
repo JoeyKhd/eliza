@@ -1,23 +1,23 @@
 import {
+    QuoteRequest,
+    executeSwap as executeAvnuSwap,
+    fetchQuotes,
+} from "@avnu/avnu-sdk";
+import {
     Action,
     ActionExample,
-    composeContext,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
-import {
-    executeSwap as executeAvnuSwap,
-    fetchQuotes,
-    QuoteRequest,
-} from "@avnu/avnu-sdk";
 
-import { getStarknetAccount } from "../utils/index.ts";
 import { validateStarknetConfig } from "../environment.ts";
+import { getStarknetAccount } from "../utils/index.ts";
 
 interface SwapContent {
     sellTokenAddress: string;

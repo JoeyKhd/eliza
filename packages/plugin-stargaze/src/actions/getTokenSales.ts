@@ -1,20 +1,20 @@
 import {
+    type Action,
     ActionExample,
-    composeContext,
     Content,
-    elizaLogger,
-    generateObjectDeprecated,
     HandlerCallback,
     IAgentRuntime,
     Memory,
     ModelClass,
     State,
-    type Action,
+    composeContext,
+    elizaLogger,
+    generateObjectDeprecated,
 } from "@elizaos/core";
 import axios from "axios";
-import { debugLog } from "../utils/debug";
 import { validateStargazeConfig } from "../environment";
 import { TokenSale, TokenSalesResponse } from "../types";
+import { debugLog } from "../utils/debug";
 
 const getTokenSalesTemplate = `Given the message, extract the collection address for fetching Stargaze sales data.
 
@@ -73,7 +73,7 @@ export interface GetTokenSalesContent extends Content {
 export default {
     name: "GET_TOKEN_SALES",
     similes: ["CHECK_SALES", "RECENT_SALES"],
-    validate: async (runtime: IAgentRuntime, message: Memory) => {
+    validate: async (runtime: IAgentRuntime, _message: Memory) => {
         elizaLogger.log("🔄 Validating Stargaze configuration...");
         try {
             const config = await validateStargazeConfig(runtime);
@@ -163,7 +163,7 @@ export default {
             const formatDate = (dateStr: string) => {
                 try {
                     return new Date(dateStr).toLocaleString();
-                } catch (e) {
+                } catch (_e) {
                     return dateStr;
                 }
             };

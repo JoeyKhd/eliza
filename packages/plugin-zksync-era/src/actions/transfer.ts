@@ -1,4 +1,5 @@
 import {
+    type Action,
     ActionExample,
     Content,
     HandlerCallback,
@@ -6,15 +7,14 @@ import {
     Memory,
     ModelClass,
     State,
-    type Action,
-    elizaLogger,
     composeContext,
+    elizaLogger,
     generateObject,
 } from "@elizaos/core";
 import { validateZKsyncConfig } from "../enviroment";
 
 import { Web3 } from "web3";
-import { ZKsyncPlugin, types, Web3ZKsyncL2 } from "web3-plugin-zksync";
+import { Web3ZKsyncL2, ZKsyncPlugin, types } from "web3-plugin-zksync";
 
 export interface TransferContent extends Content {
     tokenAddress: string;

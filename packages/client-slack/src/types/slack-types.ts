@@ -1,5 +1,5 @@
-import { WebClient } from "@slack/web-api";
 import { Service, ServiceType } from "@elizaos/core";
+import { WebClient } from "@slack/web-api";
 
 export interface SlackConfig {
     appId: string;

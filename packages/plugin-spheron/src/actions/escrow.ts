@@ -1,24 +1,24 @@
 import {
     Action,
     ActionExample,
+    HandlerCallback,
     IAgentRuntime,
     Memory,
-    State,
-    HandlerCallback,
-    elizaLogger,
-    composeContext,
-    generateObject,
     ModelClass,
+    State,
+    composeContext,
+    elizaLogger,
+    generateObject,
     generateObjectDeprecated,
 } from "@elizaos/core";
 import { validateSpheronConfig } from "../environment.ts";
+import { EscrowContent } from "../types/index.ts";
+import { SUPPORTED_TOKENS } from "../utils/constants.ts";
 import {
     depositBalance,
     getUserBalance,
     withdrawBalance,
 } from "../utils/index.ts";
-import { EscrowContent } from "../types/index.ts";
-import { SUPPORTED_TOKENS } from "../utils/constants.ts";
 
 function isEscrowContent(content: any): content is EscrowContent {
     console.log("Content for escrow operation:", content);

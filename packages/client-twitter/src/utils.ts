@@ -1,12 +1,12 @@
-import { Tweet } from "agent-twitter-client";
+import fs from "fs";
+import path from "path";
 import { getEmbeddingZeroVector } from "@elizaos/core";
 import { Content, Memory, UUID } from "@elizaos/core";
 import { stringToUuid } from "@elizaos/core";
-import { ClientBase } from "./base";
 import { elizaLogger } from "@elizaos/core";
 import { Media } from "@elizaos/core";
-import fs from "fs";
-import path from "path";
+import { Tweet } from "agent-twitter-client";
+import { ClientBase } from "./base";
 
 export const wait = (minTime: number = 1000, maxTime: number = 3000) => {
     const waitTime =

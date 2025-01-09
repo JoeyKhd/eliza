@@ -1,7 +1,7 @@
 import { Plugin } from "@elizaos/core";
-import { transfer } from "./actions/transfer";
 import { bridgeTransfer } from "./actions/bridgeTransfer";
 import { confiPump } from "./actions/confiPump";
+import { transfer } from "./actions/transfer";
 
 export const confluxPlugin: Plugin = {
     name: "conflux",
