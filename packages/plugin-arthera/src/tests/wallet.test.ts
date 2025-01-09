@@ -162,13 +162,11 @@ describe("Wallet provider", () => {
         });
         it("throws if unsupported chain name", () => {
             // intentionally set unsupported chain, ts will complain
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(() => WalletProvider.genChainFromName("ethereum")).toThrow();
         });
         it("throws if invalid chain name", () => {
             // intentionally set incorrect chain, ts will complain
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(() => WalletProvider.genChainFromName("eth")).toThrow();
         });

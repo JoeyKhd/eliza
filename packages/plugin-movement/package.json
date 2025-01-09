@@ -20,7 +20,7 @@
     "scripts": {
         "build": "tsup",
         "dev": "tsup --watch",
-        "lint": "eslint --fix --cache .",
+        "lint": "biome check --write .",
         "test": "vitest run"
     },
     "peerDependencies": {

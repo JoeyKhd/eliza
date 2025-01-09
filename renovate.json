@@ -1,6 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["config:base", "customManagers:biomeVersions"],
+    "extends": ["config:base"],
     "packageRules": [
         {
             "groupName": "Discord.js ecosystem",
@@ -8,12 +8,7 @@
         },
         {
             "groupName": "TypeScript and related",
-            "matchPackagePatterns": [
-                "^@typescript-eslint/",
-                "^typescript$",
-                "^ts-",
-                "^tslib$"
-            ]
+            "matchPackagePatterns": ["^typescript$", "^ts-", "^tslib$"]
         },
         {
             "groupName": "Testing frameworks",
@@ -22,10 +17,6 @@
         {
             "groupName": "Rollup and plugins",
             "matchPackagePatterns": ["^@rollup/", "^rollup"]
-        },
-        {
-            "groupName": "ESLint and formatting",
-            "matchPackagePatterns": ["^eslint", "^prettier"]
         },
         {
             "groupName": "SQLite related",
@@ -57,6 +48,10 @@
         {
             "groupName": "Solana packages",
             "matchPackagePatterns": ["^@solana/"]
+        },
+        {
+            "groupName": "Biome-specific packages",
+            "matchPackagePatterns": ["^biome$", "^@biomejs/"]
         }
     ],
     "timezone": "UTC",

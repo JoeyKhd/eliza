@@ -20,7 +20,7 @@
     "scripts": {
         "build": "tsup src/index.ts --format esm --dts",
         "test": "jest",
-        "lint": "eslint --fix  --cache .",
+        "lint": "biome check --write .",
         "clean": "rimraf dist",
         "dev": "tsup src/index.ts --watch",
         "example": "ts-node src/examples/standalone-example.ts",

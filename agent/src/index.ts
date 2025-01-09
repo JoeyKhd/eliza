@@ -61,11 +61,7 @@ import { fuelPlugin } from "@elizaos/plugin-fuel";
 import { genLayerPlugin } from "@elizaos/plugin-genlayer";
 import createGoatPlugin from "@elizaos/plugin-goat";
 import { imageGenerationPlugin } from "@elizaos/plugin-image-generation";
-import { multiversxPlugin } from "@elizaos/plugin-multiversx";
-import { nearPlugin } from "@elizaos/plugin-near";
-import { nftGenerationPlugin } from "@elizaos/plugin-nft-generation";
-import { createNodePlugin } from "@elizaos/plugin-node";
-import { obsidianPlugin } from "@elizaos/plugin-obsidian";
+
 import { solanaPlugin } from "@elizaos/plugin-solana";
 import { solanaAgentkitPlguin } from "@elizaos/plugin-solana-agentkit";
 import { storyPlugin } from "@elizaos/plugin-story";
@@ -74,6 +70,12 @@ import { TEEMode, teePlugin } from "@elizaos/plugin-tee";
 import { teeMarlinPlugin } from "@elizaos/plugin-tee-marlin";
 import { tonPlugin } from "@elizaos/plugin-ton";
 import { webSearchPlugin } from "@elizaos/plugin-web-search";
+
+import { multiversxPlugin } from "@elizaos/plugin-multiversx";
+import { nearPlugin } from "@elizaos/plugin-near";
+import { nftGenerationPlugin } from "@elizaos/plugin-nft-generation";
+import { createNodePlugin } from "@elizaos/plugin-node";
+import { obsidianPlugin } from "@elizaos/plugin-obsidian";
 
 import { giphyPlugin } from "@elizaos/plugin-giphy";
 import { letzAIPlugin } from "@elizaos/plugin-letzai";

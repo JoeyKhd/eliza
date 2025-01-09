@@ -174,7 +174,6 @@ export class TranscriptionService
                 elizaLogger.log(
                     "CUDA detected. Transcription will use CUDA acceleration."
                 );
-                // eslint-disable-next-line
             } catch (_error) {
                 elizaLogger.log(
                     "CUDA not detected. Transcription will run on CPU."

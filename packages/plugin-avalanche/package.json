@@ -24,7 +24,7 @@
     },
     "scripts": {
         "build": "tsup src/index.ts --format esm --no-dts",
-        "lint": "eslint --fix  --cache ."
+        "lint": "biome check --write ."
     },
     "peerDependencies": {
         "whatwg-url": "7.1.0"

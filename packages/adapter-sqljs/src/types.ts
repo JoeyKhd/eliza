@@ -134,7 +134,7 @@ export declare class Database {
         callback: ParamsCallback,
         done: () => void
     ): Database;
-    each(sql: string, callback: ParamsCallback, done: () => void): Database; // eslint-disable-line
+    each(sql: string, callback: ParamsCallback, done: () => void): Database;
 
     /**
      * Execute an SQL query, and returns the result.

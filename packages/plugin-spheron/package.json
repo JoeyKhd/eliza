@@ -7,7 +7,7 @@
     "scripts": {
         "build": "tsup --format esm --dts",
         "test": "jest",
-        "lint": "eslint --fix --cache ."
+        "lint": "biome check --write ."
     },
     "dependencies": {
         "@elizaos/core": "workspace:*",

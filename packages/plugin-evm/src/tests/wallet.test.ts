@@ -237,19 +237,16 @@ describe("Wallet provider", () => {
             expect(initialChain).toEqual(iotex.id);
 
             // intentionally set incorrect chain, ts will complain
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(() => walletProvider.switchChain("eth")).toThrow();
         });
         it("throws if unsupported chain name", () => {
             // intentionally set incorrect chain, ts will complain
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(() => WalletProvider.genChainFromName("ethereum")).toThrow();
         });
         it("throws if invalid chain name", () => {
             // intentionally set incorrect chain, ts will complain
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(() => WalletProvider.genChainFromName("eth")).toThrow();
         });

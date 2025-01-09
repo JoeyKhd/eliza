@@ -141,7 +141,7 @@ export class VideoService extends Service implements IVideoService {
     ): Promise<Media> {
         const videoId =
             url.match(
-                /(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/watch\?.+&v=))([^\/&?]+)/ // eslint-disable-line
+                /(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/watch\?.+&v=))([^\/&?]+)/
             )?.[1] || "";
         const videoUuid = this.getVideoId(videoId);
         const cacheKey = `${this.cacheKey}/${videoUuid}`;

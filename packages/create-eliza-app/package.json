@@ -10,7 +10,7 @@
     },
     "scripts": {
         "build": "unbuild",
-        "lint": "eslint --fix  --cache .",
+        "lint": "biome check --write .",
         "start": "node ./dist/index.cjs",
         "automd": "automd"
     },

@@ -59,7 +59,7 @@ export default function useVersion() {
                     });
                 }
             }
-        } catch (e) {
+        } catch (_e) {
             console.error("Unable to retrieve latest version from GitHub");
         }
     };
