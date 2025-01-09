@@ -2,8 +2,8 @@
 
 # Type Alias: EmbeddingProviderType
 
-> **EmbeddingProviderType**: _typeof_ [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\[keyof _typeof_ [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\]
+> **EmbeddingProviderType**: *typeof* [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\[keyof *typeof* [`EmbeddingProvider`](../variables/EmbeddingProvider.md)\]
 
 ## Defined in
 
-[packages/core/src/embedding.ts:24](https://github.com/elizaOS/eliza/blob/main/packages/core/src/embedding.ts#L24)
+[packages/core/src/embedding.ts:24](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/embedding.ts#L24)

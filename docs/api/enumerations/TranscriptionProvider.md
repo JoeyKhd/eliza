@@ -10,9 +10,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1327](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1327)
+[packages/core/src/types.ts:1482](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1482)
 
----
+***
 
 ### Deepgram
 
@@ -20,9 +20,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1328](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1328)
+[packages/core/src/types.ts:1483](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1483)
 
----
+***
 
 ### Local
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1329](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1329)
+[packages/core/src/types.ts:1484](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1484)

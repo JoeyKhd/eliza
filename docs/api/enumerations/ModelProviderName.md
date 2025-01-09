@@ -12,9 +12,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:222](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L222)
+[packages/core/src/types.ts:234](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L234)
 
----
+***
 
 ### ETERNALAI
 
@@ -22,9 +22,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:223](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L223)
+[packages/core/src/types.ts:235](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L235)
 
----
+***
 
 ### ANTHROPIC
 
@@ -32,9 +32,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:224](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L224)
+[packages/core/src/types.ts:236](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L236)
 
----
+***
 
 ### GROK
 
@@ -42,9 +42,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:225](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L225)
+[packages/core/src/types.ts:237](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L237)
 
----
+***
 
 ### GROQ
 
@@ -52,9 +52,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:226](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L226)
+[packages/core/src/types.ts:238](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L238)
 
----
+***
 
 ### LLAMACLOUD
 
@@ -62,9 +62,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:227](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L227)
+[packages/core/src/types.ts:239](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L239)
 
----
+***
 
 ### TOGETHER
 
@@ -72,9 +72,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:228](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L228)
+[packages/core/src/types.ts:240](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L240)
 
----
+***
 
 ### LLAMALOCAL
 
@@ -82,9 +82,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:229](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L229)
+[packages/core/src/types.ts:241](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L241)
 
----
+***
 
 ### GOOGLE
 
@@ -92,19 +92,19 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:230](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L230)
+[packages/core/src/types.ts:242](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L242)
 
----
+***
 
-### CLAUDE_VERTEX
+### CLAUDE\_VERTEX
 
-> **CLAUDE_VERTEX**: `"claude_vertex"`
+> **CLAUDE\_VERTEX**: `"claude_vertex"`
 
 #### Defined in
 
-[packages/core/src/types.ts:231](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L231)
+[packages/core/src/types.ts:243](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L243)
 
----
+***
 
 ### REDPILL
 
@@ -112,9 +112,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:232](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L232)
+[packages/core/src/types.ts:244](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L244)
 
----
+***
 
 ### OPENROUTER
 
@@ -122,9 +122,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:233](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L233)
+[packages/core/src/types.ts:245](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L245)
 
----
+***
 
 ### OLLAMA
 
@@ -132,9 +132,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:234](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L234)
+[packages/core/src/types.ts:246](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L246)
 
----
+***
 
 ### HEURIST
 
@@ -142,9 +142,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:235](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L235)
+[packages/core/src/types.ts:247](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L247)
 
----
+***
 
 ### GALADRIEL
 
@@ -152,9 +152,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:236](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L236)
+[packages/core/src/types.ts:248](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L248)
 
----
+***
 
 ### FAL
 
@@ -162,9 +162,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:237](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L237)
+[packages/core/src/types.ts:249](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L249)
 
----
+***
 
 ### GAIANET
 
@@ -172,19 +172,19 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:238](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L238)
+[packages/core/src/types.ts:250](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L250)
 
----
+***
 
-### ALI_BAILIAN
+### ALI\_BAILIAN
 
-> **ALI_BAILIAN**: `"ali_bailian"`
+> **ALI\_BAILIAN**: `"ali_bailian"`
 
 #### Defined in
 
-[packages/core/src/types.ts:239](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L239)
+[packages/core/src/types.ts:251](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L251)
 
----
+***
 
 ### VOLENGINE
 
@@ -192,9 +192,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:240](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L240)
+[packages/core/src/types.ts:252](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L252)
 
----
+***
 
 ### NANOGPT
 
@@ -202,9 +202,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:241](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L241)
+[packages/core/src/types.ts:253](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L253)
 
----
+***
 
 ### HYPERBOLIC
 
@@ -212,9 +212,9 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:242](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L242)
+[packages/core/src/types.ts:254](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L254)
 
----
+***
 
 ### VENICE
 
@@ -222,19 +222,19 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:243](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L243)
+[packages/core/src/types.ts:255](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L255)
 
----
+***
 
-### AKASH_CHAT_API
+### AKASH\_CHAT\_API
 
-> **AKASH_CHAT_API**: `"akash_chat_api"`
+> **AKASH\_CHAT\_API**: `"akash_chat_api"`
 
 #### Defined in
 
-[packages/core/src/types.ts:244](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L244)
+[packages/core/src/types.ts:256](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L256)
 
----
+***
 
 ### LIVEPEER
 
@@ -242,4 +242,24 @@ Available model providers
 
 #### Defined in
 
-[packages/core/src/types.ts:245](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L245)
+[packages/core/src/types.ts:257](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L257)
+
+***
+
+### LETZAI
+
+> **LETZAI**: `"letzai"`
+
+#### Defined in
+
+[packages/core/src/types.ts:258](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L258)
+
+***
+
+### INFERA
+
+> **INFERA**: `"infera"`
+
+#### Defined in
+
+[packages/core/src/types.ts:259](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L259)

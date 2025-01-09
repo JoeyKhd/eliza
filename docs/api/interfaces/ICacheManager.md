@@ -22,9 +22,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1071](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1071)
+[packages/core/src/types.ts:1139](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1139)
 
----
+***
 
 ### set()
 
@@ -48,9 +48,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1072](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1072)
+[packages/core/src/types.ts:1140](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1140)
 
----
+***
 
 ### delete()
 
@@ -66,4 +66,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1073](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1073)
+[packages/core/src/types.ts:1141](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1141)

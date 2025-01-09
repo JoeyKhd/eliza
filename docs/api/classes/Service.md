@@ -38,9 +38,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1079](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1079)
+[packages/core/src/types.ts:1147](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1147)
 
----
+***
 
 ### serviceType
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1090](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1090)
+[packages/core/src/types.ts:1158](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1158)
 
 ## Methods
 
@@ -64,7 +64,7 @@
 
 #### Type Parameters
 
-• **T** _extends_ [`Service`](Service.md)
+• **T** *extends* [`Service`](Service.md)
 
 #### Returns
 
@@ -72,9 +72,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1083](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1083)
+[packages/core/src/types.ts:1151](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1151)
 
----
+***
 
 ### initialize()
 
@@ -92,4 +92,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1095](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1095)
+[packages/core/src/types.ts:1163](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1163)

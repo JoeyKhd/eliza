@@ -20,4 +20,4 @@ Validator function type for actions/evaluators
 
 ## Defined in
 
-[packages/core/src/types.ts:398](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L398)
+[packages/core/src/types.ts:414](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L414)

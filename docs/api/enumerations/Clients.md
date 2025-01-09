@@ -12,9 +12,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:620](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L620)
+[packages/core/src/types.ts:636](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L636)
 
----
+***
 
 ### DIRECT
 
@@ -22,9 +22,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:621](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L621)
+[packages/core/src/types.ts:637](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L637)
 
----
+***
 
 ### TWITTER
 
@@ -32,9 +32,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:622](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L622)
+[packages/core/src/types.ts:638](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L638)
 
----
+***
 
 ### TELEGRAM
 
@@ -42,9 +42,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:623](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L623)
+[packages/core/src/types.ts:639](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L639)
 
----
+***
 
 ### FARCASTER
 
@@ -52,9 +52,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:624](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L624)
+[packages/core/src/types.ts:640](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L640)
 
----
+***
 
 ### LENS
 
@@ -62,9 +62,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:625](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L625)
+[packages/core/src/types.ts:641](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L641)
 
----
+***
 
 ### AUTO
 
@@ -72,9 +72,9 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:626](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L626)
+[packages/core/src/types.ts:642](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L642)
 
----
+***
 
 ### SLACK
 
@@ -82,4 +82,4 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:627](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L627)
+[packages/core/src/types.ts:643](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L643)

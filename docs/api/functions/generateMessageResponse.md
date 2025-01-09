@@ -18,7 +18,7 @@ The options for the generateText request.
 
 The context of the message to be completed.
 
-• **opts.modelClass**: `string`
+• **opts.modelClass**: [`ModelClass`](../enumerations/ModelClass.md)
 
 ## Returns
 
@@ -28,4 +28,4 @@ The completed message.
 
 ## Defined in
 
-[packages/core/src/generation.ts:1084](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1084)
+[packages/core/src/generation.ts:1141](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/generation.ts#L1141)

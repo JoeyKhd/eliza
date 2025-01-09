@@ -10,9 +10,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1311](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1311)
+[packages/core/src/types.ts:1405](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1405)
 
----
+***
 
 ### retweet
 
@@ -20,9 +20,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1312](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1312)
+[packages/core/src/types.ts:1406](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1406)
 
----
+***
 
 ### quote?
 
@@ -30,9 +30,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1313](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1313)
+[packages/core/src/types.ts:1407](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1407)
 
----
+***
 
 ### reply?
 
@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1314](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1314)
+[packages/core/src/types.ts:1408](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1408)

@@ -514,7 +514,7 @@ export class DirectClient {
                     return;
                 }
 
-                // do this in the background
+                // biome-ignore lint/suspicious/noAsyncPromiseExecutor: Ignore for now, but should be improved
                 const _rememberThis = new Promise(async (resolve) => {
                     const contentObj: Content = {
                         text: hfOut.say,

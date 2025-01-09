@@ -12,7 +12,7 @@
 
 • **\_\_namedParameters.context**: `string`
 
-• **\_\_namedParameters.modelClass**: `string`
+• **\_\_namedParameters.modelClass**: [`ModelClass`](../enumerations/ModelClass.md)
 
 ## Returns
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[packages/core/src/generation.ts:1036](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L1036)
+[packages/core/src/generation.ts:1093](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/generation.ts#L1093)

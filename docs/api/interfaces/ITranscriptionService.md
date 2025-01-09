@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1090](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1090)
+[packages/core/src/types.ts:1158](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1158)
 
 ## Methods
 
@@ -48,9 +48,9 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1095](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1095)
+[packages/core/src/types.ts:1163](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1163)
 
----
+***
 
 ### transcribeAttachment()
 
@@ -66,9 +66,9 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1195](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1195)
+[packages/core/src/types.ts:1266](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1266)
 
----
+***
 
 ### transcribeAttachmentLocally()
 
@@ -84,9 +84,9 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1196](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1196)
+[packages/core/src/types.ts:1267](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1267)
 
----
+***
 
 ### transcribe()
 
@@ -102,9 +102,9 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1199](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1199)
+[packages/core/src/types.ts:1270](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1270)
 
----
+***
 
 ### transcribeLocally()
 
@@ -120,4 +120,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1200](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1200)
+[packages/core/src/types.ts:1271](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1271)

@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1090](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1090)
+[packages/core/src/types.ts:1158](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1158)
 
 ## Methods
 
@@ -48,9 +48,9 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1095](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1095)
+[packages/core/src/types.ts:1163](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1163)
 
----
+***
 
 ### describeImage()
 
@@ -74,4 +74,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1189](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1189)
+[packages/core/src/types.ts:1260](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1260)

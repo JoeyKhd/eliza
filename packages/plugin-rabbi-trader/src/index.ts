@@ -140,7 +140,7 @@ const tokenCache = new NodeCache({
     checkperiod: 120, // Check for expired entries every 2 minutes
 });
 
-// Add near the top with other interfaces
+// biome-ignore lint/correctness/noUnusedVariables: Ignore for now, perhaps plugin still under development?
 interface SkipWaitCache {
     lastTweet: number;
     action: "WAIT" | "SKIP";
@@ -164,7 +164,7 @@ const tweetRateCache = new NodeCache({
     checkperiod: 3600, // Check every hour
 });
 
-// Add helper function
+// biome-ignore lint/correctness/noUnusedVariables: Ignore for now, perhaps plugin still under development?
 function canTweet(tweetType: "trade" | "market_search"): boolean {
     const now = Date.now();
     const hourKey = `tweets_${tweetType}_${Math.floor(now / 3600000)}`; // Key by hour and type

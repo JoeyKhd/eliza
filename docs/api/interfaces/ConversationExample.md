@@ -14,9 +14,9 @@ UUID of user in conversation
 
 #### Defined in
 
-[packages/core/src/types.ts:50](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L50)
+[packages/core/src/types.ts:50](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L50)
 
----
+***
 
 ### content
 
@@ -26,4 +26,4 @@ Content of the conversation
 
 #### Defined in
 
-[packages/core/src/types.ts:53](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L53)
+[packages/core/src/types.ts:53](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L53)

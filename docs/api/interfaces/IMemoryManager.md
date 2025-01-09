@@ -10,9 +10,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1021](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1021)
+[packages/core/src/types.ts:1060](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1060)
 
----
+***
 
 ### tableName
 
@@ -20,9 +20,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1022](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1022)
+[packages/core/src/types.ts:1061](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1061)
 
----
+***
 
 ### constructor
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1023](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1023)
+[packages/core/src/types.ts:1062](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1062)
 
 ## Methods
 
@@ -48,9 +48,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1025](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1025)
+[packages/core/src/types.ts:1064](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1064)
 
----
+***
 
 ### getMemories()
 
@@ -76,9 +76,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1027](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1027)
+[packages/core/src/types.ts:1066](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1066)
 
----
+***
 
 ### getCachedEmbeddings()
 
@@ -94,9 +94,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1035](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1035)
+[packages/core/src/types.ts:1074](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1074)
 
----
+***
 
 ### getMemoryById()
 
@@ -112,9 +112,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1039](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1039)
+[packages/core/src/types.ts:1078](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1078)
 
----
+***
 
 ### getMemoriesByRoomIds()
 
@@ -132,9 +132,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1040](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1040)
+[packages/core/src/types.ts:1079](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1079)
 
----
+***
 
 ### searchMemoriesByEmbedding()
 
@@ -146,7 +146,7 @@
 
 • **opts**
 
-• **opts.match_threshold?**: `number`
+• **opts.match\_threshold?**: `number`
 
 • **opts.count?**: `number`
 
@@ -160,9 +160,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1041](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1041)
+[packages/core/src/types.ts:1080](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1080)
 
----
+***
 
 ### createMemory()
 
@@ -180,9 +180,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1051](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1051)
+[packages/core/src/types.ts:1090](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1090)
 
----
+***
 
 ### removeMemory()
 
@@ -198,9 +198,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1053](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1053)
+[packages/core/src/types.ts:1092](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1092)
 
----
+***
 
 ### removeAllMemories()
 
@@ -216,9 +216,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1055](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1055)
+[packages/core/src/types.ts:1094](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1094)
 
----
+***
 
 ### countMemories()
 
@@ -236,4 +236,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1057](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1057)
+[packages/core/src/types.ts:1096](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1096)

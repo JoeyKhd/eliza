@@ -16,4 +16,4 @@ Validation function
 
 ## Defined in
 
-[packages/core/src/environment.ts:138](https://github.com/elizaOS/eliza/blob/main/packages/core/src/environment.ts#L138)
+[packages/core/src/environment.ts:146](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/environment.ts#L146)

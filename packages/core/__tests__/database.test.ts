@@ -1,4 +1,3 @@
-/* eslint-disable no-dupe-class-members */
 import { DatabaseAdapter } from "../src/database.ts";
 import {
     Account,

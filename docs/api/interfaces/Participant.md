@@ -14,9 +14,9 @@ Unique identifier
 
 #### Defined in
 
-[packages/core/src/types.ts:536](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L536)
+[packages/core/src/types.ts:552](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L552)
 
----
+***
 
 ### account
 
@@ -26,4 +26,4 @@ Associated account
 
 #### Defined in
 
-[packages/core/src/types.ts:539](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L539)
+[packages/core/src/types.ts:555](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L555)

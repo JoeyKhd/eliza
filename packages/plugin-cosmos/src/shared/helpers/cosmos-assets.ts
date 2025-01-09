@@ -4,6 +4,7 @@ export const getAvailableAssets = (
     assets: AssetList[],
     customAssets: AssetList[]
 ) => [
+    // biome-ignore lint/correctness/noUnsafeOptionalChaining: ignore for now
     ...assets?.filter(
         (asset) =>
             !(customAssets ?? [])

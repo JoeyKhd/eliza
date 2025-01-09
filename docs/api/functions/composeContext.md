@@ -22,9 +22,9 @@ The parameters for composing the context.
 
 The state object containing values to replace the placeholders in the template.
 
-• **params.template**: `string` | `Function`
+• **params.template**: [`TemplateType`](../type-aliases/TemplateType.md)
 
-The template string or function returning a string containing placeholders to be replaced with state values.
+The template string or function containing placeholders to be replaced with state values.
 
 • **params.templatingEngine?**: `"handlebars"`
 
@@ -46,8 +46,15 @@ const template = "Hello, {{userName}}! You are {{userAge}} years old";
 // Composing the context with simple string replacement will result in:
 // "Hello, Alice! You are 30 years old."
 const contextSimple = composeContext({ state, template });
+
+// Using composeContext with a template function for dynamic template
+const template = ({ state }) => {
+const tone = Math.random() > 0.5 ? "kind" : "rude";
+  return `Hello, {{userName}}! You are {{userAge}} years old. Be ${tone}`;
+};
+const contextSimple = composeContext({ state, template });
 ```
 
 ## Defined in
 
-[packages/core/src/context.ts:29](https://github.com/elizaOS/eliza/blob/main/packages/core/src/context.ts#L29)
+[packages/core/src/context.ts:37](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/context.ts#L37)

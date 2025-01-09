@@ -2,20 +2,6 @@ import type { TSESTree } from "@typescript-eslint/types";
 import { TypeScriptParser } from "./TypeScriptParser.js";
 import { ASTQueueItem, EnvUsage, TodoItem } from "./types/index.js";
 
-type AST_NODE_TYPES = {
-    ClassDeclaration: "ClassDeclaration";
-    FunctionDeclaration: "FunctionDeclaration";
-    TSTypeAliasDeclaration: "TSTypeAliasDeclaration";
-    TSEnumDeclaration: "TSEnumDeclaration";
-    MethodDefinition: "MethodDefinition";
-    TSMethodSignature: "TSMethodSignature";
-    TSInterfaceDeclaration: "TSInterfaceDeclaration";
-    TSPropertySignature: "TSPropertySignature";
-    ExportNamedDeclaration: "ExportNamedDeclaration";
-    Identifier: "Identifier";
-    VariableDeclaration: "VariableDeclaration";
-};
-
 const AST_NODE_TYPES = {
     ClassDeclaration: "ClassDeclaration",
     FunctionDeclaration: "FunctionDeclaration",

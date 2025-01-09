@@ -80,7 +80,7 @@ export function canTweet(
     tweetCounts.set(hourKey, currentCount + 1);
     return true;
 }
-
+// biome-ignore lint/correctness/noUnusedVariables: Ignore for now, perhaps plugin still under development?
 interface TweetOptions {
     skipRateLimit?: boolean;
     type?: "trade" | "market_search" | "shabbat" | "holiday";

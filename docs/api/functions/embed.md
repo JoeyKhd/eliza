@@ -4,7 +4,7 @@
 
 > **embed**(`runtime`, `input`): `Promise`\<`number`[]\>
 
-Gets embeddings from a remote API endpoint. Falls back to local BGE/384
+Gets embeddings from a remote API endpoint.  Falls back to local BGE/384
 
 ## Parameters
 
@@ -28,4 +28,4 @@ If the API request fails
 
 ## Defined in
 
-[packages/core/src/embedding.ts:162](https://github.com/elizaOS/eliza/blob/main/packages/core/src/embedding.ts#L162)
+[packages/core/src/embedding.ts:169](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/embedding.ts#L169)

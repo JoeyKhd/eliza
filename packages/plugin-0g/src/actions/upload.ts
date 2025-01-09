@@ -109,11 +109,11 @@ export const zgUpload: Action = {
             }
 
             const file = await ZgFile.fromFilePath(filePath);
-            var [tree, err] = await file.merkleTree();
-            if (err === null) {
+            var [tree, error] = await file.merkleTree();
+            if (error === null) {
                 console.log("File Root Hash: ", tree.rootHash());
             } else {
-                console.log("Error getting file root hash: ", err);
+                console.log("Error getting file root hash: ", error);
                 return false;
             }
 

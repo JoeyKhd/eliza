@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[packages/core/src/types.ts:1277](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1277)
+[packages/core/src/types.ts:1348](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1348)

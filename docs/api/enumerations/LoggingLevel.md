@@ -10,9 +10,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1300](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1300)
+[packages/core/src/types.ts:1372](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1372)
 
----
+***
 
 ### VERBOSE
 
@@ -20,9 +20,9 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1301](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1301)
+[packages/core/src/types.ts:1373](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1373)
 
----
+***
 
 ### NONE
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1302](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1302)
+[packages/core/src/types.ts:1374](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L1374)

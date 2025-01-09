@@ -1700,15 +1700,7 @@ interface ProviderOptions {
 export async function handleProvider(
     options: ProviderOptions
 ): Promise<GenerateObjectResult<unknown>> {
-    const {
-        provider,
-        runtime,
-        context,
-        modelClass,
-        verifiableInference,
-        verifiableInferenceAdapter,
-        verifiableInferenceOptions,
-    } = options;
+    const { provider, runtime, context, modelClass } = options;
     switch (provider) {
         case ModelProviderName.OPENAI:
         case ModelProviderName.ETERNALAI:

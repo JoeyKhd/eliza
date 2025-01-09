@@ -14,9 +14,9 @@ Optional unique identifier
 
 #### Defined in
 
-[packages/core/src/types.ts:338](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L338)
+[packages/core/src/types.ts:354](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L354)
 
----
+***
 
 ### userId
 
@@ -26,9 +26,9 @@ Associated user ID
 
 #### Defined in
 
-[packages/core/src/types.ts:341](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L341)
+[packages/core/src/types.ts:357](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L357)
 
----
+***
 
 ### agentId
 
@@ -38,9 +38,9 @@ Associated agent ID
 
 #### Defined in
 
-[packages/core/src/types.ts:344](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L344)
+[packages/core/src/types.ts:360](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L360)
 
----
+***
 
 ### createdAt?
 
@@ -50,9 +50,9 @@ Optional creation timestamp
 
 #### Defined in
 
-[packages/core/src/types.ts:347](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L347)
+[packages/core/src/types.ts:363](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L363)
 
----
+***
 
 ### content
 
@@ -62,9 +62,9 @@ Memory content
 
 #### Defined in
 
-[packages/core/src/types.ts:350](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L350)
+[packages/core/src/types.ts:366](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L366)
 
----
+***
 
 ### embedding?
 
@@ -74,9 +74,9 @@ Optional embedding vector
 
 #### Defined in
 
-[packages/core/src/types.ts:353](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L353)
+[packages/core/src/types.ts:369](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L369)
 
----
+***
 
 ### roomId
 
@@ -86,9 +86,9 @@ Associated room ID
 
 #### Defined in
 
-[packages/core/src/types.ts:356](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L356)
+[packages/core/src/types.ts:372](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L372)
 
----
+***
 
 ### unique?
 
@@ -98,9 +98,9 @@ Whether memory is unique
 
 #### Defined in
 
-[packages/core/src/types.ts:359](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L359)
+[packages/core/src/types.ts:375](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L375)
 
----
+***
 
 ### similarity?
 
@@ -110,4 +110,4 @@ Embedding similarity score
 
 #### Defined in
 
-[packages/core/src/types.ts:362](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L362)
+[packages/core/src/types.ts:378](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L378)

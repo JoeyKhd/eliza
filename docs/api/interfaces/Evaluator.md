@@ -14,9 +14,9 @@ Whether to always run
 
 #### Defined in
 
-[packages/core/src/types.ts:449](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L449)
+[packages/core/src/types.ts:465](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L465)
 
----
+***
 
 ### description
 
@@ -26,9 +26,9 @@ Detailed description
 
 #### Defined in
 
-[packages/core/src/types.ts:452](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L452)
+[packages/core/src/types.ts:468](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L468)
 
----
+***
 
 ### similes
 
@@ -38,9 +38,9 @@ Similar evaluator descriptions
 
 #### Defined in
 
-[packages/core/src/types.ts:455](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L455)
+[packages/core/src/types.ts:471](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L471)
 
----
+***
 
 ### examples
 
@@ -50,9 +50,9 @@ Example evaluations
 
 #### Defined in
 
-[packages/core/src/types.ts:458](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L458)
+[packages/core/src/types.ts:474](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L474)
 
----
+***
 
 ### handler
 
@@ -62,9 +62,9 @@ Handler function
 
 #### Defined in
 
-[packages/core/src/types.ts:461](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L461)
+[packages/core/src/types.ts:477](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L477)
 
----
+***
 
 ### name
 
@@ -74,9 +74,9 @@ Evaluator name
 
 #### Defined in
 
-[packages/core/src/types.ts:464](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L464)
+[packages/core/src/types.ts:480](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L480)
 
----
+***
 
 ### validate
 
@@ -86,4 +86,4 @@ Validation function
 
 #### Defined in
 
-[packages/core/src/types.ts:467](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L467)
+[packages/core/src/types.ts:483](https://github.com/JoeyKhd/eliza/blob/main/packages/core/src/types.ts#L483)
