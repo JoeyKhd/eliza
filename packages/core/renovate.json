@@ -8,12 +8,7 @@
         },
         {
             "groupName": "TypeScript and related",
-            "matchPackageNames": [
-                "/^@typescript-eslint//",
-                "/^typescript$/",
-                "/^ts-/",
-                "/^tslib$/"
-            ]
+            "matchPackageNames": ["/^typescript$/", "/^ts-/", "/^tslib$/"]
         },
         {
             "groupName": "Testing frameworks",
@@ -22,10 +17,6 @@
         {
             "groupName": "Rollup and plugins",
             "matchPackageNames": ["/^@rollup//", "/^rollup/"]
-        },
-        {
-            "groupName": "ESLint and formatting",
-            "matchPackageNames": ["/^eslint/", "/^prettier/"]
         },
         {
             "groupName": "SQLite related",

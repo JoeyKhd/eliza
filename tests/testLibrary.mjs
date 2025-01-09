@@ -18,10 +18,11 @@ function logError(error) {
     log(error); // Print stack trace
 }
 
-async function runProcess(command, args = [], directory = projectRoot()) {
+async function runProcess(_command, _args = [], _directory = projectRoot()) {
     try {
         throw new Exception("Not implemented yet"); // TODO
         // const result = await $`cd ${directory} && ${command} ${args}`;
+        // biome-ignore lint/correctness/noUnreachable: Ignore for now, but should be improved
         return result.stdout.trim();
     } catch (error) {
         throw new Error(`Command failed: ${error.message}`);
@@ -70,7 +71,7 @@ async function startAgent(character = DEFAULT_CHARACTER) {
                 method: "GET",
             });
             if (response.ok) break;
-        } catch (error) {}
+        } catch (_error) {}
         if (Date.now() - startTime > 120000) {
             throw new Error("Timeout waiting for process to start");
         } else {

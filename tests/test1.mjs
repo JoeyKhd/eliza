@@ -6,10 +6,6 @@ async function helloTrump() {
     assert(reply.length > 10);
 }
 
-async function coinbaseTest() {
-    // TODO
-}
-
 const testSuite = [helloTrump]; // Add tests here
 try {
     for (const test of testSuite) await runIntegrationTest(test);

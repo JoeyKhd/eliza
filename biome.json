@@ -7,6 +7,7 @@
             "**/*/target",
             "**/*/dist",
             "**/*-lock.yaml",
+            "docs/build/*",
             "package-lock.json",
             "dev-dist",
             "**/CHANGELOG.md"
@@ -22,6 +23,7 @@
         "lineWidth": 80,
         "attributePosition": "auto",
         "bracketSpacing": true,
+
         "ignore": [
             "**/*/target",
             "**/*/dist",
@@ -57,12 +59,12 @@
     "overrides": [
         {
             "include": [
-                "src/**/*.js",
-                "src/**/*.cjs",
-                "src/**/*.mjs",
-                "src/**/*.ts",
-                "src/**/*.jsx",
-                "src/**/*.tsx"
+                "**/*.js",
+                "**/*.cjs",
+                "**/*.mjs",
+                "**/*.ts",
+                "**/*.jsx",
+                "**/*.tsx"
             ],
             "javascript": {
                 "globals": [
