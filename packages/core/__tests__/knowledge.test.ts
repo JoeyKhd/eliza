@@ -64,6 +64,22 @@ describe("Knowledge Module", () => {
             const input = "/* Block comment */ Normal text // Line comment";
             expect(knowledge.preprocess(input)).toBe("normal text");
         });
+
+        it("should allow chinese", () => {
+            const input = "你好 Eliza".toLowerCase();
+            expect(knowledge.preprocess(input)).toBe(input);
+        });
+
+        it("should allow arabic", () => {
+            const input = "مرحبا Eliza".toLowerCase();;
+            expect(knowledge.preprocess(input)).toBe(input);
+        });
+
+        it("should allow greek", () => {
+            const input = "Γειά σου Eliza".toLowerCase();
+            expect(knowledge.preprocess(input)).toBe(input);
+        });
+
     });
 
     describe("get and set", () => {
